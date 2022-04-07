@@ -37,7 +37,7 @@ public class CorruptedHorseEntity extends HorseEntity {
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 25.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 3D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 5D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.5D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 35.0D)
                 .createMutableAttribute(Attributes.HORSE_JUMP_STRENGTH, 1D)
@@ -49,7 +49,7 @@ public class CorruptedHorseEntity extends HorseEntity {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1D, false));
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
         this.goalSelector.addGoal(0, new SwimGoal(this));
         //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setCallsForHelp(ZombifiedPiglinEntity.class));

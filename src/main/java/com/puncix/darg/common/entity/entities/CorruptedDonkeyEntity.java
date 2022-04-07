@@ -35,7 +35,7 @@ public class CorruptedDonkeyEntity extends DonkeyEntity {
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 30.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.66D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 50.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS);
@@ -46,7 +46,7 @@ public class CorruptedDonkeyEntity extends DonkeyEntity {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1D, false));
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 0.6D, false));
         this.goalSelector.addGoal(0, new SwimGoal(this));
         //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setCallsForHelp(ZombifiedPiglinEntity.class));

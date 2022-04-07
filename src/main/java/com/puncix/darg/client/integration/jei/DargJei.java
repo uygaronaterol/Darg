@@ -1,7 +1,6 @@
 package com.puncix.darg.client.integration.jei;
 
 import com.puncix.darg.Darg;
-import com.puncix.darg.core.init.BlockInit;
 import com.puncix.darg.data.recipes.CorruptedCraftingTableRecipe;
 import com.puncix.darg.data.recipes.CraftingHandRecipe;
 import com.puncix.darg.data.recipes.ModRecipeTypes;
@@ -21,7 +20,6 @@ public class DargJei implements IModPlugin {
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(Darg.MOD_ID, "jei_plugin");
     }
-
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(

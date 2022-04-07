@@ -81,8 +81,6 @@ public class CorruptedDonkeyModel <T extends CorruptedDonkeyEntity> extends Enti
 
     @Override
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.headpiece.rotateAngleX = headPitch * ((float) Math.PI / 180F);
-        this.headpiece.rotateAngleY = netHeadYaw * ((float) Math.PI / 180F);
         this.back_left_leg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.back_right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.front_left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;

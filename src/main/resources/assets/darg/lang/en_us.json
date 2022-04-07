@@ -58,5 +58,7 @@
 	"item.darg.staff_of_exheristaff": "Staff Of Exheristaff",
 	"block.darg.crafting_hand": "Crafting Hand",
 	"block.darg.condensed_corrupted_stone": "Condensed Corrupted Stone",
-	"item.darg.pillar_of_staff_of_exheristaff": "Pillar Of Staff Of Exheristaff"
+	"item.darg.pillar_of_staff_of_exheristaff": "Pillar Of Staff Of Exheristaff",
+	"item.darg.corrupted_zombie_spawn_egg": "Corrupted Zombie Spawn Egg",
+	"item.darg.corrupted_donkey_spawn_egg": "Corrupted Donkey Spawn Egg"
 }
