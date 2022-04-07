@@ -20,20 +20,18 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class ModTreeGeneration {
 	public static void generateTrees(final BiomeLoadingEvent event) {
-		CorruptedOakTree corruptedOakTree = new CorruptedOakTree();
-		Random random = new Random();
+
 		
 		
 		RegistryKey<Biome> key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
 		Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 		
-		if(types.contains(BiomeDictionary.Type.PLAINS)) {
+		if(types.contains(BiomeDictionary.Type.MESA)) {
 			java.util.List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 			base.add(() -> ModConfiguredFeatures.CORRUPTED_OAK
 					.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-					.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.0002f, 1))
+					.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.0002f, 1))
 					));
-			
 		}
 		
 	}
