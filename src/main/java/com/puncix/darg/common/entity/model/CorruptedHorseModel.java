@@ -113,6 +113,8 @@ public class CorruptedHorseModel <T extends CorruptedHorseEntity> extends Entity
         this.front_right_leg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.neck.rotateAngleX = headPitch * ((float) Math.PI / 720F);
         this.neck.rotateAngleY = netHeadYaw * ((float) Math.PI / 720F);
+        this.mane.rotateAngleX = headPitch * ((float) Math.PI / 720F);
+        this.mane.rotateAngleY = netHeadYaw * ((float) Math.PI / 720F);
         this.tail.rotateAngleZ = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
     }
 
