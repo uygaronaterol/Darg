@@ -9,14 +9,14 @@
     },
     {"item": "minecraft:air"},
     {"item": "darg:corrupted_essence_block"},
-    {"item": "darg:corrupted_essence_block"},{"item": "minecraft:corrupted_essence_block"},
-    {"item": "minecraft:diamond"},{"item": "minecraft:"},{"item": "minecraft:air"},
+    {"item": "darg:corrupted_essence_block"},{"item": "minecraft:white_dye"},
+    {"item": "minecraft:diamond"},{"item": "minecraft:iron_block"},{"item": "minecraft:gold"},
     {
       "item": "darg:corrupted_essence_block"
     }
   ],
   "output": {
-    "item": "darg:corrupted_cobblestone_bricks",
-    "count": 4
+    "item": "darg:crafting_hand",
+    "count": 1
   }
 }
