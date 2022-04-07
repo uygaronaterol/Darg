@@ -79,6 +79,27 @@
       "darg:corrupted_cow_ambient"
     ]
   },
+  "corrupted_zombie_ambient": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_zombie_ambient",
+    "sounds": [
+      "darg:corrupted_zombie_ambient"
+    ]
+  },
+  "corrupted_zombie_hit": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_zombie_hit",
+    "sounds": [
+      "darg:corrupted_zombie_hit"
+    ]
+  },
+  "corrupted_zombie_death": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_zombie_death",
+    "sounds": [
+      "darg:corrupted_zombie_death"
+    ]
+  },
   "corrupted_cow_death": {
     "category": "entities",
     "subtitle": "darg.corrupted_cow_death",

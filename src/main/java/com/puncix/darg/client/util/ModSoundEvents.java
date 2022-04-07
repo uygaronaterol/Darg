@@ -29,6 +29,10 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_AMBIENT = registerSoundEvent("corrupted_cow_ambient");
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_DEATH = registerSoundEvent("corrupted_cow_death");
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_HIT = registerSoundEvent("corrupted_cow_hit");
+    public static final RegistryObject<SoundEvent> CORRUPTED_ZOMBIE_HIT = registerSoundEvent("corrupted_zombie_hit");
+    public static final RegistryObject<SoundEvent> CORRUPTED_ZOMBIE_AMBIENT = registerSoundEvent("corrupted_zombie_ambient");
+    public static final RegistryObject<SoundEvent> CORRUPTED_ZOMBIE_DEATH = registerSoundEvent("corrupted_zombie_death");
+
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_STEP = registerSoundEvent("corrupted_cow_step");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_AMBIENT1 = registerSoundEvent("exheristaff_ambient1");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_AMBIENT2 = registerSoundEvent("exheristaff_ambient2");
