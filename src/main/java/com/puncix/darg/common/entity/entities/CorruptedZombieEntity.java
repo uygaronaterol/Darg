@@ -78,20 +78,20 @@ public class CorruptedZombieEntity extends ZombieEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.CORRUPTED_SHEEP_AMBIENT.get();
+        return ModSoundEvents.CORRUPTED_ZOMBIE_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.CORRUPTED_SHEEP_DEATH.get();
+        return ModSoundEvents.CORRUPTED_ZOMBIE_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.CORRUPTED_SHEEP_HIT.get();
+        return ModSoundEvents.CORRUPTED_ZOMBIE_HIT.get();
     }
 
     @Override
