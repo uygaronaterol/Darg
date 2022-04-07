@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/inner_stairs",
+	"textures": {
+		"bottom": "darg:blocks/corrupted_stone",
+		"top": "darg:blocks/corrupted_stone",
+		"side": "darg:blocks/corrupted_stone"
+		
+	}
+
+
+
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "darg:blocks/corrupted_oak_sapling"
+	}
+
+}

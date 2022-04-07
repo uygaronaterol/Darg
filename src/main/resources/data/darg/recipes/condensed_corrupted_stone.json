@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_stone"
+    },
+    {
+      "item": "darg:corrupted_stone"
+    },
+    {"item": "darg:corrupted_stone"},
+    {"item": "darg:corrupted_stone"},
+    {"item": "darg:corrupted_stone"},{"item": "darg:corrupted_stone"},
+    {"item": "darg:corrupted_stone"},{"item": "darg:corrupted_stone"},{"item": "darg:corrupted_stone"},{"item": "minecraft:iron_block"},
+    {
+      "item": "minecraft:gold_block"
+    },{"item": "minecraft:diamond"},{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:condensed_corrupted_stone",
+    "count": 1
+  }
+}

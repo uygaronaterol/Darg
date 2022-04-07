@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/stairs",
+	"textures": {
+		"bottom": "darg:blocks/corrupted_cobblestone_bricks",
+		"top": "darg:blocks/corrupted_cobblestone_bricks",
+		"side": "darg:blocks/corrupted_cobblestone_bricks"
+		
+	}
+
+
+
+}

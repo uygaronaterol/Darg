@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "darg:blocks/corrupted_oak_sapling"
+  }
+}

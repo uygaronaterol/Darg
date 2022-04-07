@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "darg:items/corrupted_stone_axe"
+}
+}

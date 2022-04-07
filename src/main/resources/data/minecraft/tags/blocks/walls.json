@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "darg:corrupted_cobblestone_wall",
+    "darg:corrupted_stone_wall",
+    "darg:corrupted_stone_bricks_wall",
+    "darg:corrupted_cobblestone_bricks_wall"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "darg:corrupted_cobblestone_bricks"
+    },
+    {"item": "darg:corrupted_cobblestone_bricks"},
+    {"item": "minecraft:air"},
+    {"item": "darg:corrupted_cobblestone_bricks"},{"item": "darg:corrupted_cobblestone_bricks"},
+    {"item": "minecraft:air"},{"item": "darg:corrupted_cobblestone_bricks"},{"item": "darg:corrupted_cobblestone_bricks"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_cobblestone_bricks_wall",
+    "count": 6
+  }
+}

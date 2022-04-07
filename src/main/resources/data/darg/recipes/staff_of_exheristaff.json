@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {"item": "darg:condensed_corrupted_stone"},
+    {"item": "minecraft:red_dye"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:red_dye"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:red_dye"},{"item": "minecraft:red_dye"},{"item": "darg:pillar_of_staff_of_exheristaff"},
+    {
+      "item": "darg:pillar_of_staff_of_exheristaff"
+    },{"item": "darg:pillar_of_staff_of_exheristaff"},{"item": "darg:pillar_of_staff_of_exheristaff"},{"item": "darg:corrupted_eye_of_exheristaff"}
+  ],
+  "output": {
+    "item": "darg:staff_of_exheristaff",
+    "count": 1
+  }
+}

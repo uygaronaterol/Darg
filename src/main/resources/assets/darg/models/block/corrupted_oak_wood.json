@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "darg:blocks/corrupted_oak_log",
+    "side": "darg:blocks/corrupted_oak_log"
+  }
+}

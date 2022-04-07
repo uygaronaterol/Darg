@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "darg:blocks/corrupted_oak_leaves"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "darg:block/crafting_hand",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "darg:block/crafting_hand"
+    },"facing=south": {
+      "model": "darg:block/crafting_hand",
+      "y": 180
+    },"facing=west": {
+      "model": "darg:block/crafting_hand",
+      "y": 270
+    }
+  }
+
+}

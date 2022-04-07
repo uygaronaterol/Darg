@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:essence"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_essence_piece",
+    "count": 19
+  }
+}

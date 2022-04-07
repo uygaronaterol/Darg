@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "darg:blocks/corrupted_oak_planks"
+  }
+}

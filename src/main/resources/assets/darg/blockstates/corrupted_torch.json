@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "darg:block/corrupted_torch"
+    }
+  }
+}

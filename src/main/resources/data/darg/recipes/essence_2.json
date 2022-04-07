@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_essence_block"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:essence",
+    "count": 10
+  }
+}

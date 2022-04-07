@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"up": "darg:blocks/corrupted_crafting_table_up",
+		"west": "darg:blocks/corrupted_crafting_table_west",
+		"east": "darg:blocks/corrupted_crafting_table_east",
+		"north": "darg:blocks/corrupted_crafting_table_north",
+		"south": "darg:blocks/corrupted_crafting_table_south",
+		"down": "darg:blocks/corrupted_crafting_table_down",
+		"particle": "darg:blocks/corrupted_crafting_table_west"
+	}
+
+}

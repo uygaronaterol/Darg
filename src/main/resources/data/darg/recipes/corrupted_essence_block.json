@@ -1,0 +1,20 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:essence"
+    },
+    {
+      "item": "darg:essence"
+    },
+    {"item": "darg:essence"},
+    {"item": "darg:essence"},
+    {"item": "darg:essence"},{"item": "darg:essence"},{"item": "darg:essence"},{"item": "darg:essence"},{"item": "darg:essence"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_essence_block"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_corrupted_cobblestone"
+    },
+    {
+      "item": "darg:corrupted_corrupted_cobblestone"
+    },
+    {"item": "darg:corrupted_corrupted_cobblestone"},
+    {"item": "darg:corrupted_corrupted_cobblestone"},
+    {"item": "darg:corrupted_corrupted_cobblestone"},{"item": "darg:corrupted_corrupted_cobblestone"},{"item": "darg:corrupted_corrupted_cobblestone"},
+    {"item": "darg:corrupted_corrupted_cobblestone"},{"item": "darg:corrupted_corrupted_cobblestone"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_stone",
+    "count": 9
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+
+    {"item": "darg:condensed_corrupted_stone"},
+    {
+      "item": "minecraft:red_dye"
+    },
+    {"item": "minecraft:red_dye"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:black_dye"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:black_dye"},{"item": "minecraft:red_dye"},{"item": "minecraft:iron_block"},
+    {
+      "item": "minecraft:gold_block"
+    },{"item": "minecraft:diamond"},{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:pillar_of_staff_of_exheristaff",
+    "count": 1
+  }
+}

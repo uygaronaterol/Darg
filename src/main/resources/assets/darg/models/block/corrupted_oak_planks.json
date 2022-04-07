@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "darg:blocks/corrupted_oak_planks"
+  }
+}

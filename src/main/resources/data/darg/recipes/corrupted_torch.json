@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_essence_piece"
+    },
+    {
+      "item": "darg:corrupted_stick"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_torch",
+    "count": 4
+  }
+}

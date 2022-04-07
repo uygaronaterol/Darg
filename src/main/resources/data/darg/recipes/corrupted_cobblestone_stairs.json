@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_cobblestone"
+    },
+    {
+      "item": "darg:corrupted_cobblestone"
+    },
+    {"item": "darg:corrupted_cobblestone"},
+    {"item": "minecraft:air"},
+    {"item": "darg:corrupted_cobblestone"},{"item": "darg:corrupted_cobblestone"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corrupted_cobblestone"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_cobblestone_stairs",
+    "count": 6
+  }
+}

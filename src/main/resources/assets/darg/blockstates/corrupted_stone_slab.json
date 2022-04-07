@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "darg:block/corrupted_stone_slab"
+    },
+    "type=double": {
+      "model": "darg:block/corrupted_stone"
+    },
+    "type=top": {
+      "model": "darg:block/corrupted_stone_slab_top"
+    }
+  }
+}

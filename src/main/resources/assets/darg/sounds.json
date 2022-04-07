@@ -1,0 +1,166 @@
+{ "corrupted_donkey_death": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_donkey_death",
+  "sounds": [
+    "darg:corrupted_donkey_death"
+  ]
+}, "corrupted_donkey_ambient": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_donkey_ambient",
+  "sounds": [
+    "darg:corrupted_donkey_ambient"
+  ]
+}, "corrupted_donkey_hit": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_donkey_hit",
+  "sounds": [
+    "darg:corrupted_donkey_hit"
+  ]
+}, "corrupted_sheep_death": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_sheep_death",
+  "sounds": [
+    "darg:corrupted_sheep_death"
+  ]
+}, "corrupted_sheep_ambient": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_sheep_ambient",
+  "sounds": [
+    "darg:corrupted_sheep_ambient"
+  ]
+}, "corrupted_sheep_hit": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_sheep_hit",
+  "sounds": [
+    "darg:corrupted_sheep_hit"
+  ]
+},
+  "corrupted_chicken_hit": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_chicken_hit",
+  "sounds": [
+    "darg:corrupted_chicken_hit"
+  ]
+},  "corrupted_chicken_death": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_chicken_death",
+  "sounds": [
+    "darg:corrupted_chicken_death"
+  ]
+},  "corrupted_chicken_ambient": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_chicken_ambient",
+  "sounds": [
+    "darg:corrupted_chicken_ambient"
+  ]
+},  "corrupted_pig_hit": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_pig_hit",
+  "sounds": [
+    "darg:corrupted_pig_hit"
+  ]
+},  "corrupted_pig_death": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_pig_death",
+  "sounds": [
+    "darg.corrupted_pig_death"
+  ]
+},  "corrupted_pig_ambient": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_pig_ambient",
+  "sounds": [
+    "darg:corrupted_pig_ambient"
+  ]
+},
+  "corrupted_cow_ambient": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_cow_ambient",
+    "sounds": [
+      "darg:corrupted_cow_ambient"
+    ]
+  },
+  "corrupted_cow_death": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_cow_death",
+    "sounds": [
+      "darg:corrupted_cow_death"
+    ]
+  },
+  "corrupted_cow_hit": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_cow_hit",
+    "sounds": [
+      "darg:corrupted_cow_hit"
+    ]
+  },
+  "corrupted_cow_step": {
+    "category": "entities",
+    "subtitle": "darg.corrupted_cow_step",
+    "sounds": [
+      "darg:corrupted_cow_step"
+    ]
+  },
+  "corrupted_plains_ambient": {
+    "category": "biomes",
+    "subtitle": "darg.corrupted_plains_ambient",
+    "sounds": [
+      "darg:corrupted_plains_ambient"
+    ]
+  },
+  "exheristaff_ambient1": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_ambient1",
+    "sounds": [
+      "darg:exheristaff_ambient1"
+    ]
+  },
+  "exheristaff_ambient2": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_ambient2",
+    "sounds": [
+      "darg:exheristaff_ambient2"
+    ]
+  },
+  "exheristaff_ambient3": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_ambient3",
+    "sounds": [
+      "darg:exheristaff_ambient3"
+    ]
+  },
+  "exheristaff_ambient4": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_ambient4",
+    "sounds": [
+      "darg:exheristaff_ambient4"
+    ]
+  },
+  "exheristaff_hit1": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_hit1",
+    "sounds": [
+      "darg:exheristaff_hit1"
+    ]
+  },
+  "exheristaff_hit2": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_hit2",
+    "sounds": [
+      "darg:exheristaff_hit2"
+    ]
+  },
+  "exheristaff_death": {
+    "category": "entities",
+    "subtitle": "darg.exheristaff_death",
+    "sounds": [
+      "darg:exheristaff_death"
+    ]
+  },
+    "exheristaff_animation": {
+      "category": "entities",
+      "subtitle": "darg.exheristaff_animation",
+      "sounds": [
+        "darg:exheristaff_animation"
+      ]
+    }
+}
