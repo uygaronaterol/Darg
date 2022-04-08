@@ -1,4 +1,23 @@
-{ "corrupted_donkey_death": {
+{ "corrupted_horse_death": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_horse_death",
+  "sounds": [
+    "darg:corrupted_horse_death"
+  ]
+}, "corrupted_horse_ambient": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_horse_ambient",
+  "sounds": [
+    "darg:corrupted_horse_ambient"
+  ]
+}, "corrupted_horse_hit": {
+  "category": "entities",
+  "subtitle": "darg.corrupted_horse_hit",
+  "sounds": [
+    "darg:corrupted_horse_hit"
+  ]
+},
+  "corrupted_donkey_death": {
   "category": "entities",
   "subtitle": "darg.corrupted_donkey_death",
   "sounds": [

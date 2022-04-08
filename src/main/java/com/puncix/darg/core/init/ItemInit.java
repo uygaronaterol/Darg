@@ -4,6 +4,7 @@ import com.puncix.darg.Darg;
 import com.puncix.darg.common.items.*;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
@@ -60,8 +61,14 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_STONE_HOE = ITEMS.register("corrupted_stone_hoe", () -> new HoeItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_SHOVEL = ITEMS.register("corrupted_stone_shovel", () -> new ShovelItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 
-	
-	
+	//Armors
+	public static final RegistryObject<Item> CORRUPTED_LEATHER_BOOTS = ITEMS.register("corrupted_leather_boots", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_LEATHER_LEGGINGS = ITEMS.register("corrupted_leather_leggings", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_LEATHER_CHESTPLATE = ITEMS.register("corrupted_leather_chestplate", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_LEATHER_HELMET = ITEMS.register("corrupted_leather_helmet", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
+
+
+
 	//Block items
 	public static final RegistryObject<BlockItem> CORRUPTED_GRASS = ITEMS.register("corrupted_grass", () -> new BlockItem(BlockInit.CORRUPTED_GRASS.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_DIRT = ITEMS.register("corrupted_dirt", () -> new BlockItem(BlockInit.CORRUPTED_DIRT.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

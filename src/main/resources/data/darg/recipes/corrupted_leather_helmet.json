@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_leather"
+    },
+    {
+      "item": "darg:corrupted_leather"
+    },
+    {"item": "minecraft:air"},
+    {"item": "darg:corrupted_leather"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corrupted_leather"},
+    {"item": "darg:corrupted_leather"},
+    {"item": "minecraft:air"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_leather_helmet",
+    "count": 1
+  }
+}
