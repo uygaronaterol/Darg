@@ -4,7 +4,7 @@ license="All rights reserved"
 issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
 [[mods]]
 modId="darg"
-version="1.01"
+version="1.011"
 displayName="Darg"
 updateJSONURL="https://change.me.example.invalid/updates.json"
 displayURL="https://change.me.to.your.mods.homepage.example.invalid/"

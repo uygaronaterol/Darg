@@ -2,7 +2,11 @@ package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.ItemInit;
+import javafx.geometry.BoundingBox;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.material.Material;
+import net.minecraft.command.impl.BossBarCommand;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -16,9 +20,11 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
@@ -28,7 +34,6 @@ public class ExheristaffEntity extends CreatureEntity{
     public ExheristaffEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
-
 
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
@@ -71,17 +76,29 @@ public class ExheristaffEntity extends CreatureEntity{
     {
         double rand = Math.random();
         if(rand <= 0.2) {
+            if(this.getAttackTarget() != null) {
+                this.destroyBlocksInAABB(this.getBoundingBox());
+            }
             return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
+            if(this.getAttackTarget() != null) {
+                this.destroyBlocksInAABB(this.getBoundingBox());
+            }
             return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
+            if(this.getAttackTarget() != null) {
+                this.destroyBlocksInAABB(this.getBoundingBox());
+            }
             return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
 
         }
         else if( 0.8 < rand && rand <= 0.8){
+            if(this.getAttackTarget() != null) {
+                this.destroyBlocksInAABB(this.getBoundingBox());
+            }
             return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
 
         }
@@ -90,11 +107,47 @@ public class ExheristaffEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
+                this.destroyBlocksInAABB(this.getBoundingBox());
 
             }
             return SoundEvents.WEATHER_RAIN_ABOVE;
 
         }
+    }
+
+    private boolean destroyBlocksInAABB(AxisAlignedBB area) {
+        int i = MathHelper.floor(area.minX - 1);
+        int j = MathHelper.floor(area.minY );
+        int k = MathHelper.floor(area.minZ - 1);
+        int l = MathHelper.floor(area.maxX + 1);
+        int i1 = MathHelper.floor(area.maxY +1);
+        int j1 = MathHelper.floor(area.maxZ + 1);
+        boolean flag = false;
+        boolean flag1 = false;
+
+        for(int k1 = i; k1 <= l; ++k1) {
+            for(int l1 = j; l1 <= i1; ++l1) {
+                for(int i2 = k; i2 <= j1; ++i2) {
+                    BlockPos blockpos = new BlockPos(k1, l1, i2);
+                    BlockState blockstate = this.world.getBlockState(blockpos);
+                    Block block = blockstate.getBlock();
+                    if (!blockstate.isAir(this.world, blockpos) && blockstate.getMaterial() != Material.FIRE) {
+                        if (net.minecraftforge.common.ForgeHooks.canEntityDestroy(this.world, blockpos, this) && !BlockTags.DRAGON_IMMUNE.contains(block)) {
+                            flag1 = this.world.removeBlock(blockpos, false) || flag1;
+                        } else {
+                            flag = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (flag1) {
+            BlockPos blockpos1 = new BlockPos(i + this.rand.nextInt(l - i + 1), j + this.rand.nextInt(i1 - j + 1), k + this.rand.nextInt(j1 - k + 1));
+            this.world.playEvent(2008, blockpos1, 0);
+        }
+
+        return flag;
     }
 
 
