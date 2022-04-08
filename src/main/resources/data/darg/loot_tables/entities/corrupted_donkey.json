@@ -12,6 +12,18 @@
           "name": "darg:corrupted_essence_piece"
         }
       ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:corrupted_leather"
+        }
+      ]
     }
   ]
 }

@@ -62,8 +62,6 @@ public class CorruptedSheepEntity extends SheepEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.removeGoal(new BreedGoal(this, 1.0D));;
-        this.goalSelector.removeGoal( new TemptGoal(this, 1.1D, Ingredient.fromItems(Items.WHEAT), false));;
 
         this.goalSelector.removeGoal(new PanicGoal(this, 1.25D));;
         this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );

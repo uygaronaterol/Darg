@@ -45,15 +45,18 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> PILLAR_OF_STAFF_OF_EXHERISTAFF = ITEMS.register("pillar_of_staff_of_exheristaff", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
+	//mob drops
+	public static final RegistryObject<Item> CORRUPTED_LEATHER = ITEMS.register("corrupted_leather", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<BucketOfCorruptedFire> BUCKET_OF_CORRUPTED_FIRE = ITEMS.register("bucket_of_corrupted_fire", () -> new BucketOfCorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
 
 	
 	//Tools
-	public static final RegistryObject<Item> CORRUPTED_STONE_SWORD = ITEMS.register("corrupted_stone_sword", () -> new SwordItem(ModItemTier.CORRUPTED_STONE, 1,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_STONE_SWORD = ITEMS.register("corrupted_stone_sword", () -> new SwordItem(ModItemTier.CORRUPTED_STONE, -2,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_PICKAXE = ITEMS.register("corrupted_stone_pickaxe", () -> new PickaxeItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
-	public static final RegistryObject<CorruptedStoneAxe> CORRUPTED_STONE_AXE = ITEMS.register("corrupted_stone_axe", () -> new CorruptedStoneAxe(ModItemTier.CORRUPTED_STONE, 4,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<CorruptedStoneAxe> CORRUPTED_STONE_AXE = ITEMS.register("corrupted_stone_axe", () -> new CorruptedStoneAxe(ModItemTier.CORRUPTED_STONE, 1,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_HOE = ITEMS.register("corrupted_stone_hoe", () -> new HoeItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_SHOVEL = ITEMS.register("corrupted_stone_shovel", () -> new ShovelItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 
