@@ -10,6 +10,24 @@
   "sounds": [
     "darg:egg_laying_sound"
   ]
+}, "mogling_hit": {
+  "category": "entities",
+  "subtitle": "darg.mogling_hit",
+  "sounds": [
+    "darg:mogling_hit"
+  ]
+}, "mogling_death": {
+  "category": "entities",
+  "subtitle": "darg.mogling_death",
+  "sounds": [
+    "darg:mogling_death"
+  ]
+}, "mogling_ambient": {
+  "category": "entities",
+  "subtitle": "darg.mogling_ambient",
+  "sounds": [
+    "darg:mogling_ambient"
+  ]
 }, "corrupted_horse_ambient": {
   "category": "entities",
   "subtitle": "darg.corrupted_horse_ambient",

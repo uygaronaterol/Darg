@@ -69,6 +69,9 @@ public class CorruptedCowEntity extends CowEntity {
 
         return super.attackable();
     }
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     @Override
     protected int getExperiencePoints(PlayerEntity player)

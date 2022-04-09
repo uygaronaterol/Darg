@@ -44,6 +44,9 @@ public class CorruptedHorseEntity extends HorseEntity {
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS);
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
 
     @Override

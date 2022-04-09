@@ -62,6 +62,9 @@ public class CorruptedChickenEntity extends ChickenEntity {
     {
         return 1 ;
     }
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     @Override
     protected SoundEvent getAmbientSound()

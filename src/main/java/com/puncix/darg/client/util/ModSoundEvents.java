@@ -33,6 +33,9 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> CORRUPTED_ZOMBIE_AMBIENT = registerSoundEvent("corrupted_zombie_ambient");
     public static final RegistryObject<SoundEvent> CORRUPTED_ZOMBIE_DEATH = registerSoundEvent("corrupted_zombie_death");
     public static final RegistryObject<SoundEvent> EGG_LAYING_SOUND = registerSoundEvent("egg_laying_sound");
+    public static final RegistryObject<SoundEvent> MOGLING_HIT = registerSoundEvent("mogling_hit");
+    public static final RegistryObject<SoundEvent> MOGLING_DEATH = registerSoundEvent("mogling_death");
+    public static final RegistryObject<SoundEvent> MOGLING_AMBIENT = registerSoundEvent("mogling_ambient");
 
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_STEP = registerSoundEvent("corrupted_cow_step");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_AMBIENT1 = registerSoundEvent("exheristaff_ambient1");

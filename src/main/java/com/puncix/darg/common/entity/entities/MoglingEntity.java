@@ -100,10 +100,11 @@ public class MoglingEntity extends CreatureEntity {
                 else if( 0.7 < rand && rand <= 0.9){
                     this.entityDropItem(Items.NAUTILUS_SHELL.asItem());
                 }
-                else if( 0.9 < rand && rand <= 0.95){
+                else if( 0.9 < rand && rand <= 0.97){
                     this.entityDropItem(ItemInit.MOGLING_SPAWN_EGG.get());
 
-                }else if( 0.95 < rand && rand <= 0.99){
+                }else if( 0.97 < rand && rand <= 0.99){
+                    this.entityDropItem(ItemInit.GOLD_LAYING_CHICKEN_SPAWN_EGG.get());
 
                 }
                 return ActionResultType.CONSUME;
@@ -122,20 +123,20 @@ public class MoglingEntity extends CreatureEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.CORRUPTED_ZOMBIE_AMBIENT.get();
+        return ModSoundEvents.MOGLING_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.CORRUPTED_ZOMBIE_DEATH.get();
+        return ModSoundEvents.MOGLING_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.CORRUPTED_ZOMBIE_HIT.get();
+        return ModSoundEvents.MOGLING_HIT.get();
     }
 
     @Override

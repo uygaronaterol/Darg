@@ -48,6 +48,9 @@ public class CorruptedPigEntity extends PigEntity {
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS);
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
 
     @Override

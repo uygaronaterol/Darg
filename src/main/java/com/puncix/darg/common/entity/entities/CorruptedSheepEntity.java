@@ -58,6 +58,9 @@ public class CorruptedSheepEntity extends SheepEntity {
     public ResourceLocation getLootTable() {
         return this.getType().getLootTable();
     }
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     @Override
     protected void registerGoals() {

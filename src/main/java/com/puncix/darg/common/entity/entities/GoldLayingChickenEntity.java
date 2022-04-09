@@ -31,6 +31,9 @@ public class GoldLayingChickenEntity extends ChickenEntity {
     public GoldLayingChickenEntity(EntityType<? extends ChickenEntity> type, World worldIn) {
         super(type, worldIn);
     }
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()

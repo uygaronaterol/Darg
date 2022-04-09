@@ -68,6 +68,9 @@ public class CorruptedDonkeyEntity extends DonkeyEntity {
         return ModSoundEvents.CORRUPTED_DONKEY_AMBIENT.get();
     }
 
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     @Override
     protected SoundEvent getDeathSound()
