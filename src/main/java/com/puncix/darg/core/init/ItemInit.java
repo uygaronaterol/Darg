@@ -23,6 +23,9 @@ public class ItemInit {
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
+	//mogling trade
+	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> BETTER_MOGLING_FOOD = ITEMS.register("better_mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//SPAWN eggs
@@ -34,6 +37,8 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> CORRUPTED_DONKEY_SPAWN_EGG = ITEMS.register("corrupted_donkey_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.CORRUPTED_DONKEY,0x800080,0x524E4D,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> EXHERISTAFF_SPAWN_EGG = ITEMS.register("exheristaff_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.EXHERISTAFF,0x000000,0x800080,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> CORRUPTED_ZOMBIE_SPAWN_EGG = ITEMS.register("corrupted_zombie_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.CORRUPTED_ZOMBIE,0x0000FF,0x00F060,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> MOGLING_SPAWN_EGG = ITEMS.register("mogling_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.MOGLING,0x800000,0x808000,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> GOLD_LAYING_CHICKEN_SPAWN_EGG = ITEMS.register("gold_laying_chicken_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOLD_LAYING_CHICKEN,0x800000,0x808000,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

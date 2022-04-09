@@ -48,6 +48,10 @@ public class ExheristaffEntity extends CreatureEntity{
     }
 
 
+    @Override
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
 
     @Override
     protected void registerGoals() {

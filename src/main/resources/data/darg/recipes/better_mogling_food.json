@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:hay_block"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:better_mogling_food",
+    "count": 1
+  }
+}

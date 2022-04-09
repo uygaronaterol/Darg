@@ -4,6 +4,12 @@
   "sounds": [
     "darg:corrupted_horse_death"
   ]
+}, "egg_laying_sound": {
+  "category": "entities",
+  "subtitle": "darg.egg_laying_sound",
+  "sounds": [
+    "darg:egg_laying_sound"
+  ]
 }, "corrupted_horse_ambient": {
   "category": "entities",
   "subtitle": "darg.corrupted_horse_ambient",

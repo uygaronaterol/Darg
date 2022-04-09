@@ -71,7 +71,16 @@ public class EntityTypeInit {
                             EntityClassification.CREATURE).size(0.7f, 1.5f)
                             .build(new ResourceLocation(Darg.MOD_ID, "corrupted_zombie").toString()));
 
-
+    public static final RegistryObject<EntityType<MoglingEntity>> MOGLING =
+            ENTITY_TYPES.register("mogling",
+                    () -> EntityType.Builder.create(MoglingEntity::new,
+                            EntityClassification.CREATURE).size(0.5f, 0.6f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "mogling").toString()));
+    public static final RegistryObject<EntityType<GoldLayingChickenEntity>> GOLD_LAYING_CHICKEN =
+            ENTITY_TYPES.register("gold_laying_chicken",
+                    () -> EntityType.Builder.create(GoldLayingChickenEntity::new,
+                            EntityClassification.CREATURE).size(0.4f, 0.7f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "gold_laying_chicken").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

@@ -49,6 +49,11 @@ public class CorruptedZombieEntity extends ZombieEntity {
     }
 
     @Override
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
+
+    @Override
     public ResourceLocation getLootTable() {
         return this.getType().getLootTable();
     }

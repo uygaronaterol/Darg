@@ -8,7 +8,7 @@
           "type": "minecraft:item",
           "name": "darg:corrupted_eye_of_exheristaff"
         }
-      ],
+      ]},{
       "rolls": {
         "min": 2,
         "max": 3
@@ -18,7 +18,7 @@
           "type": "minecraft:item",
           "name": "darg:corrupted_essence_block"
         }
-      ],
+      ]},{
       "rolls": {
         "min": 4,
         "max": 7
