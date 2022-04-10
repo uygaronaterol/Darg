@@ -1,5 +1,6 @@
 package com.puncix.darg.common.entity.entities;
 
+
 import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.block.BlockState;
@@ -7,7 +8,13 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-
+import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
+import net.minecraft.entity.monster.ZombifiedPiglinEntity;
+import net.minecraft.entity.monster.piglin.PiglinAction;
+import net.minecraft.entity.monster.piglin.PiglinTasks;
+import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -21,8 +28,8 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.Optional;
 
-public class MoglingEntity extends CreatureEntity {
-    public MoglingEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class ZorbigEntity extends CreatureEntity {
+    public ZorbigEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
@@ -79,29 +86,26 @@ public class MoglingEntity extends CreatureEntity {
                 } else {
                     return ActionResultType.CONSUME;
                 }
-            } else if(itemstack.getItem() == ItemInit.MOGLING_FOOD.get()) {
+            } else if(itemstack.getItem() == ItemInit.BETTER_MOGLING_FOOD.get()) {
                 double rand = Math.random();
                 itemstack.shrink(1);
                 if(rand <= 0.3) {
-                    this.entityDropItem(Items.HONEYCOMB.asItem());
+                    this.entityDropItem(Items.BLAZE_POWDER.asItem());
                 }
                 else if( 0.3 < rand && rand <= 0.5){
-                    this.entityDropItem(Items.APPLE.asItem());
+                    this.entityDropItem(Items.IRON_INGOT.asItem());
                 }
                 else if( 0.5 < rand && rand <= 0.7){
-                    this.entityDropItem(Items.SLIME_BALL.asItem());
+                    this.entityDropItem(Items.BEE_SPAWN_EGG.asItem());
                 }
                 else if( 0.7 < rand && rand <= 0.9){
-                    this.entityDropItem(Items.NAUTILUS_SHELL.asItem());
+                    this.entityDropItem(Items.NETHER_WART.asItem());
                 }
-                else if( 0.9 < rand && rand <= 0.97){
-                    this.entityDropItem(ItemInit.CORRUPTED_LEATHER.get());
+                else if( 0.9 < rand && rand <= 0.99){
+                    this.entityDropItem(Items.GOLD_INGOT.asItem());
 
-                }else if( 0.97 < rand && rand <= 0.99){
-                    this.entityDropItem(ItemInit.MOGLING_SPAWN_EGG.get());
-
-                }else{
-                    this.entityDropItem(ItemInit.ZORBIG_SPAWN_EGG.get());
+                }else {
+                    this.entityDropItem(ItemInit.GOLD_LAYING_CHICKEN_SPAWN_EGG.get());
 
                 }
                 return ActionResultType.CONSUME;

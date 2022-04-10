@@ -112,6 +112,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.CORRUPTED_ZOMBIE.get(), CorruptedZombieRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MOGLING.get(), MoglingRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOLD_LAYING_CHICKEN.get(), GoldLayingChickenRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.ZORBIG.get(), ZorbigRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

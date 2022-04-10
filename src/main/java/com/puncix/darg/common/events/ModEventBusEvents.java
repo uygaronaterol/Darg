@@ -25,6 +25,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.CORRUPTED_ZOMBIE.get(), CorruptedZombieEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.GOLD_LAYING_CHICKEN.get(), GoldLayingChickenEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.MOGLING.get(), MoglingEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.ZORBIG.get(), ZorbigEntity.setCustomAttributes().create());
 
 
 

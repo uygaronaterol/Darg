@@ -81,7 +81,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(GoldLayingChickenEntity::new,
                             EntityClassification.CREATURE).size(0.4f, 0.7f)
                             .build(new ResourceLocation(Darg.MOD_ID, "gold_laying_chicken").toString()));
-
+    public static final RegistryObject<EntityType<ZorbigEntity>> ZORBIG =
+            ENTITY_TYPES.register("zorbig",
+                    () -> EntityType.Builder.create(ZorbigEntity::new,
+                            EntityClassification.CREATURE).size(0.5f, 0.6f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "zorbig").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
