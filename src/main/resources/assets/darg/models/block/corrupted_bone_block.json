@@ -6,7 +6,7 @@
     "east": "darg:blocks/corrupted_bone_block_side",
     "north": "darg:blocks/corrupted_bone_block_side",
     "south": "darg:blocks/corrupted_bone_block_side",
-    "down": "darg:blocks/corrupted_bone_block_side",
+    "down": "darg:blocks/corrupted_bone_block_up",
     "particle": "darg:blocks/corrupted_bone_block_up"
   }
 
