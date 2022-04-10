@@ -28,6 +28,7 @@ public class ModStructureGeneration {
 
             structures.add(() -> ModStructures.CORRUPTED_HOUSE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.EXHERISTAFF_STRUCTURE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.CORRUPTED_FOSSIL_SITE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 
         }
     }
