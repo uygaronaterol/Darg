@@ -90,10 +90,11 @@ public class PaleontologistMoglingEntity extends CreatureEntity {
                 else if( 0.5 < rand && rand <= 0.9){
                     this.entityDropItem(Items.TROPICAL_FISH.asItem());
                 }
-                else{
+                else if( 0.9 < rand && rand <= 0.98){
                     this.entityDropItem(Items.NAUTILUS_SHELL.asItem());
-
                 }
+                else
+                    this.entityDropItem(ItemInit.PALEONTOLOGIST_MOGLING_SPAWN_EGG.get());
                 return ActionResultType.CONSUME;
             }
             return ActionResultType.CONSUME;

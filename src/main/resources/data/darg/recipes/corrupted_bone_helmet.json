@@ -10,7 +10,7 @@
     {"item": "minecraft:air"},
     {"item": "darg:corrupted_bone"},
     {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corrupted_bone"},{"item": "darg:corrupted_bone"},
-    {"item": "darg:corrupted_bone"},
+    {"item": "minecraft:air"},
     {
       "item": "minecraft:air"
     }
