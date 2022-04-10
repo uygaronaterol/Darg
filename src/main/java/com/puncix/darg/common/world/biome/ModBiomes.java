@@ -42,7 +42,7 @@ public class ModBiomes {
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityTypeInit.CORRUPTED_CHICKEN.get(), 10, 3, 4));
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityTypeInit.CORRUPTED_HORSE.get(), 3, 3, 4));
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(EntityTypeInit.CORRUPTED_SHEEP.get(), 10, 3, 4));
-        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityTypeInit.CORRUPTED_ZOMBIE.get(), 10, 1, 3));
+        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityTypeInit.CORRUPTED_ZOMBIE.get(), 1, 1, 3));
 
         //biomegenerationsettings$builder.withStructure();
 

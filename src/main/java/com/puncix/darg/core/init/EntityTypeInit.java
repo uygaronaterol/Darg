@@ -86,6 +86,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(ZorbigEntity::new,
                             EntityClassification.CREATURE).size(0.5f, 0.6f)
                             .build(new ResourceLocation(Darg.MOD_ID, "zorbig").toString()));
+    public static final RegistryObject<EntityType<PaleontologistMoglingEntity>> PALEONTOLOGIST_MOGLING =
+            ENTITY_TYPES.register("paleontologist_mogling",
+                    () -> EntityType.Builder.create(PaleontologistMoglingEntity::new,
+                            EntityClassification.CREATURE).size(0.5f, 0.6f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "paleontologist_mogling").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

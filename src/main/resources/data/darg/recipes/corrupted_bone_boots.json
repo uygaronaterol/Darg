@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_bone"
+    },
+    {
+      "item": "darg:corrupted_bone"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corrupted_bone"},{"item": "darg:corrupted_bone"},
+    {"item": "darg:corrupted_bone"},
+    {
+      "item": "minecraft:air"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_bone_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "minecraft:air"},
+    {"item": "darg:corrupted_bone"},
+    {"item": "darg:corrupted_stick"},{"item": "darg:corrupted_stick"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_bone_shovel",
+    "count": 1
+  }
+}

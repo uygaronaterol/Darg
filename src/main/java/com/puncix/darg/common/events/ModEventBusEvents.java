@@ -26,6 +26,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.GOLD_LAYING_CHICKEN.get(), GoldLayingChickenEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.MOGLING.get(), MoglingEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.ZORBIG.get(), ZorbigEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.PALEONTOLOGIST_MOGLING.get(), PaleontologistMoglingEntity.setCustomAttributes().create());
 
 
 

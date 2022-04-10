@@ -11,7 +11,8 @@ import net.minecraft.util.LazyValue;
 
 public enum ModItemTier implements IItemTier{
 	CORRUPTED_STONE(2, 150, 4f, 6, 10, () -> Ingredient.fromItems(ItemInit.CORRUPTED_STONE.get())),
-	CORRUPTED_COBBLESTONE(2, 150, 4f, 6, 10, () -> Ingredient.fromItems(ItemInit.CORRUPTED_COBBLESTONE.get()));
+	CORRUPTED_COBBLESTONE(2, 150, 4f, 6, 10, () -> Ingredient.fromItems(ItemInit.CORRUPTED_COBBLESTONE.get())),
+	CORRUPTED_BONE(3, 750, 4f, 7, 12, () -> Ingredient.fromItems(ItemInit.CORRUPTED_BONE.get()));
 	private final int harvestLevel;
 	private final int maxUses;
 	private final float efficiency;

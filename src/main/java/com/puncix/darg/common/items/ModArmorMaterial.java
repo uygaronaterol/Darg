@@ -18,6 +18,10 @@ public enum ModArmorMaterial implements IArmorMaterial {
     CORRUPTED_LEATHER("corrupted_leather", 7, new int[] { 2, 3, 4, 2 }, 12,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,1.0f, 0.0f, () -> {
         return Ingredient.fromItems(ItemInit.CORRUPTED_LEATHER.get());
+    }),
+    CORRUPTED_BONE("corrupted_bone", 7, new int[] { 3, 6, 7, 3 }, 12,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,1.0f, 0.0f, () -> {
+        return Ingredient.fromItems(ItemInit.CORRUPTED_BONE.get());
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};

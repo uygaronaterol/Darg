@@ -6,6 +6,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.puncix.darg.Darg;
+import com.puncix.darg.common.world.structure.structures.CorruptedFossilSiteStructure;
 import com.puncix.darg.common.world.structure.structures.CorruptedHouseStructure;
 
 import com.puncix.darg.common.world.structure.structures.ExheristaffStructure;
@@ -29,6 +30,8 @@ public class ModStructures {
             STRUCTURES.register("corrupted_house", CorruptedHouseStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> EXHERISTAFF_STRUCTURE =
             STRUCTURES.register("exheristaff_structure", ExheristaffStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> CORRUPTED_FOSSIL_SITE =
+            STRUCTURES.register("corrupted_fossil_site", CorruptedFossilSiteStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -39,6 +42,9 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(EXHERISTAFF_STRUCTURE.get(),
                 new StructureSeparationSettings(500,300, 1234567890),
+                true);
+        setupMapSpacingAndLand(CORRUPTED_FOSSIL_SITE.get(),
+                new StructureSeparationSettings(200,80, 1234567890),
                 true);
     }
 

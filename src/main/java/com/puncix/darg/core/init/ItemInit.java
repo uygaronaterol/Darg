@@ -27,6 +27,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> BETTER_MOGLING_FOOD = ITEMS.register("better_mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
+	//ores
+	public static final RegistryObject<Item> CORRUPTED_FOSSIL_CHUNK = ITEMS.register("corrupted_fossil_chunk", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
+	//material
+	public static final RegistryObject<Item> CORRUPTED_BONE = ITEMS.register("corrupted_bone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
 
 	//SPAWN eggs
 	public static final RegistryObject<ModSpawnEggItem> CORRUPTED_COW_SPAWN_EGG = ITEMS.register("corrupted_cow_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.CORRUPTED_COW,0x800080,0x000000,new Item.Properties().group(ItemGroup.MISC)));
@@ -40,6 +46,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> MOGLING_SPAWN_EGG = ITEMS.register("mogling_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.MOGLING,0x800000,0x808000,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> GOLD_LAYING_CHICKEN_SPAWN_EGG = ITEMS.register("gold_laying_chicken_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOLD_LAYING_CHICKEN,0xFFD700,0xD4AF37,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> ZORBIG_SPAWN_EGG = ITEMS.register("zorbig_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.ZORBIG,0x4660A2,0xbd8b38,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> PALEONTOLOGIST_MOGLING_SPAWN_EGG = ITEMS.register("paleontologist_mogling_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.PALEONTOLOGIST_MOGLING,0x37ab5d,0xa7df1c,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -59,19 +66,28 @@ public class ItemInit {
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<BucketOfCorruptedFire> BUCKET_OF_CORRUPTED_FIRE = ITEMS.register("bucket_of_corrupted_fire", () -> new BucketOfCorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
 
-	
+
 	//Tools
 	public static final RegistryObject<Item> CORRUPTED_STONE_SWORD = ITEMS.register("corrupted_stone_sword", () -> new SwordItem(ModItemTier.CORRUPTED_STONE, -2,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_PICKAXE = ITEMS.register("corrupted_stone_pickaxe", () -> new PickaxeItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<CorruptedStoneAxe> CORRUPTED_STONE_AXE = ITEMS.register("corrupted_stone_axe", () -> new CorruptedStoneAxe(ModItemTier.CORRUPTED_STONE, 1,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_HOE = ITEMS.register("corrupted_stone_hoe", () -> new HoeItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_STONE_SHOVEL = ITEMS.register("corrupted_stone_shovel", () -> new ShovelItem(ModItemTier.CORRUPTED_STONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_SWORD = ITEMS.register("corrupted_bone_sword", () -> new SwordItem(ModItemTier.CORRUPTED_BONE, -2,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_PICKAXE = ITEMS.register("corrupted_bone_pickaxe", () -> new PickaxeItem(ModItemTier.CORRUPTED_BONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_AXE = ITEMS.register("corrupted_bone_axe", () -> new AxeItem(ModItemTier.CORRUPTED_BONE, 1,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_HOE = ITEMS.register("corrupted_bone_hoe", () -> new HoeItem(ModItemTier.CORRUPTED_BONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_SHOVEL = ITEMS.register("corrupted_bone_shovel", () -> new ShovelItem(ModItemTier.CORRUPTED_BONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 
 	//Armors
 	public static final RegistryObject<Item> CORRUPTED_LEATHER_BOOTS = ITEMS.register("corrupted_leather_boots", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
 	public static final RegistryObject<Item> CORRUPTED_LEATHER_LEGGINGS = ITEMS.register("corrupted_leather_leggings", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
 	public static final RegistryObject<Item> CORRUPTED_LEATHER_CHESTPLATE = ITEMS.register("corrupted_leather_chestplate", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
 	public static final RegistryObject<Item> CORRUPTED_LEATHER_HELMET = ITEMS.register("corrupted_leather_helmet", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_BOOTS = ITEMS.register("corrupted_bone_boots", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_LEGGINGS = ITEMS.register("corrupted_bone_leggings", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_CHESTPLATE = ITEMS.register("corrupted_bone_chestplate", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
+	public static final RegistryObject<Item> CORRUPTED_BONE_HELMET = ITEMS.register("corrupted_bone_helmet", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
 
 
 
@@ -81,6 +97,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CORRUPTED_CRAFTING_TABLE = ITEMS.register("corrupted_crafting_table", () -> new BlockItem(BlockInit.CORRUPTED_CRAFTING_TABLE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CRAFTING_HAND = ITEMS.register("crafting_hand", () -> new BlockItem(BlockInit.CRAFTING_HAND.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CONDENSED_CORRUPTED_STONE = ITEMS.register("condensed_corrupted_stone", () -> new BlockItem(BlockInit.CONDENSED_CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> CORRUPTED_FOSSIL_ORE = ITEMS.register("corrupted_fossil_ore", () -> new BlockItem(BlockInit.CORRUPTED_FOSSIL_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -116,7 +133,6 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CORRUPTED_OAK_SLAB = ITEMS.register("corrupted_oak_slab", () -> new BlockItem(BlockInit.CORRUPTED_OAK_SLAB.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_OAK_DOOR = ITEMS.register("corrupted_oak_door", () -> new BlockItem(BlockInit.CORRUPTED_OAK_DOOR.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_TORCH = ITEMS.register("corrupted_torch", () -> new WallOrFloorItem(BlockInit.CORRUPTED_TORCH.get(), BlockInit.CORRUPTED_WALL_TORCH.get(), (new Item.Properties()).group(ItemGroup.DECORATIONS)));
-
 	public static final RegistryObject<BlockItem> CORRUPTED_OAK_TRAPDOOR = ITEMS.register("corrupted_oak_trapdoor", () -> new BlockItem(BlockInit.CORRUPTED_OAK_TRAPDOOR.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 }

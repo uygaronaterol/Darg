@@ -1,23 +1,24 @@
 package com.puncix.darg.common.world.gen;
 
+import com.puncix.darg.core.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
-	;
-	
-	
+	CORRUPTED_FOSSIL(Lazy.of(BlockInit.CORRUPTED_FOSSIL_ORE),10, 8,60);
+
+
+
 	private final Lazy<Block> block;
 	private final int maxVeinSize;
 	private final int minHeight;
 	private final int maxHeight;
-	
-	OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight){
+
+	OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight) {
 		this.block = block;
 		this.maxVeinSize = maxVeinSize;
 		this.minHeight = minHeight;
 		this.maxHeight = maxHeight;
-		
 	}
 
 	public Lazy<Block> getBlock() {
@@ -35,14 +36,14 @@ public enum OreType {
 	public int getMaxHeight() {
 		return maxHeight;
 	}
+
 	public static OreType get(Block block) {
-		for(OreType ore : values()) {
+		for (OreType ore : values()) {
 			if(block == ore.block) {
 				return ore;
 			}
 		}
 		return null;
-	
 	}
 	
 }

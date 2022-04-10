@@ -166,6 +166,9 @@ public class BlockInit {
 			.harvestLevel(2).sound(SoundType.BONE).setLightLevel((p_235470_0_) -> {
 			      return 1;
 			   }).setRequiresTool().harvestTool(ToolType.PICKAXE)));
-
+	public static final RegistryObject<Block> CORRUPTED_FOSSIL_ORE = BLOCKS.register("corrupted_fossil_ore", () -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(5f,5f)
+			.harvestLevel(2).sound(SoundType.BONE).setLightLevel((p_235470_0_) -> {
+				return 0;
+			}).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 
 }

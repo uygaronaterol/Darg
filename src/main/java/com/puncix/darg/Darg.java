@@ -3,6 +3,7 @@ package com.puncix.darg;
 
 import com.google.common.collect.ImmutableMap;
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.common.entity.entities.PaleontologistMoglingEntity;
 import com.puncix.darg.common.entity.render.*;
 import com.puncix.darg.common.screens.CraftingHandScreen;
 import com.puncix.darg.common.world.biome.ModBiomes;
@@ -60,7 +61,6 @@ public class Darg
         ModSoundEvents.register(bus);
         EntityTypeInit.register(bus);
         ModBiomes.register(bus);
-
         // Register the enqueueIMC method for modloading
         //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
@@ -113,6 +113,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MOGLING.get(), MoglingRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOLD_LAYING_CHICKEN.get(), GoldLayingChickenRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.ZORBIG.get(), ZorbigRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.PALEONTOLOGIST_MOGLING.get(), PaleontologistMoglingRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

@@ -3,6 +3,7 @@ package com.puncix.darg.common.world;
 import com.mojang.serialization.Codec;
 import com.puncix.darg.Darg;
 import com.puncix.darg.common.world.gen.ModEntityGeneration;
+import com.puncix.darg.common.world.gen.ModOreGeneration;
 import com.puncix.darg.common.world.gen.ModStructureGeneration;
 import com.puncix.darg.common.world.gen.ModTreeGeneration;
 
@@ -34,6 +35,7 @@ public class ModWorldEvents {
 		ModStructureGeneration.generateStructures(event);
 		ModTreeGeneration.generateTrees(event);
 		ModEntityGeneration.onEntitySpawn(event);
+		ModOreGeneration.generateOres(event);
 	}
 
 
