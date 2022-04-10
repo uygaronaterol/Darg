@@ -65,5 +65,10 @@
 	"item.darg.mogling_food": "Mogling Food",
 	"item.darg.better_mogling_food": "Better Mogling Food",
 	"item.darg.zorbig_spawn_egg": "Zorbig Spawn Egg",
+	"item.darg.corrupted_leather": "Corrupted Leather",
+	"item.darg.corrupted_leather_boots": "Corrupted Leather Boots",
+	"item.darg.corrupted_leather_helmet": "Corrupted Leather Helmet",
+	"item.darg.corrupted_leather_leggings": "Corrupted Leather Leggings",
+	"item.darg.corrupted_leather_chestplate": "Corrupted Leather Chestplate",
 	"item.darg.gold_laying_chicken_spawn_egg": "Gold Laying Chicken Spawn Egg"
 }

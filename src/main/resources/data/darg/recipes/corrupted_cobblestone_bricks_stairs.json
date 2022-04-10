@@ -2,7 +2,7 @@
   "type": "darg:corruption",
   "ingredients": [
     {
-      "item": "darg:corrupted_cobblestone_bricks_bricks"
+      "item": "darg:corrupted_cobblestone_bricks"
     },
     {
       "item": "darg:corrupted_cobblestone_bricks"
