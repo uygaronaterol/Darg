@@ -29,6 +29,9 @@ public class BlockInit {
 			.harvestLevel(4).sound(SoundType.ANCIENT_DEBRIS).setRequiresTool().harvestTool(ToolType.PICKAXE).setLightLevel((p_235470_0_) -> {
 				return 10;
 			})));
+	//bone
+	public static final RegistryObject<Block> CORRUPTED_BONE_BLOCK = BLOCKS.register("corrupted_bone_block", () -> new Block( AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3f,3f)
+			.harvestLevel(4).sound(SoundType.ANCIENT_DEBRIS).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 	//Corrupted grass & dirt
 	public static final RegistryObject<CorruptedGrass> CORRUPTED_GRASS = BLOCKS.register("corrupted_grass", () -> new CorruptedGrass(AbstractBlock.Properties.create(Material.ORGANIC).hardnessAndResistance(1f,1f)
 			.harvestLevel(1).tickRandomly().sound(SoundType.HONEY).setLightLevel((p_235470_0_) -> {

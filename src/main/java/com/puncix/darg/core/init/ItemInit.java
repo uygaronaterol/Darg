@@ -98,6 +98,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CRAFTING_HAND = ITEMS.register("crafting_hand", () -> new BlockItem(BlockInit.CRAFTING_HAND.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CONDENSED_CORRUPTED_STONE = ITEMS.register("condensed_corrupted_stone", () -> new BlockItem(BlockInit.CONDENSED_CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_FOSSIL_ORE = ITEMS.register("corrupted_fossil_ore", () -> new BlockItem(BlockInit.CORRUPTED_FOSSIL_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> CORRUPTED_BONE_BLOCK = ITEMS.register("corrupted_bone_block", () -> new BlockItem(BlockInit.CORRUPTED_BONE_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

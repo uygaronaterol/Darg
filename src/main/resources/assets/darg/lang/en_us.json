@@ -83,5 +83,6 @@
 	"item.darg.corrupted_bone_boots": "Corrupted Bone Boots",
 	"block.darg.corrupted_fossil_ore": "Corrupted Fossil Ore",
 	"item.darg.corrupted_fossil_chunk": "Corrupted Fossil Chunk",
-	"item.darg.paleontologist_mogling_spawn_egg": "Paleontologist Mogling Spawn Egg"
+	"item.darg.paleontologist_mogling_spawn_egg": "Paleontologist Mogling Spawn Egg",
+	"item.darg.corrupted_bone_block": "Corrupted Bone Block"
 }

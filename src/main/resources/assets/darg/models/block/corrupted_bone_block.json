@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "darg:blocks/corrupted_bone_block_up",
+    "west": "darg:blocks/corrupted_bone_block_side",
+    "east": "darg:blocks/corrupted_bone_block_side",
+    "north": "darg:blocks/corrupted_bone_block_side",
+    "south": "darg:blocks/corrupted_bone_block_side",
+    "down": "darg:blocks/corrupted_bone_block_side",
+    "particle": "darg:blocks/corrupted_bone_block_up"
+  }
+
+}

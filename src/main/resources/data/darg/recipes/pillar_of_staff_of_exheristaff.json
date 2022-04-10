@@ -10,7 +10,7 @@
       "item": "minecraft:red_dye"
     },
     {"item": "minecraft:red_dye"},
-    {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:black_dye"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_bone_block"},
     {"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:black_dye"},{"item": "minecraft:red_dye"},{"item": "minecraft:iron_block"},
     {
       "item": "minecraft:gold_block"
