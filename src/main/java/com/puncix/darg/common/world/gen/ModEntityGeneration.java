@@ -2,7 +2,6 @@ package com.puncix.darg.common.world.gen;
 
 import com.puncix.darg.common.world.biome.ModBiomes;
 import com.puncix.darg.core.init.EntityTypeInit;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.entity.EntityType;
