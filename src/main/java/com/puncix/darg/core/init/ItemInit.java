@@ -23,6 +23,8 @@ public class ItemInit {
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF_OF_NIGHT_VISION = ITEMS.register("corrupted_basic_staff_of_night_vision", () -> new CorruptedBasicStaffOfNightVision(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(30)));
+	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_NIGHT_VISION = ITEMS.register("corrupted_staff_of_night_vision", () -> new CorruptedStaffOfNightVision(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
+	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_NIGHT_VISION = ITEMS.register("corrupted_advanced_staff_of_night_vision", () -> new CorruptedAdvancedStaffOfNightVision(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 	//mogling trade
 	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -30,6 +32,7 @@ public class ItemInit {
 
 	//ores
 	public static final RegistryObject<Item> CORRUPTED_FOSSIL_CHUNK = ITEMS.register("corrupted_fossil_chunk", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTION = ITEMS.register("corruption", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//material
 	public static final RegistryObject<Item> CORRUPTED_BONE = ITEMS.register("corrupted_bone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -103,6 +106,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CONDENSED_CORRUPTED_STONE = ITEMS.register("condensed_corrupted_stone", () -> new BlockItem(BlockInit.CONDENSED_CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_FOSSIL_ORE = ITEMS.register("corrupted_fossil_ore", () -> new BlockItem(BlockInit.CORRUPTED_FOSSIL_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_BONE_BLOCK = ITEMS.register("corrupted_bone_block", () -> new BlockItem(BlockInit.CORRUPTED_BONE_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> CORRUPTION_ORE = ITEMS.register("corruption_ore", () -> new BlockItem(BlockInit.CORRUPTION_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

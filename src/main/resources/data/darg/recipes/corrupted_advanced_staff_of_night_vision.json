@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_bone_block"
+    },
+
+    {"item": "minecraft:green_dye"},
+    {
+      "item": "darg:corrupted_ball"
+    },
+    {"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_staff_of_night_vision"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:corrupted_bone_block"},{"item": "minecraft:white_dye"},{"item": "minecraft:black_dye"},{"item": "minecraft:blaze_rod"},
+    {
+      "item": "darg:corruption"
+    },{"item": "minecraft:phantom_membrane"},{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:corrupted_advanced_staff_of_night_vision",
+    "count": 1
+  }
+}

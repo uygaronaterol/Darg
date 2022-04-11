@@ -5,7 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
-	CORRUPTED_FOSSIL(Lazy.of(BlockInit.CORRUPTED_FOSSIL_ORE),10, 8,60);
+	CORRUPTED_FOSSIL(Lazy.of(BlockInit.CORRUPTED_FOSSIL_ORE),10, 8,60),
+	CORRUPTION(Lazy.of(BlockInit.CORRUPTION_ORE),1, 0,10);
 
 
 

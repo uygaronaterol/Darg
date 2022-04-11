@@ -82,7 +82,7 @@ public class CorruptedFossilSiteStructure extends Structure<NoFeatureConfig> {
                     blockpos, this.components, this.rand,false,true);
 
             this.components.forEach(piece -> piece.offset(0, 1, 0));
-            this.components.forEach(piece -> piece.getBoundingBox().minY -= 1);
+            this.components.forEach(piece -> piece.getBoundingBox().minY -= 0);
 
             this.recalculateStructureSize();
 

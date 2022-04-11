@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+
+    {"item": "minecraft:green_dye"},
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_basic_staff_of_night_vision"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "minecraft:white_dye"},{"item": "minecraft:black_dye"},{"item": "minecraft:green_dye"},{"item": "minecraft:carrot"},
+    {
+      "item": "minecraft:carrot"
+    },{"item": "minecraft:phantom_membrane"},{"item": "minecraft:diamond"},{"item": "darg:essence"}
+  ],
+  "output": {
+    "item": "darg:corrupted_staff_of_night_vision",
+    "count": 1
+  }
+}
