@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(ModBiomes.CORRUPTED_PLAINS.get(), BiomeManager.BiomeType.WARM, 20);
+        addBiome(ModBiomes.CORRUPTED_PLAINS.get(), BiomeManager.BiomeType.WARM, 5);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
