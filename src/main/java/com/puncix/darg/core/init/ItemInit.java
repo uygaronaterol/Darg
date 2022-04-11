@@ -22,6 +22,7 @@ public class ItemInit {
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF_OF_NIGHT_VISION = ITEMS.register("corrupted_basic_staff_of_night_vision", () -> new CorruptedBasicStaffOfNightVision(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(30)));
 
 	//mogling trade
 	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -32,6 +33,8 @@ public class ItemInit {
 
 	//material
 	public static final RegistryObject<Item> CORRUPTED_BONE = ITEMS.register("corrupted_bone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_BALL = ITEMS.register("corrupted_ball", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF = ITEMS.register("corrupted_basic_staff", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//SPAWN eggs
@@ -61,6 +64,7 @@ public class ItemInit {
 
 	//mob drops
 	public static final RegistryObject<Item> CORRUPTED_LEATHER = ITEMS.register("corrupted_leather", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE = ITEMS.register("corrupted_eye", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));

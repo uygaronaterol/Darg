@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {"item": "minecraft:leather"},
+    {"item": "darg:corrupted_eye"},
+    {"item": "darg:corrupted_basic_staff"},{"item": "darg:corrupted_stone"},{"item": "minecraft:yellow_dye"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_basic_staff_of_night_vision",
+    "count": 1
+  }
+}
