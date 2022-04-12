@@ -29,8 +29,4 @@ public class CorruptedStaffOfNightVision extends Item {
         return ActionResult.resultSuccess(stack);
     }
 
-    @Override
-    public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
-        return null;
-    }
 }

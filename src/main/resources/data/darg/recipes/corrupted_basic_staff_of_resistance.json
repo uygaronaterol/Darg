@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {"item": "minecraft:air"},
+    {"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_basic_staff"},{"item": "darg:corrupted_stone"},{"item": "minecraft:iron_block"},{"item": "minecraft:red_dye"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_basic_staff_of_resistance",
+    "count": 1
+  }
+}

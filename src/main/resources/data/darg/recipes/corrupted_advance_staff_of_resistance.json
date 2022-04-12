@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_bone_block"
+    },
+
+    {"item": "minecraft:red_dye"},
+    {
+      "item": "darg:corrupted_ball"
+    },
+    {"item": "darg:corruption"},
+    {"item": "darg:corrupted_staff_of_resistance"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:corrupted_bone_block"},{"item": "minecraft:red_dye"},{"item": "darg:corrupted_ball"},{"item": "minecraft:netherite_ingot"},
+    {
+      "item": "minecraft:diamond_block"
+    },{"item": "minecraft:diamond_block"},{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:corrupted_advanced_staff_of_resistance",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+
+    {"item": "minecraft:red_dye"},
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_basic_staff_of_resistance"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:corrupted_bone_block"},{"item": "minecraft:red_dye"},{"item": "minecraft:purple_dye"},{"item": "minecraft:iron_block"},
+    {
+      "item": "minecraft:diamond_block"
+    },{"item": "darg:corrupted_bone_block"},{"item": "minecraft:bone_block"},{"item": "darg:essence"}
+  ],
+  "output": {
+    "item": "darg:corrupted_staff_of_resistance",
+    "count": 1
+  }
+}
