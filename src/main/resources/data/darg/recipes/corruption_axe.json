@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+
+    {"item": "minecraft:air"},
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:corrupted_bone_block"},{"item": "darg:corrupted_bone_block"},
+    {"item": "minecraft:red_dye"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corruption"},
+    {
+      "item": "darg:corruption"
+    },{"item": "darg:corruption"},{"item": "minecraft:air"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:corruption_axe",
+    "count": 1
+  }
+}
