@@ -101,6 +101,7 @@
 	"item.darg.corruption_shovel": "Corruption Shovel",
 	"item.darg.corruption_axe": "Corruption Axe",
 	"item.darg.corruption_pickaxe": "Corruption Pickaxe",
-	"item.darg.corrupted_wool": "Corrupted Wool"
+	"block.darg.corrupted_wool": "Corrupted Wool",
+	"item.darg.corrupted_eye": "Corrupted Eye"
 
 }
