@@ -88,6 +88,11 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_BONE_AXE = ITEMS.register("corrupted_bone_axe", () -> new AxeItem(ModItemTier.CORRUPTED_BONE, 1,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_BONE_HOE = ITEMS.register("corrupted_bone_hoe", () -> new HoeItem(ModItemTier.CORRUPTED_BONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTED_BONE_SHOVEL = ITEMS.register("corrupted_bone_shovel", () -> new ShovelItem(ModItemTier.CORRUPTED_BONE, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTION_SWORD = ITEMS.register("corruption_sword", () -> new SwordItem(ModItemTier.CORRUPTION, -1,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTION_PICKAXE = ITEMS.register("corruption_pickaxe", () -> new PickaxeItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTION_AXE = ITEMS.register("corruption_axe", () -> new AxeItem(ModItemTier.CORRUPTION, 2,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Item> CORRUPTION_SHOVEL = ITEMS.register("corruption_shovel", () -> new ShovelItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+
 
 	//Armors
 	public static final RegistryObject<Item> CORRUPTED_LEATHER_BOOTS = ITEMS.register("corrupted_leather_boots", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_LEATHER, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
