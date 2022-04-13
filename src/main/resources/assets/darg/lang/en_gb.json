@@ -82,5 +82,22 @@
 	"item.darg.corrupted_bone_boots": "Corrupted Bone Boots",
 	"block.darg.corrupted_fossil_ore": "Corrupted Fossil Ore",
 	"item.darg.corrupted_fossil_chunk": "Corrupted Fossil Chunk",
-	"item.darg.paleontologist_mogling_spawn_egg": "Paleontologist Mogling Spawn Egg"
+	"item.darg.paleontologist_mogling_spawn_egg": "Paleontologist Mogling Spawn Egg",
+	"block.darg.corrupted_bone_block": "Corrupted Bone Block",
+	"block.darg.corruption_ore": "Corruption Ore",
+	"item.darg.corrupted_basic_staff": "Corrupted Basic Staff",
+	"item.darg.corrupted_basic_staff_of_night_vision": "Corrupted Basic Staff Of Night Vision",
+	"item.darg.corrupted_staff_of_night_vision": "Corrupted Staff Of Night Vision",
+	"item.darg.corrupted_advanced_staff_of_night_vision": "Corrupted Advanced Staff Of Night Vision",
+	"item.darg.corruption": "Corruption",
+	"item.darg.corrupted_ball": "Corrupted Ball",
+	"item.darg.corrupted_basic_staff_of_resistance": "Corrupted Basic Staff Of Resistance",
+	"item.darg.corrupted_staff_of_resistance": "Corrupted Staff Of Resistance",
+	"item.darg.corrupted_advanced_staff_of_speed": "Corrupted Advanced Staff Of Speed",
+	"item.darg.corrupted_staff_of_speed": "Corrupted Staff Of Resistance",
+	"item.darg.corrupted_advanced_staff_of_speed": "Corrupted Advanced Staff Of Speed",
+	"item.darg.corruption_sword": "Corruption Sword",
+	"item.darg.corruption_shovel": "Corruption Shovel",
+	"item.darg.corruption_axe": "Corruption Axe",
+	"item.darg.corruption_pickaxe": "Corruption Pickaxe"
 }

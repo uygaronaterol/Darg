@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    },
+
+    {"item": "minecraft:rabbit_foot"},
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "darg:corruption"},
+    {"item": "darg:corrupted_staff_of_speed"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "minecraft:gold_block"},{"item": "minecraft:rabbit_foot"},{"item": "minecraft:air"},{"item": "darg:condensed_corrupted_stone"},
+    {
+      "item": "darg:condensed_corrupted_stone"
+    },{"item": "darg:condensed_corrupted_stone"},{"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:corrupted_advanced_staff_of_speed",
+    "count": 1
+  }
+}

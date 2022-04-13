@@ -28,6 +28,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF_OF_RESISTANCE = ITEMS.register("corrupted_basic_staff_of_resistance", () -> new CorruptedBasicStaffOfResistance(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(30)));
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_RESISTANCE = ITEMS.register("corrupted_staff_of_resistance", () -> new CorruptedStaffOfResistance(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_RESISTANCE = ITEMS.register("corrupted_advanced_staff_of_resistance", () -> new CorruptedAdvancedStaffOfResistance(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF_OF_SPEED = ITEMS.register("corrupted_basic_staff_of_speed", () -> new CorruptedBasicStaffOfSpeed(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(30)));
+	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_SPEED = ITEMS.register("corrupted_staff_of_speed", () -> new CorruptedStaffOfSpeed(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
+	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_SPEED = ITEMS.register("corrupted_advanced_staff_of_speed", () -> new CorruptedAdvancedStaffOfSpeed(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 	//mogling trade
 	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

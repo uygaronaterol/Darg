@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:rabbit_hide"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {"item": "minecraft:yellow_dye"},
+    {"item": "darg:corrupted_ball"},
+    {"item": "darg:corrupted_basic_staff"},{"item": "darg:corrupted_stone"},{"item": "minecraft:rabbit_hide"},{"item": "minecraft:red_dye"},{"item": "minecraft:yellow_dye"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_basic_staff_of_speed",
+    "count": 1
+  }
+}
