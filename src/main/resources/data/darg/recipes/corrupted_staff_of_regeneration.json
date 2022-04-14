@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:ghast_tear"
+    },
+
+    {"item": "minecraft:red_dye"},
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "darg:corrupted_ball"},
+    {"item": "darg:corrupted_basic_staff_of_regeneration"},{"item": "darg:corrupted_bone_block"},
+    {"item": "minecraft:ghast_tear"},{"item": "minecraft:red_dye"},{"item": "minecraft:air"},{"item": "minecraft:porkchop"},
+    {
+      "item": "minecraft:golden_apple"
+    },{"item": "minecraft:golden_apple"},{"item": "minecraft:beef"},{"item": "darg:essence"}
+  ],
+  "output": {
+    "item": "darg:corrupted_staff_of_regeneration",
+    "count": 1
+  }
+}

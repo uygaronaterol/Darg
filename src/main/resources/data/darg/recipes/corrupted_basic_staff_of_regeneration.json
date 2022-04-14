@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {"item": "darg:corrupted_leather"},
+    {"item": "darg:corrupted_ball"},
+    {"item": "darg:corrupted_basic_staff"},{"item": "darg:corrupted_stone"},{"item": "minecraft:red_dye"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:corrupted_basic_staff_of_regeneration",
+    "count": 1
+  }
+}
