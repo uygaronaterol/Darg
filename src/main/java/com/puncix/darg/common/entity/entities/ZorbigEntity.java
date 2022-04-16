@@ -4,6 +4,7 @@ package com.puncix.darg.common.entity.entities;
 import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.renderer.entity.model.BatModel;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;

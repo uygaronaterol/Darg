@@ -91,6 +91,13 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(PaleontologistMoglingEntity::new,
                             EntityClassification.CREATURE).size(0.5f, 0.6f)
                             .build(new ResourceLocation(Darg.MOD_ID, "paleontologist_mogling").toString()));
+    public static final RegistryObject<EntityType<MedusaEntity>> MEDUSA =
+            ENTITY_TYPES.register("medusa",
+                    () -> EntityType.Builder.create(MedusaEntity::new,
+                            EntityClassification.CREATURE).size(2.5f, 3f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "medusa").toString()));
+
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

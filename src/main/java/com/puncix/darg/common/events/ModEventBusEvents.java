@@ -2,6 +2,7 @@ package com.puncix.darg.common.events;
 
 import com.puncix.darg.Darg;
 import com.puncix.darg.common.entity.entities.*;
+import com.puncix.darg.common.entity.render.MedusaRenderer;
 import com.puncix.darg.common.items.ModSpawnEggItem;
 import com.puncix.darg.core.init.EntityTypeInit;
 import net.minecraft.entity.EntityType;
@@ -27,6 +28,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.MOGLING.get(), MoglingEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.ZORBIG.get(), ZorbigEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.PALEONTOLOGIST_MOGLING.get(), PaleontologistMoglingEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.MEDUSA.get(), MedusaEntity.setCustomAttributes().create());
 
 
 

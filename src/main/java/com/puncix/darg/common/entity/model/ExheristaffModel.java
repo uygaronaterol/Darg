@@ -352,15 +352,15 @@ public class ExheristaffModel <T extends ExheristaffEntity> extends EntityModel<
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.leftUpperArm.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLowerArm.rotateAngleX = MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount;
+        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.leftLowerArm.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
         this.rightUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 1.4F * limbSwingAmount;
-        this.rightLowerArm.rotateAngleX = MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount;
+        this.rightLowerArm.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
         this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLowerLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.40F) * 1.4F * limbSwingAmount;
+        this.leftLowerLeg.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
         this.rightUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.rightLowerLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount;
-        this.robe.rotateAngleX = MathHelper.cos(limbSwing * 0.10F) * 1.1F * limbSwingAmount;
+        this.rightLowerLeg.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
+        this.robe.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.10F) * 1.1F * limbSwingAmount);
     }
 
 
