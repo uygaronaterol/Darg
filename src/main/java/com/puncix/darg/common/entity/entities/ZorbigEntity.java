@@ -102,11 +102,14 @@ public class ZorbigEntity extends CreatureEntity {
                 else if( 0.7 < rand && rand <= 0.9){
                     this.entityDropItem(Items.NETHER_WART.asItem());
                 }
-                else if( 0.9 < rand && rand <= 0.99){
+                else if( 0.9 < rand && rand <= 0.98){
                     this.entityDropItem(Items.GOLD_INGOT.asItem());
 
-                }else {
+                }else if( 0.98 < rand && rand <= 0.99){
                     this.entityDropItem(ItemInit.GOLD_LAYING_CHICKEN_SPAWN_EGG.get());
+
+                }else{
+                    this.entityDropItem(ItemInit.DARBIG_SPAWN_EGG.get());
 
                 }
                 return ActionResultType.CONSUME;

@@ -39,6 +39,8 @@ public class ItemInit {
 	//mogling trade
 	public static final RegistryObject<Item> MOGLING_FOOD = ITEMS.register("mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> BETTER_MOGLING_FOOD = ITEMS.register("better_mogling_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<BlockItem> NUTRITIOUS_MOGLING_FOOD = ITEMS.register("nutritious_mogling_food", () -> new BlockItem(BlockInit.NUTRITIOUS_MOGLING_FOOD.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+
 
 	//ores
 	public static final RegistryObject<Item> CORRUPTED_FOSSIL_CHUNK = ITEMS.register("corrupted_fossil_chunk", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -64,6 +66,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> ZORBIG_SPAWN_EGG = ITEMS.register("zorbig_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.ZORBIG,0x4660A2,0xbd8b38,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> PALEONTOLOGIST_MOGLING_SPAWN_EGG = ITEMS.register("paleontologist_mogling_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.PALEONTOLOGIST_MOGLING,0x37ab5d,0xa7df1c,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> MEDUSA_SPAWN_EGG = ITEMS.register("medusa_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.MEDUSA,0x800000,0x808000,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> DARBIG_SPAWN_EGG = ITEMS.register("darbig_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.DARBIG,0x4660A2,0xbd8b38,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

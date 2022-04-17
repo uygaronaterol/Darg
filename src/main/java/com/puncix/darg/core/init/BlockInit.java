@@ -23,7 +23,12 @@ public class BlockInit {
 	
 	//Deferred register
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Darg.MOD_ID);
-	
+
+	//mogling food
+	public static final RegistryObject<Block> NUTRITIOUS_MOGLING_FOOD = BLOCKS.register("nutritious_mogling_food", () -> new Block( AbstractBlock.Properties.create(Material.ORGANIC).hardnessAndResistance(2f,2f)
+			.harvestLevel(0).sound(SoundType.SAND).setRequiresTool().harvestTool(ToolType.HOE)));
+
+
 	//Essence blocks
 	public static final RegistryObject<Block> CORRUPTED_ESSENCE_BLOCK = BLOCKS.register("corrupted_essence_block", () -> new Block( AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(6f,6f)
 			.harvestLevel(4).sound(SoundType.ANCIENT_DEBRIS).setRequiresTool().harvestTool(ToolType.PICKAXE).setLightLevel((p_235470_0_) -> {

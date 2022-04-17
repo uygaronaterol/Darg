@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:hay_block"
+    },
+    {
+      "item": "minecraft:hay_block"
+    },
+    {"item": "minecraft:hay_block"},
+    {"item": "minecraft:hay_block"},
+    {"item": "minecraft:hay_block"},{"item": "minecraft:hay_block"},{"item": "minecraft:hay_block"},{"item": "minecraft:hay_block"},
+    {"item": "minecraft:hay_block"},
+    {
+      "item": "darg:corrupted_essence_block"
+    }
+  ],
+  "output": {
+    "item": "darg:nutritious_mogling_food",
+    "count": 1
+  }
+}

@@ -29,6 +29,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.ZORBIG.get(), ZorbigEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.PALEONTOLOGIST_MOGLING.get(), PaleontologistMoglingEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.MEDUSA.get(), MedusaEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.DARBIG.get(), DarbigEntity.setCustomAttributes().create());
 
 
 
