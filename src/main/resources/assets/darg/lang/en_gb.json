@@ -108,6 +108,8 @@
 	"item.darg.corrupted_advanced_staff_of_regeneration": "Corrupted Advanced Staff Of Regeneration",
 	"item.darg.darbig_spawn_egg": "Darbig Spawn Egg",
 	"item.darg.medusa_spawn_egg": "Medusa Spawn Egg",
-	"block.darg.nutritious_mogling_food": "Nutritious Mogling Food"
+	"block.darg.nutritious_mogling_food": "Nutritious Mogling Food",
+	"item.darg.nutritious_mogling_food": "Medusa Snake Spawn Egg",
+	"item.darg.corrupted_eye_of_medusa": "Corrupted Eye Of Medusa"
 
 }
