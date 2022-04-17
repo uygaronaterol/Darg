@@ -109,7 +109,7 @@ public class MedusaEntity extends CreatureEntity{
                 this.destroyBlocksInAABB(this.getBoundingBox());
 
             }
-            return SoundEvents.WEATHER_RAIN_ABOVE;
+            return SoundEvents.BLOCK_CHAIN_HIT;
 
         }
     }
