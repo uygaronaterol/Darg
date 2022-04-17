@@ -101,6 +101,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(DarbigEntity::new,
                             EntityClassification.CREATURE).size(0.5f, 0.6f)
                             .build(new ResourceLocation(Darg.MOD_ID, "darbig").toString()));
+    public static final RegistryObject<EntityType<MedusaSnakeEntity>> MEDUSA_SNAKE =
+            ENTITY_TYPES.register("medusa_snake",
+                    () -> EntityType.Builder.create(MedusaSnakeEntity::new,
+                            EntityClassification.CREATURE).size(0.3f, 0.2f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "medusa_snake").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

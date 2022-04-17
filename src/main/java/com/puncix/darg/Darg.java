@@ -116,6 +116,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.PALEONTOLOGIST_MOGLING.get(), PaleontologistMoglingRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MEDUSA.get(), MedusaRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DARBIG.get(), DarbigRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MEDUSA_SNAKE.get(), MedusaSnakeRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

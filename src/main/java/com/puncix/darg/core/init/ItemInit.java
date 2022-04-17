@@ -67,6 +67,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> PALEONTOLOGIST_MOGLING_SPAWN_EGG = ITEMS.register("paleontologist_mogling_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.PALEONTOLOGIST_MOGLING,0x37ab5d,0xa7df1c,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> MEDUSA_SPAWN_EGG = ITEMS.register("medusa_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.MEDUSA,0x087608,0x075a07,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> DARBIG_SPAWN_EGG = ITEMS.register("darbig_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.DARBIG,0x000000,0xFFFFFF,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> MEDUSA_SNAKE_SPAWN_EGG = ITEMS.register("medusa_snake_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.MEDUSA_SNAKE,0x087608,0x0c4a0c,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
