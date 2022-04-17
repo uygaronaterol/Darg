@@ -18,6 +18,7 @@ public class ItemInit {
 
 	//boss items
 	public static final RegistryObject<CorruptedEyeOfExheristaff> CORRUPTED_EYE_OF_EXHERISTAFF = ITEMS.register("corrupted_eye_of_exheristaff", () -> new CorruptedEyeOfExheristaff(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<CorruptedEyeOfMedusa> CORRUPTED_EYE_OF_MEDUSA = ITEMS.register("corrupted_eye_of_medusa", () -> new CorruptedEyeOfMedusa(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//complex items

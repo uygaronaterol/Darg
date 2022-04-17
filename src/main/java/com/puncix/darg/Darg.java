@@ -129,5 +129,7 @@ public class Darg
                 (rendererManager) -> new SpriteRenderer<>(rendererManager, renderer));
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF_PROJECTILE_ENTITY.get(),
                 (rendererManager) -> new SpriteRenderer<>(rendererManager, renderer));
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MEDUSA_PROJECTILE_ENTITY.get(),
+                (rendererManager) -> new SpriteRenderer<>(rendererManager, renderer));
     }
 }

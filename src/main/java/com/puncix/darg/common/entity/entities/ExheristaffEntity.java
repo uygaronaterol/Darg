@@ -67,7 +67,7 @@ public class ExheristaffEntity extends CreatureEntity{
     @Override
     protected int getExperiencePoints(PlayerEntity player)
     {
-        return 3 ;
+        return 50 ;
     }
 
 

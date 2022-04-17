@@ -29,6 +29,14 @@ public class EntityTypeInit {
                             .build(new ResourceLocation(Darg.MOD_ID, "exheristaff_projectile_entity").toString()));
 
 
+
+    public static final RegistryObject<EntityType<MedusaProjectileEntity>> MEDUSA_PROJECTILE_ENTITY =
+            ENTITY_TYPES.register("medusa_projectile_entity",
+                    () -> EntityType.Builder.<MedusaProjectileEntity>create(MedusaProjectileEntity::new,
+                            EntityClassification.MISC).size(0.4f, 0.4f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "medusa_projectile_entity").toString()));
+
+
     //mobs
     public static final RegistryObject<EntityType<CorruptedCowEntity>> CORRUPTED_COW =
             ENTITY_TYPES.register("corrupted_cow",
