@@ -453,9 +453,9 @@ public class MedusaModel<T extends MedusaEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.5F) * 1.4F * limbSwingAmount;
+        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.8F) * 1.4F * limbSwingAmount;
         this.leftLowerArm.rotateAngleX =  -Math.abs(MathHelper.cos(limbSwing * 0.5F) * 1.4F * limbSwingAmount);
-        this.rightUpperArm.rotateAngleX =  MathHelper.cos(limbSwing * 0.5F) * 1.4F * limbSwingAmount;
+        this.rightUpperArm.rotateAngleX =  MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount;
         this.rightHand.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
         this.leftHand.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
 

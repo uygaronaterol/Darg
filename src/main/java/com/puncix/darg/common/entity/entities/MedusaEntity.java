@@ -54,7 +54,7 @@ public class MedusaEntity extends CreatureEntity{
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new SwimGoal(this));
-        this.goalSelector.addGoal( 1, new MeleeAttackGoal(this, 0.6, true));
+        this.goalSelector.addGoal( 1, new MeleeAttackGoal(this, 0.8, true));
 
         this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 50F));
         //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
@@ -119,8 +119,14 @@ public class MedusaEntity extends CreatureEntity{
     private void summonSnakes(){
         if(this.getAttackTarget() != null){
             MedusaSnakeEntity medusaSnakeEntity = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
-            medusaSnakeEntity.setPosition(this.getPosX(),this.getPosY(),this.getPosZ());
+            medusaSnakeEntity.setPosition(this.getPosX()+1,this.getPosY()+1,this.getPosZ()+1);
             this.world.addEntity(medusaSnakeEntity);
+            MedusaSnakeEntity medusaSnakeEntity1 = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
+            medusaSnakeEntity1.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()-1);
+            this.world.addEntity(medusaSnakeEntity1);
+            MedusaSnakeEntity medusaSnakeEntity2 = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
+            medusaSnakeEntity2.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()+1);
+            this.world.addEntity(medusaSnakeEntity2);
         }
     }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
