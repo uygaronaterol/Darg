@@ -186,8 +186,7 @@ public class ExheristaffEntity extends CreatureEntity{
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50,3));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 50));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 50));
             }
             return true;
         }

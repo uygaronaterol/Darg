@@ -1,6 +1,7 @@
 package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.core.init.EntityTypeInit;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,7 +10,9 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.item.EnderPearlEntity;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.EndermiteEntity;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TurtleEntity;
@@ -107,13 +110,19 @@ public class MedusaEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 this.destroyBlocksInAABB(this.getBoundingBox());
-
+                this.summonSnakes();
             }
             return SoundEvents.BLOCK_CHAIN_HIT;
 
         }
     }
-
+    private void summonSnakes(){
+        if(this.getAttackTarget() != null){
+            MedusaSnakeEntity medusaSnakeEntity = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
+            medusaSnakeEntity.setPosition(this.getPosX(),this.getPosY(),this.getPosZ());
+            this.world.addEntity(medusaSnakeEntity);
+        }
+    }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
         int i = MathHelper.floor(area.minX - 4);
         int j = MathHelper.floor(area.minY );
