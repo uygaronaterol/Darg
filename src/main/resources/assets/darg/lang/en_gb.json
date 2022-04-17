@@ -102,6 +102,12 @@
 	"item.darg.corruption_axe": "Corruption Axe",
 	"item.darg.corruption_pickaxe": "Corruption Pickaxe",
 	"block.darg.corrupted_wool": "Corrupted Wool",
-	"item.darg.corrupted_eye": "Corrupted Eye"
+	"item.darg.corrupted_eye": "Corrupted Eye",
+	"item.darg.corrupted_basic_staff_of_regeneration": "Corrupted Basic Staff Of Regeneration",
+	"item.darg.corrupted_staff_of_regeneration": "Corrupted Staff Of Regeneration",
+	"item.darg.corrupted_advanced_staff_of_regeneration": "Corrupted Advanced Staff Of Regeneration",
+	"item.darg.darbig_spawn_egg": "Darbig Spawn Egg",
+	"item.darg.medusa_spawn_egg": "Medusa Spawn Egg",
+	"block.darg.nutritious_mogling_food": "Nutritious Mogling Food"
 
 }
