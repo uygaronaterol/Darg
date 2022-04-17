@@ -453,13 +453,13 @@ public class MedusaModel<T extends MedusaEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.8F) * 1.4F * limbSwingAmount;
-        this.leftLowerArm.rotateAngleX =  -Math.abs(MathHelper.cos(limbSwing * 0.5F) * 1.4F * limbSwingAmount);
-        this.rightUpperArm.rotateAngleX =  MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount;
+        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.4F) * 1.4F * limbSwingAmount;
+        this.leftLowerArm.rotateAngleX =  -Math.abs(MathHelper.cos(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
+        this.rightUpperArm.rotateAngleX =  MathHelper.cos(limbSwing * 0.4F) * 1.4F * limbSwingAmount;
         this.rightHand.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
         this.leftHand.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
 
-        this.rightLowerArm.rotateAngleY = -Math.abs(MathHelper.sin(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
+        this.rightLowerArm.rotateAngleY = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
         this.leftHandThumb.rotateAngleY =  -Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
         this.leftHandLeft2.rotateAngleY =  -Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
         this.leftHandPoint.rotateAngleY =  -Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
@@ -470,8 +470,8 @@ public class MedusaModel<T extends MedusaEntity> extends EntityModel<T> {
         this.rightHandMiddle.rotateAngleY =  Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
         this.rightHandPoint.rotateAngleY =  Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
         this.rightHandPinky.rotateAngleY =  Math.abs(MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount);
-        this.tail.rotateAngleY =  MathHelper.sin(limbSwing * 0.0662F) * 0.8F * limbSwingAmount;
-        this.tail1.rotateAngleY =  MathHelper.cos(limbSwing * 0.0662F) * 0.6F * limbSwingAmount;
+        this.tail.rotateAngleY =  MathHelper.sin(limbSwing * 0.3662F) * 0.8F * limbSwingAmount;
+        this.tail1.rotateAngleY =  MathHelper.cos(limbSwing * 0.1662F) * 0.6F * limbSwingAmount;
         this.tail2.rotateAngleY =  MathHelper.sin(limbSwing * 0.0662F) * 0.4F * limbSwingAmount;
         this.tail3.rotateAngleY =  MathHelper.cos(limbSwing * 0.0662F) * 0.2F * limbSwingAmount;
         this.tail4.rotateAngleY =  MathHelper.sin(limbSwing * 0.0662F) * 0.1F * limbSwingAmount;
