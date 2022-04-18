@@ -16,6 +16,18 @@
   "sounds": [
     "darg:mogling_hit"
   ]
+}, "snake1": {
+  "category": "entities",
+  "subtitle": "darg.snake1",
+  "sounds": [
+    "darg:snake1"
+  ]
+}, "snake2": {
+  "category": "entities",
+  "subtitle": "darg.snake2",
+  "sounds": [
+    "darg:snake2"
+  ]
 }, "mogling_death": {
   "category": "entities",
   "subtitle": "darg.mogling_death",

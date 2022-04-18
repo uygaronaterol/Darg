@@ -69,26 +69,25 @@ public class MedusaSnakeEntity extends CreatureEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.CORRUPTED_COW_AMBIENT.get();
+        return ModSoundEvents.SNAKE1.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.CORRUPTED_COW_DEATH.get();
+        return ModSoundEvents.SNAKE2.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.CORRUPTED_COW_HIT.get();
+        return ModSoundEvents.SNAKE1.get();
     }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn)
     {
-        this.playSound(ModSoundEvents.CORRUPTED_COW_STEP.get(), 0.10F, 0.5F);
     }
 
     @Override
