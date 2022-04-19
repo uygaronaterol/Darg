@@ -50,7 +50,7 @@ public class ModStructures {
                 new StructureSeparationSettings(200,80, 1234567890),
                 true);
         setupMapSpacingAndLand(MOGLING_VILLAGE.get(),
-                new StructureSeparationSettings(1000,800, 1234567890),
+                new StructureSeparationSettings(100,80, 1234567890),
                 true);
     }
 
