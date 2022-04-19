@@ -10,6 +10,7 @@ import com.puncix.darg.common.world.structure.structures.CorruptedFossilSiteStru
 import com.puncix.darg.common.world.structure.structures.CorruptedHouseStructure;
 
 import com.puncix.darg.common.world.structure.structures.ExheristaffStructure;
+import com.puncix.darg.common.world.structure.structures.MoglingVillageStructure;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.DimensionSettings;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
@@ -32,6 +33,8 @@ public class ModStructures {
             STRUCTURES.register("exheristaff_structure", ExheristaffStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> CORRUPTED_FOSSIL_SITE =
             STRUCTURES.register("corrupted_fossil_site", CorruptedFossilSiteStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> MOGLING_VILLAGE =
+            STRUCTURES.register("mogling_village", MoglingVillageStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -45,6 +48,9 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(CORRUPTED_FOSSIL_SITE.get(),
                 new StructureSeparationSettings(200,80, 1234567890),
+                true);
+        setupMapSpacingAndLand(MOGLING_VILLAGE.get(),
+                new StructureSeparationSettings(1000,800, 1234567890),
                 true);
     }
 
