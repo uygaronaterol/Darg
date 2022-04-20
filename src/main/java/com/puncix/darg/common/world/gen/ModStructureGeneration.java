@@ -30,7 +30,11 @@ public class ModStructureGeneration {
             structures.add(() -> ModStructures.EXHERISTAFF_STRUCTURE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.CORRUPTED_FOSSIL_SITE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.MOGLING_VILLAGE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
+        else if(types.contains(BiomeDictionary.Type.SWAMP) ) {
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.MEDUSA_TEMPLE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+
 
         }
     }
