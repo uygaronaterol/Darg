@@ -75,6 +75,8 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.CORRUPTED_FOSSIL_SITE.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.MOGLING_VILLAGE.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.MOGLING_VILLAGE.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.MEDUSA_TEMPLE.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.MEDUSA_TEMPLE.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}
