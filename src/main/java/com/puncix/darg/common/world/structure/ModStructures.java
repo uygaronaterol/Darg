@@ -52,7 +52,7 @@ public class ModStructures {
                 new StructureSeparationSettings(100,80, 1234567890),
                 true);
         setupMapSpacingAndLand(MEDUSA_TEMPLE.get(),
-                new StructureSeparationSettings(100,80, 1234567890),
+                new StructureSeparationSettings(150,110, 1234567890),
                 true);
     }
 

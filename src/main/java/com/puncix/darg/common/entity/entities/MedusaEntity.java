@@ -81,27 +81,31 @@ public class MedusaEntity extends CreatureEntity{
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
+            //return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
+            return ModSoundEvents.SNAKE1.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
+            //return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
+            return ModSoundEvents.SNAKE1.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
+            //return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
+            return ModSoundEvents.SNAKE1.get();
 
         }
         else if( 0.8 < rand && rand <= 0.8){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
+            //return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
+            return ModSoundEvents.SNAKE1.get();
 
         }
         else{
@@ -168,8 +172,8 @@ public class MedusaEntity extends CreatureEntity{
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.EXHERISTAFF_DEATH.get();
-
+       //return ModSoundEvents.EXHERISTAFF_DEATH.get();
+        return ModSoundEvents.SNAKE2.get();
     }
 
 
@@ -179,10 +183,10 @@ public class MedusaEntity extends CreatureEntity{
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            return ModSoundEvents.EXHERISTAFF_HIT1.get();
+            return ModSoundEvents.SNAKE2.get();
         }
         else {
-            return ModSoundEvents.EXHERISTAFF_HIT2.get();
+            return ModSoundEvents.SNAKE2.get();
 
         }
     }
@@ -220,7 +224,7 @@ public class MedusaEntity extends CreatureEntity{
         soepe.setItem(ItemInit.CORRUPTED_EYE_OF_MEDUSA.get().getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
         soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+        this.playSound(ModSoundEvents.MEDUSA_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
         this.world.addEntity(soepe);
         double rand = Math.random();
         if( rand < 0.25){

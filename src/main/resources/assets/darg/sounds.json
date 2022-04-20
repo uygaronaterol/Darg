@@ -16,6 +16,12 @@
   "sounds": [
     "darg:mogling_hit"
   ]
+}, "medusa_animation": {
+  "category": "entities",
+  "subtitle": "darg.medusa_animation",
+  "sounds": [
+    "darg:medusa_animation"
+  ]
 }, "snake1": {
   "category": "entities",
   "subtitle": "darg.snake1",

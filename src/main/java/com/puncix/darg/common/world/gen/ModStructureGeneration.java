@@ -34,8 +34,6 @@ public class ModStructureGeneration {
         else if(types.contains(BiomeDictionary.Type.SWAMP) ) {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.MEDUSA_TEMPLE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-
-
         }
     }
 
