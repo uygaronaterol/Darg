@@ -9,6 +9,7 @@ import com.puncix.darg.common.screens.CraftingHandScreen;
 import com.puncix.darg.common.world.biome.ModBiomes;
 import com.puncix.darg.common.world.gen.ModBiomeGeneration;
 import com.puncix.darg.common.world.gen.ModConfiguredFeatures;
+import com.puncix.darg.core.init.EnchantmentInit;
 import com.puncix.darg.core.init.EntityTypeInit;
 import com.puncix.darg.data.recipes.ModRecipeTypes;
 import net.minecraft.client.Minecraft;
@@ -51,7 +52,7 @@ public class Darg
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
-
+        EnchantmentInit.ENCHANTMENTS.register(bus);
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
         ModTileEntities.TILE_ENTITIES.register(bus);

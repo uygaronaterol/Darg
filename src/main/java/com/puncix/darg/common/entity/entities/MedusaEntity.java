@@ -206,7 +206,7 @@ public class MedusaEntity extends CreatureEntity{
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50,3));
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 50));
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 100));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 100));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 50));
 
             }
             return true;

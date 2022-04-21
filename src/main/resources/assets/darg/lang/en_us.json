@@ -111,5 +111,7 @@
 	"item.darg.medusa_spawn_egg": "Medusa Spawn Egg",
 	"block.darg.nutritious_mogling_food": "Nutritious Mogling Food",
 	"item.darg.medusa_snake_spawn_egg": "Medusa Snake Spawn Egg",
-	"item.darg.corrupted_eye_of_medusa": "Corrupted Eye Of Medusa"
+	"item.darg.corrupted_eye_of_medusa": "Corrupted Eye Of Medusa",
+	"enchantment.darg.medusa_poison": "Medusa Poison",
+	"enchantment.darg.medusa_turn_stone": "Medusa Turn Stone"
 }
