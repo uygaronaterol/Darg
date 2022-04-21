@@ -99,9 +99,7 @@ public class CorruptedChickenEntity extends ChickenEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 15,3));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WEAKNESS, 20));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 30));
+
             }
             return true;
         }

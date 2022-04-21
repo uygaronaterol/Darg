@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event){
-
+        addEntityToSpecificBiomes( event,EntityTypeInit.EATER.get(), 1,1,1,Biomes.SOUL_SAND_VALLEY);
 
 
     }

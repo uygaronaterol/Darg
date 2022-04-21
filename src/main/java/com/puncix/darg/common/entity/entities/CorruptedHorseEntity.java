@@ -103,9 +103,7 @@ public class CorruptedHorseEntity extends HorseEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 40,3));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WEAKNESS, 50));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 70));
+
             }
             return true;
         }

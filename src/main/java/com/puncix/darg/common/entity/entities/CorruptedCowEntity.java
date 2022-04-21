@@ -110,8 +110,6 @@ public class CorruptedCowEntity extends CowEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 35,3));
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WEAKNESS, 50));
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.NAUSEA, 25));
             }
             return true;
