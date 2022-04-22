@@ -16,7 +16,7 @@ public class EaterRenderer extends MobRenderer<EaterEntity, EaterModel<EaterEnti
             new ResourceLocation(Darg.MOD_ID, "textures/entity/eater.png");
 
     public EaterRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new EaterModel<>(), 0.2F);
+        super(renderManagerIn, new EaterModel<>(), 1.2F);
     }
     @Override
     public ResourceLocation getEntityTexture(EaterEntity entity) {

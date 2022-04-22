@@ -85,6 +85,7 @@ public class ItemInit {
 	//mob drops
 	public static final RegistryObject<Item> CORRUPTED_LEATHER = ITEMS.register("corrupted_leather", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE = ITEMS.register("corrupted_eye", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> EATER_TOOTH = ITEMS.register("eater_tooth", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
