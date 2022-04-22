@@ -82,20 +82,20 @@ public class EaterEntity extends MonsterEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.CORRUPTED_PIG_AMBIENT.get();
+        return ModSoundEvents.EATER_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.CORRUPTED_PIG_DEATH.get();
+        return ModSoundEvents.EATER_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.CORRUPTED_PIG_HIT.get();
+        return ModSoundEvents.EATER_HIT.get();
     }
 
 

@@ -237,7 +237,25 @@
     "sounds": [
       "darg:exheristaff_death"
     ]
-  },
+  }, "eater_hit": {
+  "category": "entities",
+  "subtitle": "darg.eater_hit",
+  "sounds": [
+    "darg:eater_hit"
+  ]
+}, "eater_death": {
+  "category": "entities",
+  "subtitle": "darg.eater_death",
+  "sounds": [
+    "darg:eater_death"
+  ]
+}, "eater_ambient": {
+  "category": "entities",
+  "subtitle": "darg.eater_ambient",
+  "sounds": [
+    "darg:eater_ambient"
+  ]
+},
     "exheristaff_animation": {
       "category": "entities",
       "subtitle": "darg.exheristaff_animation",

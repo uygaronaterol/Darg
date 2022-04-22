@@ -39,7 +39,9 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> SNAKE1 = registerSoundEvent("snake1");
     public static final RegistryObject<SoundEvent> SNAKE2 = registerSoundEvent("snake2");
     public static final RegistryObject<SoundEvent> MEDUSA_ANIMATION = registerSoundEvent("medusa_animation");
-
+    public static final RegistryObject<SoundEvent> EATER_HIT = registerSoundEvent("eater_hit");
+    public static final RegistryObject<SoundEvent> EATER_DEATH = registerSoundEvent("eater_death");
+    public static final RegistryObject<SoundEvent> EATER_AMBIENT = registerSoundEvent("eater_ambient");
     public static final RegistryObject<SoundEvent> CORRUPTED_COW_STEP = registerSoundEvent("corrupted_cow_step");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_AMBIENT1 = registerSoundEvent("exheristaff_ambient1");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_AMBIENT2 = registerSoundEvent("exheristaff_ambient2");
