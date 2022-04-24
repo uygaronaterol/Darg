@@ -119,6 +119,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(EaterEntity::new,
                             EntityClassification.MONSTER).size(2f, 1.5f)
                             .build(new ResourceLocation(Darg.MOD_ID, "eater").toString()));
+    public static final RegistryObject<EntityType<VarzakEntity>> VARZAK =
+            ENTITY_TYPES.register("varzak",
+                    () -> EntityType.Builder.create(VarzakEntity::new,
+                            EntityClassification.CREATURE).size(0.7f, 2.2f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "varzak").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
