@@ -216,11 +216,11 @@ public class VarzakModel <T extends VarzakEntity> extends EntityModel<T> { // Th
         this.leftLowerArm.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.1F * limbSwingAmount);
         this.rightUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 1.1F * limbSwingAmount;
         this.rightLowerArm.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.1F * limbSwingAmount);
-        this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLowerLeg.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
-        this.rightUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.rightLowerLeg.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
-        this.cape.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.10F) * 1.1F * limbSwingAmount);
+        this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 0.8F * limbSwingAmount;
+        this.leftLowerLeg.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.40F) * 0.8F * limbSwingAmount);
+        this.rightUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 0.8F * limbSwingAmount;
+        this.rightLowerLeg.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.40F) * 0.8F * limbSwingAmount);
+        this.cape.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.10F) * 0.4F * limbSwingAmount);
     }
 
         @Override

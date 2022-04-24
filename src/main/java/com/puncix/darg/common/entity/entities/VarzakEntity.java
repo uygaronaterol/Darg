@@ -10,6 +10,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TurtleEntity;
@@ -17,7 +18,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.Direction;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -35,13 +38,17 @@ public class VarzakEntity extends CreatureEntity {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 35.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D);
     }
 
+    @Override
+    protected float getStandingEyeHeight(Pose poseIn, EntitySize sizeIn) {
+        return super.getStandingEyeHeight(poseIn, sizeIn);
+    }
 
     @Override
     public boolean canDespawn(double distanceToClosestPlayer) {
@@ -103,6 +110,7 @@ public class VarzakEntity extends CreatureEntity {
         }
         else{
             if(this.getAttackTarget() != null) {
+                teleportAttack();
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
@@ -208,6 +216,39 @@ public class VarzakEntity extends CreatureEntity {
             this.getEntity().setInvulnerable(true);
         }
     }
+    protected boolean teleportAttack() {
+        if (!this.world.isRemote() && this.isAlive() && this.getAttackTarget() != null) {
+            double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 4.0D;
+            double d1 = this.getAttackTarget().getPosY() ;
+            double d2 = this.getAttackTarget().getPosZ() + (this.rand.nextDouble() - 0.5D) * 4.0D;
 
+            return this.teleportTo(d0, d1, d2);
+        } else {
+            return false;
+        }
+    }
+    private boolean teleportTo(double x, double y, double z) {
+        BlockPos.Mutable blockpos$mutable = new BlockPos.Mutable(x, y, z);
 
+        while(blockpos$mutable.getY() > 0 && !this.world.getBlockState(blockpos$mutable).getMaterial().blocksMovement()) {
+            blockpos$mutable.move(Direction.DOWN);
+        }
+
+        BlockState blockstate = this.world.getBlockState(blockpos$mutable);
+        boolean flag = blockstate.getMaterial().blocksMovement();
+        boolean flag1 = blockstate.getFluidState().isTagged(FluidTags.WATER);
+        if (flag && !flag1) {
+            net.minecraftforge.event.entity.living.EnderTeleportEvent event = new net.minecraftforge.event.entity.living.EnderTeleportEvent(this, x, y, z, 0);
+            if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) return false;
+            boolean flag2 = this.attemptTeleport(event.getTargetX(), event.getTargetY(), event.getTargetZ(), true);
+            if (flag2 && !this.isSilent()) {
+                this.world.playSound((PlayerEntity)null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, this.getSoundCategory(), 1.0F, 1.0F);
+                this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
+            }
+
+            return flag2;
+        } else {
+            return false;
+        }
+    }
 }

@@ -80,6 +80,7 @@ public class ExheristaffEntity extends CreatureEntity{
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
+            playSound(ModSoundEvents.EXHERISTAFF_AMBIENT1.get(), 1, 1);
             return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
