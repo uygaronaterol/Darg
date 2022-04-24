@@ -27,6 +27,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 public class VarzakEntity extends CreatureEntity {
     public VarzakEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
@@ -111,9 +112,7 @@ public class VarzakEntity extends CreatureEntity {
         else{
             if(this.getAttackTarget() != null) {
                 teleportAttack();
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
+                lightningStrike();
                 this.destroyBlocksInAABB(this.getBoundingBox());
 
             }
@@ -121,7 +120,12 @@ public class VarzakEntity extends CreatureEntity {
 
         }
     }
-
+    private void lightningStrike(){
+        if( this.getAttackTarget() != null){
+            BlockPos pos = this.getAttackTarget().getPosition();
+            EntityType.LIGHTNING_BOLT.spawn((ServerWorld)this.getEntityWorld(),null, this.attackingPlayer,pos, SpawnReason.TRIGGERED,true ,true);
+        }
+    }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
         int i = MathHelper.floor(area.minX - 1);
         int j = MathHelper.floor(area.minY );
@@ -192,7 +196,7 @@ public class VarzakEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WITHER, 50));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50));
             }
             return true;
         }

@@ -81,27 +81,30 @@ public class ExheristaffEntity extends CreatureEntity{
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             playSound(ModSoundEvents.EXHERISTAFF_AMBIENT1.get(), 1, 1);
-            return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
+            return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
+            playSound(ModSoundEvents.EXHERISTAFF_AMBIENT2.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
+            playSound(ModSoundEvents.EXHERISTAFF_AMBIENT3.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
         else if( 0.8 < rand && rand <= 0.8){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
+            playSound(ModSoundEvents.EXHERISTAFF_AMBIENT4.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
         else{
@@ -112,7 +115,7 @@ public class ExheristaffEntity extends CreatureEntity{
                 this.destroyBlocksInAABB(this.getBoundingBox());
 
             }
-            return SoundEvents.WEATHER_RAIN_ABOVE;
+            return ModSoundEvents.SILENCE.get();
 
         }
     }
@@ -156,7 +159,8 @@ public class ExheristaffEntity extends CreatureEntity{
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.EXHERISTAFF_DEATH.get();
+        playSound(ModSoundEvents.EXHERISTAFF_DEATH.get(), 1, 1);
+        return ModSoundEvents.SILENCE.get();
 
     }
 
@@ -167,10 +171,12 @@ public class ExheristaffEntity extends CreatureEntity{
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            return ModSoundEvents.EXHERISTAFF_HIT1.get();
+            playSound(ModSoundEvents.EXHERISTAFF_HIT1.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
         }
         else {
-            return ModSoundEvents.EXHERISTAFF_HIT2.get();
+            playSound(ModSoundEvents.EXHERISTAFF_HIT2.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
     }

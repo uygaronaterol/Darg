@@ -255,6 +255,12 @@
   "sounds": [
     "darg:eater_ambient"
   ]
+}, "silence": {
+  "category": "entities",
+  "subtitle": "darg.silence",
+  "sounds": [
+    "darg:silence"
+  ]
 },
     "exheristaff_animation": {
       "category": "entities",

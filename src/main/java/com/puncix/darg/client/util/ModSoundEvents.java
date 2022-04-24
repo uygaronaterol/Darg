@@ -51,6 +51,7 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> EXHERISTAFF_HIT2 = registerSoundEvent("exheristaff_hit2");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_DEATH = registerSoundEvent("exheristaff_death");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_ANIMATION= registerSoundEvent("exheristaff_animation");
+    public static final RegistryObject<SoundEvent> SILENCE = registerSoundEvent("silence");
 
     public static final RegistryObject<SoundEvent> CORRUPTED_PLAINS_AMBIENT = registerSoundEvent("corrupted_plains_ambient");
 
