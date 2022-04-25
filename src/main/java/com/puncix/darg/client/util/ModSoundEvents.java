@@ -52,6 +52,17 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> EXHERISTAFF_DEATH = registerSoundEvent("exheristaff_death");
     public static final RegistryObject<SoundEvent> EXHERISTAFF_ANIMATION= registerSoundEvent("exheristaff_animation");
     public static final RegistryObject<SoundEvent> SILENCE = registerSoundEvent("silence");
+    public static final RegistryObject<SoundEvent> VARZAK_AMBIENT1 = registerSoundEvent("varzak_ambient1");
+    public static final RegistryObject<SoundEvent> VARZAK_AMBIENT2 = registerSoundEvent("varzak_ambient2");
+    public static final RegistryObject<SoundEvent> VARZAK_AMBIENT3 = registerSoundEvent("varzak_ambient3");
+    public static final RegistryObject<SoundEvent> VARZAK_AMBIENT4 = registerSoundEvent("varzak_ambient4");
+    public static final RegistryObject<SoundEvent> VARZAK_AMBIENT5 = registerSoundEvent("varzak_ambient5");
+    public static final RegistryObject<SoundEvent> VARZAK_HIT1 = registerSoundEvent("varzak_hit1");
+    public static final RegistryObject<SoundEvent> VARZAK_HIT2 = registerSoundEvent("varzak_hit2");
+    public static final RegistryObject<SoundEvent> VARZAK_ANIMATION = registerSoundEvent("varzak_animation");
+    public static final RegistryObject<SoundEvent> VARZAK_DEATH = registerSoundEvent("varzak_death");
+
+
 
     public static final RegistryObject<SoundEvent> CORRUPTED_PLAINS_AMBIENT = registerSoundEvent("corrupted_plains_ambient");
 

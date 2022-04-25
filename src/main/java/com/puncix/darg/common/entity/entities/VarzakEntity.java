@@ -86,37 +86,47 @@ public class VarzakEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
+            playSound(ModSoundEvents.VARZAK_AMBIENT1.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
+            playSound(ModSoundEvents.VARZAK_AMBIENT2.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
+            playSound(ModSoundEvents.VARZAK_AMBIENT3.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
-        else if( 0.8 < rand && rand <= 0.8){
+        else if( 0.6 < rand && rand <= 0.8){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
-
+            if( rand < 6.5){
+                playSound(ModSoundEvents.VARZAK_AMBIENT5.get(), 1, 1);
+                return ModSoundEvents.SILENCE.get();
+            }
+            else {
+                playSound(ModSoundEvents.VARZAK_AMBIENT4.get(), 1, 1);
+                return ModSoundEvents.SILENCE.get();
+            }
         }
         else{
             if(this.getAttackTarget() != null) {
                 teleportAttack();
                 lightningStrike();
                 this.destroyBlocksInAABB(this.getBoundingBox());
-
+                playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
+                return ModSoundEvents.SILENCE.get();
             }
-            return SoundEvents.WEATHER_RAIN_ABOVE;
+            return ModSoundEvents.SILENCE.get();
 
         }
     }
@@ -165,7 +175,8 @@ public class VarzakEntity extends CreatureEntity {
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.EXHERISTAFF_DEATH.get();
+        playSound(ModSoundEvents.VARZAK_DEATH.get(), 1, 1);
+        return ModSoundEvents.SILENCE.get();
 
     }
 
@@ -176,10 +187,12 @@ public class VarzakEntity extends CreatureEntity {
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            return ModSoundEvents.EXHERISTAFF_HIT1.get();
+            playSound(ModSoundEvents.VARZAK_HIT1.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
         }
         else {
-            return ModSoundEvents.EXHERISTAFF_HIT2.get();
+            playSound(ModSoundEvents.VARZAK_HIT2.get(), 1, 1);
+            return ModSoundEvents.SILENCE.get();
 
         }
     }

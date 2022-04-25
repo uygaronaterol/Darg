@@ -99,7 +99,7 @@ public class ExheristaffEntity extends CreatureEntity{
             return ModSoundEvents.SILENCE.get();
 
         }
-        else if( 0.8 < rand && rand <= 0.8){
+        else if( 0.6 < rand && rand <= 0.8){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }

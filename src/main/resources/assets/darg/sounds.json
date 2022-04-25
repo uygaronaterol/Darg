@@ -268,5 +268,68 @@
       "sounds": [
         "darg:exheristaff_animation"
       ]
-    }
+    },
+  "varzak_animation": {
+    "category": "entities",
+    "subtitle": "darg.varzak_animation",
+    "sounds": [
+      "darg:varzak_animation"
+    ]
+  },
+  "varzak_ambient1": {
+    "category": "entities",
+    "subtitle": "darg.varzak_ambient1",
+    "sounds": [
+      "darg:varzak_ambient1"
+    ]
+  },
+  "varzak_ambient2": {
+    "category": "entities",
+    "subtitle": "darg.varzak_ambient2",
+    "sounds": [
+      "darg:varzak_ambient2"
+    ]
+  },
+  "varzak_ambient3": {
+    "category": "entities",
+    "subtitle": "darg.varzak_ambient3",
+    "sounds": [
+      "darg:varzak_ambient3"
+    ]
+  },
+  "varzak_ambient4": {
+    "category": "entities",
+    "subtitle": "darg.varzak_ambient4",
+    "sounds": [
+      "darg:varzak_ambient4"
+    ]
+  },
+  "varzak_ambient5": {
+    "category": "entities",
+    "subtitle": "darg.varzak_ambient5",
+    "sounds": [
+      "darg:varzak_ambient5"
+    ]
+  },
+  "varzak_hit1": {
+    "category": "entities",
+    "subtitle": "darg.varzak_hit1",
+    "sounds": [
+      "darg:varzak_hit1"
+    ]
+  },
+  "varzak_hit2": {
+    "category": "entities",
+    "subtitle": "darg.varzak_hit2",
+    "sounds": [
+      "darg:varzak_hit2"
+    ]
+  },
+  "varzak_death": {
+    "category": "entities",
+    "subtitle": "darg.varzak_death",
+    "sounds": [
+      "darg:varzak_death"
+    ]
+  }
 }
