@@ -37,9 +37,9 @@ public class VarzakEntity extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 350.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 35.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )

@@ -17,8 +17,8 @@ public class DwarfModel <T extends DwarfEntity> extends EntityModel<T> {
         private final ModelRenderer leftArm;
 
         public DwarfModel() {
-            textureWidth = 16;
-            textureHeight = 16;
+            textureWidth = 64;
+            textureHeight = 64;
 
             body = new ModelRenderer(this);
             body.setRotationPoint(0.0F, 24.0F, 0.0F);

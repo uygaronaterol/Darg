@@ -34,6 +34,8 @@ public class ModStructures {
             STRUCTURES.register("mogling_village", MoglingVillageStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> MEDUSA_TEMPLE =
             STRUCTURES.register("medusa_temple", MedusaTempleStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> VARZAK_LAIR =
+            STRUCTURES.register("varzak_lair", VarzakLairStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -53,6 +55,9 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(MEDUSA_TEMPLE.get(),
                 new StructureSeparationSettings(150,110, 1234567890),
+                true);
+        setupMapSpacingAndLand(VARZAK_LAIR.get(),
+                new StructureSeparationSettings(120,110, 1234567890),
                 true);
     }
 

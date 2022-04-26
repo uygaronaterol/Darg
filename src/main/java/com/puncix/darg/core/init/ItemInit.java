@@ -19,6 +19,7 @@ public class ItemInit {
 	//boss items
 	public static final RegistryObject<CorruptedEyeOfExheristaff> CORRUPTED_EYE_OF_EXHERISTAFF = ITEMS.register("corrupted_eye_of_exheristaff", () -> new CorruptedEyeOfExheristaff(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<CorruptedEyeOfMedusa> CORRUPTED_EYE_OF_MEDUSA = ITEMS.register("corrupted_eye_of_medusa", () -> new CorruptedEyeOfMedusa(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<CorruptedEyeOfVarzak> CORRUPTED_EYE_OF_VARZAK = ITEMS.register("corrupted_eye_of_varzak", () -> new CorruptedEyeOfVarzak(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//complex items
@@ -35,6 +36,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_BASIC_STAFF_OF_REGENERATION = ITEMS.register("corrupted_basic_staff_of_regeneration", () -> new CorruptedBasicStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(30)));
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_staff_of_regeneration", () -> new CorruptedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_advanced_staff_of_regeneration", () -> new CorruptedAdvancedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> VARZAKS_CROWN = ITEMS.register("varzaks_crown", () -> new VarzaksCrown(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 
 	//mogling trade
@@ -88,6 +90,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_LEATHER = ITEMS.register("corrupted_leather", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE = ITEMS.register("corrupted_eye", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> EATER_TOOTH = ITEMS.register("eater_tooth", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> DWARF_BLOOD = ITEMS.register("dwarf_blood", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));

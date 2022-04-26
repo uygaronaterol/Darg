@@ -36,9 +36,9 @@ public class MedusaEntity extends CreatureEntity{
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 1500.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 500.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 30.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 12.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 20D )

@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corruption"
+    },
+    {
+      "item": "darg:condensed_corrupted_stone"
+    },
+    {"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_eye_of_varzak"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corruption"},{"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_bone_block"},{"item": "darg:dwarf_blood"},
+    {
+      "item": "darg:corrupted_essence_block"
+    },{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"},{"item": "darg:dwarf_blood"}
+  ],
+  "output": {
+    "item": "darg:varzaks_crown",
+    "count": 1
+  }
+}

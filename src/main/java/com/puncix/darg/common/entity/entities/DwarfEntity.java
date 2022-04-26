@@ -136,6 +136,7 @@ public class DwarfEntity extends CreatureEntity {
                 counter = 0;
                 return SoundEvents.ENTITY_ITEM_BREAK;
             }
+            return SoundEvents.BLOCK_ANVIL_BREAK;
         }else if(this.thisHasCorruptedBonePickaxe){
             counter++;
             double rand = Math.random();
@@ -158,6 +159,8 @@ public class DwarfEntity extends CreatureEntity {
                 counter = 0;
                 return SoundEvents.ENTITY_ITEM_BREAK;
             }
+            return SoundEvents.BLOCK_ANVIL_BREAK;
+
         }else if(this.thisHasCorruptionPickaxe){
             counter++;
             double rand = Math.random();
@@ -183,6 +186,7 @@ public class DwarfEntity extends CreatureEntity {
                 counter = 0;
                 return SoundEvents.ENTITY_ITEM_BREAK;
             }
+            return SoundEvents.BLOCK_ANVIL_BREAK;
         }
         return ModSoundEvents.MOGLING_AMBIENT.get();
     }

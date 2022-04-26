@@ -2,14 +2,11 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls":  {
-        "min": 2,
-        "max": 3
-      },
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "darg:corrupted_eye_of_medusa"
+          "name": "darg:corrupted_eye_of_varzak"
         }
       ]},{
       "rolls": {

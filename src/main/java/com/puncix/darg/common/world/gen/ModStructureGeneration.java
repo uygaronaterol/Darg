@@ -35,6 +35,10 @@ public class ModStructureGeneration {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.MEDUSA_TEMPLE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
+        else if(types.contains(BiomeDictionary.Type.MOUNTAIN)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.VARZAK_LAIR.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
     }
 
 }

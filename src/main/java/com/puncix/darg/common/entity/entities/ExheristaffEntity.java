@@ -35,9 +35,9 @@ public class ExheristaffEntity extends CreatureEntity{
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 300.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 10.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 20D )
