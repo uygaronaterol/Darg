@@ -33,6 +33,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.MEDUSA_SNAKE.get(), MedusaSnakeEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.EATER.get(), EaterEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.VARZAK.get(), VarzakEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.DWARF.get(), DwarfEntity.setCustomAttributes().create());
 
 
 

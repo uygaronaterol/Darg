@@ -124,6 +124,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(VarzakEntity::new,
                             EntityClassification.CREATURE).size(0.7f, 2.2f)
                             .build(new ResourceLocation(Darg.MOD_ID, "varzak").toString()));
+    public static final RegistryObject<EntityType<DwarfEntity>> DWARF =
+            ENTITY_TYPES.register("dwarf",
+                    () -> EntityType.Builder.create(DwarfEntity::new,
+                            EntityClassification.CREATURE).size(0.8f, 1.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "dwarf").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
