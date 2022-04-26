@@ -115,5 +115,9 @@
 	"enchantment.darg.medusa_poison": "Medusa Poison",
 	"enchantment.darg.medusa_turn_stone": "Medusa Turn Stone",
 	"item.darg.eater_spawn_egg": "Eater Spawn Egg",
-	"item.darg.eater_tooth": "Eater Tooth"
+	"item.darg.eater_tooth": "Eater Tooth",
+	"item.darg.varzaks_crown": "Varzak's Crown",
+	"item.darg.dwarf_blood": "Dwarf Blood",
+	"item.darg.dwarf_spawn_egg": "Dwarf Spawn Egg",
+	"item.darg.varzak_spawn_egg": "Dwarf Blood"
 }
