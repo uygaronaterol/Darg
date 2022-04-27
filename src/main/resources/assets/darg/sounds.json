@@ -331,5 +331,26 @@
     "sounds": [
       "darg:varzak_death"
     ]
+  },
+  "dwarf_death": {
+    "category": "entities",
+    "subtitle": "darg.dwarf_death",
+    "sounds": [
+      "darg:dwarf_death"
+    ]
+  },
+  "dwarf_hit": {
+    "category": "entities",
+    "subtitle": "darg.dwarf_hit",
+    "sounds": [
+      "darg:dwarf_hit"
+    ]
+  },
+  "dwarf_ambient": {
+    "category": "entities",
+    "subtitle": "darg.dwarf_ambient",
+    "sounds": [
+      "darg:dwarf_ambient"
+    ]
   }
 }

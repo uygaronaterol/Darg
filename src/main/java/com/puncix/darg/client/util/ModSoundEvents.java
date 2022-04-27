@@ -61,6 +61,9 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> VARZAK_HIT2 = registerSoundEvent("varzak_hit2");
     public static final RegistryObject<SoundEvent> VARZAK_ANIMATION = registerSoundEvent("varzak_animation");
     public static final RegistryObject<SoundEvent> VARZAK_DEATH = registerSoundEvent("varzak_death");
+    public static final RegistryObject<SoundEvent> DWARF_DEATH = registerSoundEvent("dwarf_death");
+    public static final RegistryObject<SoundEvent> DWARF_AMBIENT = registerSoundEvent("dwarf_ambient");
+    public static final RegistryObject<SoundEvent> DWARF_HIT = registerSoundEvent("dwarf_hit");
 
 
 

@@ -188,20 +188,20 @@ public class DwarfEntity extends CreatureEntity {
             }
             return SoundEvents.BLOCK_ANVIL_BREAK;
         }
-        return ModSoundEvents.MOGLING_AMBIENT.get();
+        return ModSoundEvents.DWARF_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.MOGLING_DEATH.get();
+        return ModSoundEvents.DWARF_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.MOGLING_HIT.get();
+        return ModSoundEvents.DWARF_HIT.get();
     }
 
     @Override
