@@ -214,25 +214,7 @@ public class VarzakEntity extends CreatureEntity {
             return true;
         }
     }
-    public void attackEntityWithRangedAttack(LivingEntity target) {
 
-        this.getEntity().setInvulnerable(true);
-
-        double d0 = target.getPosX() - this.getPosX();
-        double d1 = target.getPosYHeight(0.3333333333333333D) - this.getPosY() ;
-        double d2 = target.getPosZ() - this.getPosZ();
-        double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
-        ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
-        soepe.setItem(ItemInit.CORRUPTED_EYE_OF_EXHERISTAFF.get().getDefaultInstance());
-        //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
-        soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
-        this.world.addEntity(soepe);
-        double rand = Math.random();
-        if( rand < 0.25){
-            this.getEntity().setInvulnerable(true);
-        }
-    }
     protected boolean teleportAttack() {
         if (!this.world.isRemote() && this.isAlive() && this.getAttackTarget() != null) {
             double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 4.0D;

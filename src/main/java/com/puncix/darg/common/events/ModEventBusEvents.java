@@ -34,6 +34,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.EATER.get(), EaterEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.VARZAK.get(), VarzakEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.DWARF.get(), DwarfEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.KATSU.get(), KatsuEntity.setCustomAttributes().create());
 
 
 

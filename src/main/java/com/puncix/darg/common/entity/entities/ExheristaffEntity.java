@@ -210,7 +210,7 @@ public class ExheristaffEntity extends CreatureEntity{
         soepe.setItem(ItemInit.CORRUPTED_EYE_OF_EXHERISTAFF.get().getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
         soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F );
         this.world.addEntity(soepe);
         double rand = Math.random();
         if( rand < 0.25){
