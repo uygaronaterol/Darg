@@ -2,6 +2,7 @@ package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.ItemInit;
+import com.puncix.darg.core.init.ParticleInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.material.Material;
@@ -259,6 +260,14 @@ public class KatsuEntity extends CreatureEntity {
             if (flag2 && !this.isSilent()) {
                 this.world.playSound((PlayerEntity)null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, this.getSoundCategory(), 1.0F, 1.0F);
                 this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
+                world.addParticle(ParticleInit.BLACK_PARTICLE.get(),x+ Math.random(),y+ Math.random(),z+ Math.random(),0f,0f,0f);
 
             }
 
