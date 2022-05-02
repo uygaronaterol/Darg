@@ -9,8 +9,7 @@ import com.puncix.darg.common.screens.CraftingHandScreen;
 import com.puncix.darg.common.world.biome.ModBiomes;
 import com.puncix.darg.common.world.gen.ModBiomeGeneration;
 import com.puncix.darg.common.world.gen.ModConfiguredFeatures;
-import com.puncix.darg.core.init.EnchantmentInit;
-import com.puncix.darg.core.init.EntityTypeInit;
+import com.puncix.darg.core.init.*;
 import com.puncix.darg.data.recipes.ModRecipeTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
@@ -34,8 +33,6 @@ import com.puncix.darg.common.containers.ModContainers;
 import com.puncix.darg.common.screens.CorruptedCraftingTableScreen;
 import com.puncix.darg.common.tileentities.ModTileEntities;
 import com.puncix.darg.common.world.structure.ModStructures;
-import com.puncix.darg.core.init.BlockInit;
-import com.puncix.darg.core.init.ItemInit;
 
 import java.util.function.Supplier;
 
@@ -52,6 +49,7 @@ public class Darg
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
+        ParticleInit.PARTICLES.register(bus);
         EnchantmentInit.ENCHANTMENTS.register(bus);
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
@@ -121,6 +119,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EATER.get(), EaterRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.VARZAK.get(), VarzakRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DWARF.get(), DwarfRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.KATSU.get(), KatsuRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

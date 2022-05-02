@@ -119,8 +119,12 @@ public class KatsuEntity extends CreatureEntity {
         }
         else{
             if(this.getAttackTarget() != null) {
+                attackEntityWithRangedAttack(this.getAttackTarget());
+                attackEntityWithRangedAttack(this.getAttackTarget());
+                attackEntityWithRangedAttack(this.getAttackTarget());
                 teleportAttack();
-                lightningStrike();
+                attackEntityWithRangedAttack(this.getAttackTarget());
+                attackEntityWithRangedAttack(this.getAttackTarget());
                 this.destroyBlocksInAABB(this.getBoundingBox());
                 playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
@@ -129,19 +133,14 @@ public class KatsuEntity extends CreatureEntity {
 
         }
     }
-    private void lightningStrike(){
-        if( this.getAttackTarget() != null){
-            BlockPos pos = this.getAttackTarget().getPosition();
-            EntityType.LIGHTNING_BOLT.spawn((ServerWorld)this.getEntityWorld(),null, this.attackingPlayer,pos, SpawnReason.TRIGGERED,true ,true);
-        }
-    }
+
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
-        int i = MathHelper.floor(area.minX - 1);
+        int i = MathHelper.floor(area.minX - 3);
         int j = MathHelper.floor(area.minY );
-        int k = MathHelper.floor(area.minZ - 1);
-        int l = MathHelper.floor(area.maxX + 1);
-        int i1 = MathHelper.floor(area.maxY +1);
-        int j1 = MathHelper.floor(area.maxZ + 1);
+        int k = MathHelper.floor(area.minZ - 3);
+        int l = MathHelper.floor(area.maxX + 3);
+        int i1 = MathHelper.floor(area.maxY +3);
+        int j1 = MathHelper.floor(area.maxZ + 3);
         boolean flag = false;
         boolean flag1 = false;
 
@@ -260,6 +259,7 @@ public class KatsuEntity extends CreatureEntity {
             if (flag2 && !this.isSilent()) {
                 this.world.playSound((PlayerEntity)null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, this.getSoundCategory(), 1.0F, 1.0F);
                 this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
+
             }
 
             return flag2;
