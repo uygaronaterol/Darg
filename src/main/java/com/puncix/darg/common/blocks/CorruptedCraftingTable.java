@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 
 import com.puncix.darg.common.containers.CorruptedCraftingTableContainer;
 
+import com.puncix.darg.core.init.ParticleInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -61,7 +62,7 @@ public class CorruptedCraftingTable extends HorizontalBlock {
 	public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 		float chance = 0.25f;
 		if(chance < rand.nextFloat()){
-			worldIn.addParticle(ParticleTypes.ASH,pos.getX()+rand.nextDouble(),pos.getY() + 0.6d,pos.getZ()+rand.nextDouble(),0d,0.05d,0d);
+			worldIn.addParticle(ParticleInit.CORRUPTED_PARTICLE.get(),pos.getX()+rand.nextDouble(),pos.getY() + 0.6d,pos.getZ()+rand.nextDouble(),0d,0.05d,0d);
 		}
 		super.animateTick(stateIn, worldIn, pos, rand);
 	}

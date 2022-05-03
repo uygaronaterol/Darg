@@ -112,7 +112,9 @@ public class BlockInit {
 			.harvestLevel(2).sound(SoundType.BONE).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 	
 
-	
+	//ninja metal block
+	public static final RegistryObject<Block> NINJA_METAL_BLOCK = BLOCKS.register("ninja_metal_block", () -> new Block( AbstractBlock.Properties.create(Material.EARTH).hardnessAndResistance(10f,10f)
+			.harvestLevel(2).sound(SoundType.METAL).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 	
 	//Wood
 	public static final RegistryObject<Block> CORRUPTED_OAK_LOG = BLOCKS.register("corrupted_oak_log",

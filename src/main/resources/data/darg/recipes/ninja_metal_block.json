@@ -1,0 +1,20 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:ninja_metal"
+    },
+    {
+      "item": "darg:ninja_metal"
+    },
+    {"item": "minecraft:air"},
+    {"item": "darg:ninja_metal"},
+    {"item": "darg:ninja_metal"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:ninja_metal_block"
+  }
+}

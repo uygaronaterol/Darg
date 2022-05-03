@@ -13,4 +13,6 @@ public class ParticleInit {
     public static final DeferredRegister<ParticleType<?>> PARTICLES
         = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, Darg.MOD_ID);
     public static final RegistryObject<BasicParticleType> BLACK_PARTICLE = PARTICLES.register("black_particle", () -> new BasicParticleType(true));
+    public static final RegistryObject<BasicParticleType> CORRUPTED_PARTICLE = PARTICLES.register("corrupted_particle", () -> new BasicParticleType(true));
+
 }

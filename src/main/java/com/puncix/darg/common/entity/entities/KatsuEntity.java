@@ -39,7 +39,7 @@ public class KatsuEntity extends CreatureEntity {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 350.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
@@ -86,14 +86,14 @@ public class KatsuEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT1.get(), 1, 1);
+            playSound(ModSoundEvents.KATSU_AMBIENT1.get(), 3, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT2.get(), 1, 1);
+            playSound(ModSoundEvents.KATSU_AMBIENT2.get(), 3, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -101,7 +101,7 @@ public class KatsuEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT3.get(), 1, 1);
+            playSound(ModSoundEvents.KATSU_AMBIENT3.get(), 3, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -110,11 +110,11 @@ public class KatsuEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             if( rand < 6.5){
-                playSound(ModSoundEvents.VARZAK_AMBIENT5.get(), 1, 1);
+                playSound(ModSoundEvents.KATSU_AMBIENT4.get(), 3, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             else {
-                playSound(ModSoundEvents.VARZAK_AMBIENT4.get(), 1, 1);
+                playSound(ModSoundEvents.KATSU_AMBIENT5.get(), 3, 1);
                 return ModSoundEvents.SILENCE.get();
             }
         }
@@ -127,7 +127,7 @@ public class KatsuEntity extends CreatureEntity {
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 this.destroyBlocksInAABB(this.getBoundingBox());
-                playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.KATSU_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
@@ -174,7 +174,7 @@ public class KatsuEntity extends CreatureEntity {
     @Override
     protected SoundEvent getDeathSound()
     {
-        playSound(ModSoundEvents.VARZAK_DEATH.get(), 1, 1);
+        playSound(ModSoundEvents.KATSU_DEATH.get(), 1, 1);
         return ModSoundEvents.SILENCE.get();
 
     }
@@ -186,11 +186,11 @@ public class KatsuEntity extends CreatureEntity {
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            playSound(ModSoundEvents.VARZAK_HIT1.get(), 1, 1);
+            playSound(ModSoundEvents.KATSU_HIT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
-            playSound(ModSoundEvents.VARZAK_HIT2.get(), 1, 1);
+            playSound(ModSoundEvents.KATSU_HIT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }

@@ -95,7 +95,7 @@ public class DarbigEntity extends CreatureEntity {
                     this.entityDropItem(Items.HEART_OF_THE_SEA.asItem());
                 }
                 else if( 0.9 < rand && rand <= 0.97){
-                    this.entityDropItem(ItemInit.CORRUPTED_BASIC_STAFF.get());
+                    this.entityDropItem(ItemInit.CORRUPTION.get());
 
                 }else if( 0.97 < rand && rand <= 0.99){
                     this.entityDropItem(Items.NETHER_STAR.asItem());

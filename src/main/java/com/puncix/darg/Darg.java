@@ -120,6 +120,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.VARZAK.get(), VarzakRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DWARF.get(), DwarfRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.KATSU.get(), KatsuRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.NINJA.get(), NinjaRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

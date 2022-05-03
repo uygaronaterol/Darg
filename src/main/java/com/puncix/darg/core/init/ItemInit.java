@@ -76,6 +76,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> VARZAK_SPAWN_EGG = ITEMS.register("varzak_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.VARZAK,0xffffff,0x35d7f6,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> DWARF_SPAWN_EGG = ITEMS.register("dwarf_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.DWARF,0xcd7e5b,0xf8b398,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> KATSU_SPAWN_EGG = ITEMS.register("katsu_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.KATSU,0x786d00,0x3e306b,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> NINJA_SPAWN_EGG = ITEMS.register("ninja_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.NINJA,0x332525,0xc5d9d0,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -93,6 +94,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_EYE = ITEMS.register("corrupted_eye", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> EATER_TOOTH = ITEMS.register("eater_tooth", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> DWARF_BLOOD = ITEMS.register("dwarf_blood", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> NINJA_METAL = ITEMS.register("ninja_metal", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));
@@ -114,6 +116,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTION_PICKAXE = ITEMS.register("corruption_pickaxe", () -> new PickaxeItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTION_AXE = ITEMS.register("corruption_axe", () -> new AxeItem(ModItemTier.CORRUPTION, 2,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTION_SHOVEL = ITEMS.register("corruption_shovel", () -> new ShovelItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<Kizutsu> KIZUTSU = ITEMS.register("kizutsu", () -> new Kizutsu(ModItemTier.CORRUPTION, 7,-2.0F, new Item.Properties().group(ItemGroup.TOOLS)));
 
 
 	//Armors
@@ -137,6 +140,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CORRUPTED_FOSSIL_ORE = ITEMS.register("corrupted_fossil_ore", () -> new BlockItem(BlockInit.CORRUPTED_FOSSIL_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_BONE_BLOCK = ITEMS.register("corrupted_bone_block", () -> new BlockItem(BlockInit.CORRUPTED_BONE_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTION_ORE = ITEMS.register("corruption_ore", () -> new BlockItem(BlockInit.CORRUPTION_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> NINJA_METAL_BLOCK = ITEMS.register("ninja_metal_block", () -> new BlockItem(BlockInit.NINJA_METAL_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

@@ -352,5 +352,60 @@
     "sounds": [
       "darg:dwarf_ambient"
     ]
-  }
+  },
+  "katsu_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.katsu_ambient1",
+  "sounds": [
+    "darg:katsu_ambient1"
+  ]
+}, "katsu_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.katsu_ambient2",
+  "sounds": [
+    "darg:katsu_ambient2"
+  ]
+}, "katsu_ambient3": {
+  "category": "entities",
+  "subtitle": "darg.katsu_ambient3",
+  "sounds": [
+    "darg:katsu_ambient3"
+  ]
+}, "katsu_ambient4": {
+  "category": "entities",
+  "subtitle": "darg.katsu_ambient4",
+  "sounds": [
+    "darg:katsu_ambient4"
+  ]
+}, "katsu_ambient5": {
+  "category": "entities",
+  "subtitle": "darg.katsu_ambient5",
+  "sounds": [
+    "darg:katsu_ambient5"
+  ]
+}, "katsu_animation": {
+  "category": "entities",
+  "subtitle": "darg.katsu_animation",
+  "sounds": [
+    "darg:katsu_animation"
+  ]
+}, "katsu_death": {
+  "category": "entities",
+  "subtitle": "darg.katsu_death",
+  "sounds": [
+    "darg:katsu_death"
+  ]
+}, "katsu_hit1": {
+  "category": "entities",
+  "subtitle": "darg.katsu_hit1",
+  "sounds": [
+    "darg:katsu_hit1"
+  ]
+}, "katsu_hit2": {
+  "category": "entities",
+  "subtitle": "darg.katsu_hit2",
+  "sounds": [
+    "darg:katsu_hit2"
+  ]
+}
 }

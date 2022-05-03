@@ -64,6 +64,15 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> DWARF_DEATH = registerSoundEvent("dwarf_death");
     public static final RegistryObject<SoundEvent> DWARF_AMBIENT = registerSoundEvent("dwarf_ambient");
     public static final RegistryObject<SoundEvent> DWARF_HIT = registerSoundEvent("dwarf_hit");
+    public static final RegistryObject<SoundEvent> KATSU_AMBIENT1 = registerSoundEvent("katsu_ambient1");
+    public static final RegistryObject<SoundEvent> KATSU_AMBIENT2 = registerSoundEvent("katsu_ambient2");
+    public static final RegistryObject<SoundEvent> KATSU_AMBIENT3 = registerSoundEvent("katsu_ambient3");
+    public static final RegistryObject<SoundEvent> KATSU_AMBIENT4 = registerSoundEvent("katsu_ambient4");
+    public static final RegistryObject<SoundEvent> KATSU_AMBIENT5 = registerSoundEvent("katsu_ambient5");
+    public static final RegistryObject<SoundEvent> KATSU_HIT1 = registerSoundEvent("katsu_hit1");
+    public static final RegistryObject<SoundEvent> KATSU_HIT2 = registerSoundEvent("katsu_hit2");
+    public static final RegistryObject<SoundEvent> KATSU_ANIMATION = registerSoundEvent("katsu_animation");
+    public static final RegistryObject<SoundEvent> KATSU_DEATH = registerSoundEvent("katsu_death");
 
 
 

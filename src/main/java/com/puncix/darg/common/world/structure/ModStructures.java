@@ -36,6 +36,8 @@ public class ModStructures {
             STRUCTURES.register("medusa_temple", MedusaTempleStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> VARZAK_LAIR =
             STRUCTURES.register("varzak_lair", VarzakLairStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> KATSU_DOJO =
+            STRUCTURES.register("katsu_dojo", KatsuDojoStrcuture::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -45,19 +47,22 @@ public class ModStructures {
                 new StructureSeparationSettings(100,50, 1234567890),
                 true);
         setupMapSpacingAndLand(EXHERISTAFF_STRUCTURE.get(),
-                new StructureSeparationSettings(500,300, 1234567890),
+                new StructureSeparationSettings(300,200, 1234567890),
                 true);
         setupMapSpacingAndLand(CORRUPTED_FOSSIL_SITE.get(),
                 new StructureSeparationSettings(200,80, 1234567890),
                 true);
         setupMapSpacingAndLand(MOGLING_VILLAGE.get(),
-                new StructureSeparationSettings(100,80, 1234567890),
+                new StructureSeparationSettings(300,200, 1234567890),
                 true);
         setupMapSpacingAndLand(MEDUSA_TEMPLE.get(),
-                new StructureSeparationSettings(150,110, 1234567890),
+                new StructureSeparationSettings(100,80, 1234567890),
                 true);
         setupMapSpacingAndLand(VARZAK_LAIR.get(),
                 new StructureSeparationSettings(120,110, 1234567890),
+                true);
+        setupMapSpacingAndLand(KATSU_DOJO.get(),
+                new StructureSeparationSettings(130,100, 1234567890),
                 true);
     }
 

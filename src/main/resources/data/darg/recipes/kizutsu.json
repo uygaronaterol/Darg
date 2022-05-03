@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:condensed_corrupted_stone"
+    },
+
+    {"item": "darg:condensed_corrupted_stone"},
+    {
+      "item": "minecraft:suspicious_stew"
+    },
+    {"item": "darg:ninja_metal_block"},
+    {"item": "darg:ninja_metal_block"},{"item": "darg:ninja_metal_block"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_ball"},{"item": "darg:corruption"},{"item": "darg:corrupted_essence_block"},
+    {
+      "item": "minecraft:gold_block"
+    },{"item": "darg:corrupted_eye_of_katsu"},{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:kizutsu",
+    "count": 1
+  }
+}

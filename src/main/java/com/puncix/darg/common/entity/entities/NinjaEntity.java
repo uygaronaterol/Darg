@@ -1,0 +1,85 @@
+package com.puncix.darg.common.entity.entities;
+
+import com.puncix.darg.client.util.ModSoundEvents;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.*;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.ZombifiedPiglinEntity;
+import net.minecraft.entity.passive.CowEntity;
+import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.passive.TurtleEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class NinjaEntity extends CreatureEntity {
+    public NinjaEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+        super(type, worldIn);
+    }
+
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+        return MobEntity.func_233666_p_()
+                .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.66D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 4.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 35.0D);
+    }
+
+
+
+    @Override
+    protected void registerGoals() {
+        this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 0.5D, false));
+        this.goalSelector.addGoal(0, new SwimGoal(this));
+        //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setCallsForHelp(ZombifiedPiglinEntity.class));
+
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
+        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, TurtleEntity.class, 10, true, false, TurtleEntity.TARGET_DRY_BABY));
+    }
+
+    @Override
+    public boolean attackable() {
+
+        return super.attackable();
+    }
+    public boolean canDespawn(double distanceToClosestPlayer) {
+        return false;
+    }
+
+    @Override
+    protected int getExperiencePoints(PlayerEntity player)
+    {
+        return 3 ;
+    }
+
+    @Override
+    protected void playStepSound(BlockPos pos, BlockState blockIn)
+    {
+    }
+
+    @Override
+    public boolean attackEntityAsMob(Entity entityIn) {
+        if (!super.attackEntityAsMob(entityIn)) {
+            return false;
+        } else {
+            if (entityIn instanceof LivingEntity) {
+            }
+            return true;
+        }
+    }
+
+}

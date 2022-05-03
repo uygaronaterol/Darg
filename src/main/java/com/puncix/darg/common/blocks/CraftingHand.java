@@ -5,6 +5,7 @@ import com.puncix.darg.common.containers.CraftingHandContainer;
 import com.puncix.darg.common.tileentities.CorruptedCraftingTableTile;
 import com.puncix.darg.common.tileentities.CraftingHandTile;
 import com.puncix.darg.common.tileentities.ModTileEntities;
+import com.puncix.darg.core.init.ParticleInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -65,7 +66,7 @@ public class CraftingHand extends HorizontalBlock {
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         float chance = 0.25f;
         if(chance < rand.nextFloat()){
-            worldIn.addParticle(ParticleTypes.ASH,pos.getX()+rand.nextDouble(),pos.getY() + 0.6d,pos.getZ()+rand.nextDouble(),0d,-0.05d,0d);
+            worldIn.addParticle(ParticleInit.BLACK_PARTICLE.get(),pos.getX()+rand.nextDouble(),pos.getY() + 0.6d,pos.getZ()+rand.nextDouble(),0d,-0.05d,0d);
         }
         super.animateTick(stateIn, worldIn, pos, rand);
     }
