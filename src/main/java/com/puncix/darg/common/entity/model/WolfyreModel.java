@@ -443,7 +443,7 @@ public class WolfyreModel <T extends WolfyreEntity> extends EntityModel<T> {
         this.leftPoint.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 0.3F * limbSwingAmount;
         this.leftThumb.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 0.3F * limbSwingAmount;
         this.leftTwo.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 0.3F * limbSwingAmount;
-        this.body.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 1.1F * limbSwingAmount;
+        this.body.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.3F) * 1.1F * limbSwingAmount);
 
     }
 
