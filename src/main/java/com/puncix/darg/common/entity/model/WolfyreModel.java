@@ -422,9 +422,9 @@ public class WolfyreModel <T extends WolfyreEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.6662F) * 1.1F * limbSwingAmount;
+        this.leftUpperArm.rotateAngleX =  Math.abs(MathHelper.sin(limbSwing * 0.6662F) * 1.1F * limbSwingAmount);
         this.leftLowerArm.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.1F * limbSwingAmount);
-        this.rightUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 1.1F * limbSwingAmount;
+        this.rightUpperArm.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.3F) * 1.1F * limbSwingAmount);
         this.rightLowerArm.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.1F * limbSwingAmount);
         this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 0.8F * limbSwingAmount;
         this.leftLowerLeg.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.40F) * 0.8F * limbSwingAmount);
