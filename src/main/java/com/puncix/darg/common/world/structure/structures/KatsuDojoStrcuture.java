@@ -83,7 +83,7 @@ public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
             //addpieces() add pieces of the structure so that structure can be in more than 1 chunks
             JigsawManager.func_242837_a(dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
-                            .getOrDefault(new ResourceLocation(Darg.MOD_ID, "katsu_dojo_structure/start_pool")),
+                            .getOrDefault(new ResourceLocation(Darg.MOD_ID, "katsu_dojo/start_pool")),
                             8), AbstractVillagePiece::new, chunkGenerator, templateManagerIn,
                     blockpos, this.components, this.rand,false,true);
 

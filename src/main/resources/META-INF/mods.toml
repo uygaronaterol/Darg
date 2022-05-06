@@ -9,7 +9,7 @@ displayName="Darg"
 updateJSONURL="https://change.me.example.invalid/updates.json"
 displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
 logoFile="examplemod.png" #optional
-credits="Kaan Yilmaz, Metin Ilkbahar as voice actor,
+credits="Kaan Yilmaz, Metin Ilkbahar, Umut Emre Fidan as voice actors,
  https://www.youtube.com/c/XiaoTongPiano as the corrupted plains soundtrack,
  many youtube minecraft modding tutorial channels"
 authors="puncix"

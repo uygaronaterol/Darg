@@ -139,6 +139,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(NinjaEntity::new,
                             EntityClassification.CREATURE).size(0.8f, 2.1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "ninja").toString()));
+    public static final RegistryObject<EntityType<WolfyreEntity>> WOLFYRE =
+            ENTITY_TYPES.register("wolfyre",
+                    () -> EntityType.Builder.create(WolfyreEntity::new,
+                            EntityClassification.CREATURE).size(0.8f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "wolfyre").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
