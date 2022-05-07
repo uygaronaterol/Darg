@@ -86,14 +86,14 @@ public class WolfyreEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT1.get(), 1, 1);
+            playSound(ModSoundEvents.WOLFYRE_AMBIENT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT2.get(), 1, 1);
+            playSound(ModSoundEvents.WOLFYRE_AMBIENT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -101,7 +101,7 @@ public class WolfyreEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT3.get(), 1, 1);
+            playSound(ModSoundEvents.WOLFYRE_AMBIENT3.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -110,11 +110,11 @@ public class WolfyreEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             if( rand < 6.5){
-                playSound(ModSoundEvents.VARZAK_AMBIENT5.get(), 1, 1);
+                playSound(ModSoundEvents.WOLFYRE_AMBIENT4.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             else {
-                playSound(ModSoundEvents.VARZAK_AMBIENT4.get(), 1, 1);
+                playSound(ModSoundEvents.WOLFYRE_AMBIENT4.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
         }
@@ -123,7 +123,7 @@ public class WolfyreEntity extends CreatureEntity {
                 teleportAttack();
                 goCrazy();
                 this.destroyBlocksInAABB(this.getBoundingBox());
-                playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.WOLFYRE_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
@@ -177,7 +177,7 @@ public class WolfyreEntity extends CreatureEntity {
     @Override
     protected SoundEvent getDeathSound()
     {
-        playSound(ModSoundEvents.VARZAK_DEATH.get(), 1, 1);
+        playSound(ModSoundEvents.WOLFYRE_DEATH.get(), 1, 1);
         return ModSoundEvents.SILENCE.get();
 
     }
@@ -189,11 +189,11 @@ public class WolfyreEntity extends CreatureEntity {
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            playSound(ModSoundEvents.VARZAK_HIT1.get(), 1, 1);
+            playSound(ModSoundEvents.WOLFYRE_HIT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
-            playSound(ModSoundEvents.VARZAK_HIT2.get(), 1, 1);
+            playSound(ModSoundEvents.WOLFYRE_HIT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }

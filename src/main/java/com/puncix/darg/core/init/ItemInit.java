@@ -38,6 +38,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_staff_of_regeneration", () -> new CorruptedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_advanced_staff_of_regeneration", () -> new CorruptedAdvancedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> VARZAKS_CROWN = ITEMS.register("varzaks_crown", () -> new VarzaksCrown(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> WOLFYRE_HAND = ITEMS.register("wolfyre_hand", () -> new WolfyreHand(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 
 	//mogling trade

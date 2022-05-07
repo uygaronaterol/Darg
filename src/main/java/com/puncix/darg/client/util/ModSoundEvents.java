@@ -73,6 +73,16 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> KATSU_HIT2 = registerSoundEvent("katsu_hit2");
     public static final RegistryObject<SoundEvent> KATSU_ANIMATION = registerSoundEvent("katsu_animation");
     public static final RegistryObject<SoundEvent> KATSU_DEATH = registerSoundEvent("katsu_death");
+    public static final RegistryObject<SoundEvent> WOLFYRE_AMBIENT1 = registerSoundEvent("wolfyre_ambient1");
+    public static final RegistryObject<SoundEvent> WOLFYRE_AMBIENT2 = registerSoundEvent("wolfyre_ambient2");
+    public static final RegistryObject<SoundEvent> WOLFYRE_AMBIENT3 = registerSoundEvent("wolfyre_ambient3");
+    public static final RegistryObject<SoundEvent> WOLFYRE_AMBIENT4 = registerSoundEvent("wolfyre_ambient4");
+    public static final RegistryObject<SoundEvent> WOLFYRE_HIT1 = registerSoundEvent("wolfyre_hit1");
+    public static final RegistryObject<SoundEvent> WOLFYRE_HIT2 = registerSoundEvent("wolfyre_hit2");
+    public static final RegistryObject<SoundEvent> WOLFYRE_DEATH = registerSoundEvent("wolfyre_death");
+    public static final RegistryObject<SoundEvent> WOLFYRE_ANIMATION = registerSoundEvent("wolfyre_animation");
+
+
 
 
 

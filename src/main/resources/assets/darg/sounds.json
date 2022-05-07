@@ -407,5 +407,53 @@
   "sounds": [
     "darg:katsu_hit2"
   ]
+}, "wolfyre_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_ambient1",
+  "sounds": [
+    "darg:wolfyre_ambient1"
+  ]
+}, "wolfyre_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_ambient2",
+  "sounds": [
+    "darg:wolfyre_ambient2"
+  ]
+}, "wolfyre_ambient3": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_ambient3",
+  "sounds": [
+    "darg:wolfyre_ambient3"
+  ]
+}, "wolfyre_ambient4": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_ambient4",
+  "sounds": [
+    "darg:wolfyre_ambient4"
+  ]
+}, "wolfyre_hit1": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_hit1",
+  "sounds": [
+    "darg:wolfyre_hit1"
+  ]
+}, "wolfyre_hit2": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_hit2",
+  "sounds": [
+    "darg:wolfyre_hit2"
+  ]
+}, "wolfyre_death": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_death",
+  "sounds": [
+    "darg:wolfyre_death"
+  ]
+}, "wolfyre_animation": {
+  "category": "entities",
+  "subtitle": "darg.wolfyre_animation",
+  "sounds": [
+    "darg:wolfyre_animation"
+  ]
 }
 }
