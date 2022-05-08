@@ -22,6 +22,8 @@ public class ItemInit {
 	public static final RegistryObject<CorruptedEyeOfVarzak> CORRUPTED_EYE_OF_VARZAK = ITEMS.register("corrupted_eye_of_varzak", () -> new CorruptedEyeOfVarzak(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<CorruptedEyeOfKatsu> CORRUPTED_EYE_OF_KATSU = ITEMS.register("corrupted_eye_of_katsu", () -> new CorruptedEyeOfKatsu(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Shuriken> SHURIKEN = ITEMS.register("shuriken", () -> new Shuriken(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<CorruptedEyeOfWolfyre> CORRUPTED_EYE_OF_WOLFYRE = ITEMS.register("corrupted_eye_of_wolfyre", () -> new CorruptedEyeOfWolfyre(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> WOLFYRE_SKIN = ITEMS.register("wolfyre_skin", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
@@ -38,7 +40,6 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_staff_of_regeneration", () -> new CorruptedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_advanced_staff_of_regeneration", () -> new CorruptedAdvancedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> VARZAKS_CROWN = ITEMS.register("varzaks_crown", () -> new VarzaksCrown(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
-	public static final RegistryObject<Item> WOLFYRE_HAND = ITEMS.register("wolfyre_hand", () -> new WolfyreHand(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 
 	//mogling trade
@@ -119,6 +120,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTION_AXE = ITEMS.register("corruption_axe", () -> new AxeItem(ModItemTier.CORRUPTION, 2,-3F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Item> CORRUPTION_SHOVEL = ITEMS.register("corruption_shovel", () -> new ShovelItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Kizutsu> KIZUTSU = ITEMS.register("kizutsu", () -> new Kizutsu(ModItemTier.CORRUPTION, 7,-2.0F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<WolfyreHand> WOLFYRE_HAND = ITEMS.register("wolfyre_hand", () -> new WolfyreHand(ModItemTier.CORRUPTION, 7,-2.0F, new Item.Properties().group(ItemGroup.TOOLS)));
 
 
 	//Armors

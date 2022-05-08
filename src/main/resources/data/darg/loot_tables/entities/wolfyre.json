@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:corrupted_eye_of_wolfyre"
+        }
+      ]},{
+      "rolls": {
+        "min": 4,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:wolfyre_skin"
+        }
+      ]},{
+      "rolls": {
+        "min": 2,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:corrupted_essence_block"
+        }
+      ]},{
+      "rolls": {
+        "min": 4,
+        "max": 7
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:essence"
+        }
+      ]
+    },{
+      "rolls": {
+        "min": 1,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:corruption_ore"
+        }
+      ]
+    }
+  ]
+}

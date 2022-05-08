@@ -1,6 +1,7 @@
 package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.core.init.EffectInit;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -212,6 +213,8 @@ public class WolfyreEntity extends CreatureEntity {
         } else {
             if (entityIn instanceof LivingEntity) {
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(EffectInit.BLEED.get(), 100));
+
             }
             return true;
         }

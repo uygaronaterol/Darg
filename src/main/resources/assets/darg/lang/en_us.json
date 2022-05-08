@@ -126,5 +126,9 @@
 	"item.darg.ninja_metal_block": "Ninja Metal Block",
 	"item.darg.katsu_spawn_egg": "Katsu Spawn Egg",
 	"item.darg.ninja_spawn_egg": "Ninja Spawn Egg",
-	"item.darg.wolfyre_spawn_egg": "Wolfyre Spawn Egg"
+	"item.darg.wolfyre_spawn_egg": "Wolfyre Spawn Egg",
+	"effect.darg.bleed": "Bleed",
+	"item.darg.wolfyre_hand": "Wolfyre Hand",
+	"item.darg.wolfyre_skin": "Wolfyre Skin",
+	"item.darg.corrupted_eye_of_wolfyre": "Corrupted Eye Of Wolfyre"
 }

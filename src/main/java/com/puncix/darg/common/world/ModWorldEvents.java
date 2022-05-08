@@ -81,6 +81,8 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.VARZAK_LAIR.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.KATSU_DOJO.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.KATSU_DOJO.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.WOLFYRE_DEN.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.WOLFYRE_DEN.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}

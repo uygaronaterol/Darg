@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corrupted_stone_sword"
+    },
+    {
+      "item": "darg:wolfyre_skin"
+    },
+    {"item": "darg:wolfyre_skin"},
+    {"item": "darg:corrupted_eye_of_wolfyre"},
+    {"item": "darg:corruption"},{"item": "darg:corrupted_bone_block"},
+    {"item": "darg:corrupted_stone_sword"},{"item": "darg:wolfyre_skin"},{"item": "darg:wolfyre_skin"},{"item": "darg:dwarf_blood"},
+    {
+      "item": "darg:ninja_metal_block"
+    },{"item": "minecraft:netherite_ingot"},{"item": "darg:corrupted_essence_block"},{"item": "darg:condensed_corrupted_stone"}
+  ],
+  "output": {
+    "item": "darg:wolfyre_hand",
+    "count": 1
+  }
+}

@@ -58,6 +58,8 @@ public class Darg
         ModStructures.register(bus);
         ModRecipeTypes.register(bus);
         ModSoundEvents.register(bus);
+        EffectInit.register(bus);
+        PotionInit.register(bus);
         EntityTypeInit.register(bus);
         ModBiomes.register(bus);
         // Register the enqueueIMC method for modloading

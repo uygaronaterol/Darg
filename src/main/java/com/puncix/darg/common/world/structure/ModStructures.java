@@ -38,6 +38,8 @@ public class ModStructures {
             STRUCTURES.register("varzak_lair", VarzakLairStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> KATSU_DOJO =
             STRUCTURES.register("katsu_dojo", KatsuDojoStrcuture::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> WOLFYRE_DEN =
+            STRUCTURES.register("wolfyre_den", WolfyreDenStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -63,6 +65,9 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(KATSU_DOJO.get(),
                 new StructureSeparationSettings(130,100, 1234567890),
+                true);
+        setupMapSpacingAndLand(WOLFYRE_DEN.get(),
+                new StructureSeparationSettings(300,200, 1234567890),
                 true);
     }
 

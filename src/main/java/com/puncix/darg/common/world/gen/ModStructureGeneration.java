@@ -43,6 +43,10 @@ public class ModStructureGeneration {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.KATSU_DOJO.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
+        else if(types.contains(BiomeDictionary.Type.FOREST)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.WOLFYRE_DEN.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
     }
 
 }

@@ -10,22 +10,20 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class WolfyreHand extends Item {
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.IItemTier;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 
-
-    public WolfyreHand(Properties properties) {
-        super(properties);
+public class WolfyreHand extends SwordItem {
+    public WolfyreHand(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builderIn) {
+        super(tier, attackDamageIn, attackSpeedIn, builderIn);
     }
 
-
     @Override
-    public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
-        if( entity.isAlive()) {
-            entity.attackEntityFrom(DamageSource.causeIndirectDamage(player, (LivingEntity)entity), 20);
-        }
-        player.getCooldownTracker().setCooldown(this, 100);
+    public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 
-        return false;
+        return super.hitEntity(stack, target, attacker);
     }
 
 }
