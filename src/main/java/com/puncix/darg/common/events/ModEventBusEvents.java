@@ -37,6 +37,8 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.KATSU.get(), KatsuEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.NINJA.get(), NinjaEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.WOLFYRE.get(), WolfyreEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.MANATONE.get(), ManatoneEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.GOLEM.get(), GolemEntity.setCustomAttributes().create());
 
 
 

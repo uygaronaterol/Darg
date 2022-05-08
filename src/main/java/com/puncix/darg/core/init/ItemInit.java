@@ -24,6 +24,7 @@ public class ItemInit {
 	public static final RegistryObject<Shuriken> SHURIKEN = ITEMS.register("shuriken", () -> new Shuriken(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<CorruptedEyeOfWolfyre> CORRUPTED_EYE_OF_WOLFYRE = ITEMS.register("corrupted_eye_of_wolfyre", () -> new CorruptedEyeOfWolfyre(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> WOLFYRE_SKIN = ITEMS.register("wolfyre_skin", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> MANATONE_HEAD_PIECE = ITEMS.register("manatone_head_piece", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
@@ -98,6 +99,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> EATER_TOOTH = ITEMS.register("eater_tooth", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> DWARF_BLOOD = ITEMS.register("dwarf_blood", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> NINJA_METAL = ITEMS.register("ninja_metal", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> GOLEM_ESSENCE = ITEMS.register("golem_essence", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
 
 	//Special items
 	public static final RegistryObject<CorruptedFire> CORRUPTED_FIRE = ITEMS.register("corrupted_fire", () -> new CorruptedFire(new Item.Properties().group(ItemGroup.MISC)));

@@ -144,6 +144,16 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(WolfyreEntity::new,
                             EntityClassification.CREATURE).size(0.8f, 3.1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "wolfyre").toString()));
+    public static final RegistryObject<EntityType<ManatoneEntity>> MANATONE =
+            ENTITY_TYPES.register("manatone",
+                    () -> EntityType.Builder.create(ManatoneEntity::new,
+                            EntityClassification.CREATURE).size(0.8f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "manatone").toString()));
+    public static final RegistryObject<EntityType<GolemEntity>> GOLEM =
+            ENTITY_TYPES.register("golem",
+                    () -> EntityType.Builder.create(GolemEntity::new,
+                            EntityClassification.CREATURE).size(0.6f, 1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "golem").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
