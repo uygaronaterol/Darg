@@ -71,21 +71,25 @@ public class GolemEntity extends CreatureEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        attackEntityWithRangedAttack(this.getAttackTarget());
-        return ModSoundEvents.SNAKE1.get();
+        if(this.getAttackTarget() != null) {
+            attackEntityWithRangedAttack(this.getAttackTarget());
+            return ModSoundEvents.GOLEM_AMBIENT.get();
+        }
+        return ModSoundEvents.GOLEM_AMBIENT.get();
+
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.SNAKE2.get();
+        return ModSoundEvents.GOLEM_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.SNAKE1.get();
+        return ModSoundEvents.GOLEM_HIT.get();
     }
 
     @Override
@@ -99,7 +103,7 @@ public class GolemEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.POISON, 35,3));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 35,3));
             }
             return true;
         }

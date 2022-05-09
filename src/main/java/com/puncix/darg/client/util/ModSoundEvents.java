@@ -81,7 +81,14 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> WOLFYRE_HIT2 = registerSoundEvent("wolfyre_hit2");
     public static final RegistryObject<SoundEvent> WOLFYRE_DEATH = registerSoundEvent("wolfyre_death");
     public static final RegistryObject<SoundEvent> WOLFYRE_ANIMATION = registerSoundEvent("wolfyre_animation");
-
+    public static final RegistryObject<SoundEvent> MANATONE_ANIMATION = registerSoundEvent("manatone_animation");
+    public static final RegistryObject<SoundEvent> MANATONE_AMBIENT1 = registerSoundEvent("manatone_ambient1");
+    public static final RegistryObject<SoundEvent> MANATONE_AMBIENT2 = registerSoundEvent("manatone_ambient2");
+    public static final RegistryObject<SoundEvent> MANATONE_HIT = registerSoundEvent("manatone_hit");
+    public static final RegistryObject<SoundEvent> MANATONE_DEATH = registerSoundEvent("manatone_death");
+    public static final RegistryObject<SoundEvent> GOLEM_DEATH = registerSoundEvent("golem_death");
+    public static final RegistryObject<SoundEvent> GOLEM_HIT = registerSoundEvent("golem_hit");
+    public static final RegistryObject<SoundEvent> GOLEM_AMBIENT = registerSoundEvent("golem_ambient");
 
 
 

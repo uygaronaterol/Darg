@@ -455,5 +455,56 @@
   "sounds": [
     "darg:wolfyre_animation"
   ]
+}, "manatone_animation": {
+  "category": "entities",
+  "subtitle": "darg.manatone_animation",
+  "sounds": [
+    "darg:manatone_animation"
+  ]
+}, "manatone_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.manatone_ambient1",
+  "sounds": [
+    "darg:manatone_ambient1"
+  ]
+},
+   "manatone_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.manatone_ambient2",
+  "sounds": [
+    "darg:manatone_ambient2"
+  ]
+},
+   "manatone_hit": {
+  "category": "entities",
+  "subtitle": "darg.manatone_hit",
+  "sounds": [
+    "darg:manatone_hit"
+  ]
+}
+  , "manatone_death": {
+  "category": "entities",
+  "subtitle": "darg.manatone_death",
+  "sounds": [
+    "darg:manatone_death"
+  ]
+} , "golem_ambient": {
+  "category": "entities",
+  "subtitle": "darg.golem_ambient",
+  "sounds": [
+    "darg:golem_ambient"
+  ]
+}, "golem_death": {
+  "category": "entities",
+  "subtitle": "darg.golem_death",
+  "sounds": [
+    "darg:golem_death"
+  ]
+}, "golem_hit": {
+  "category": "entities",
+  "subtitle": "darg.golem_hit",
+  "sounds": [
+    "darg:golem_hit"
+  ]
 }
 }

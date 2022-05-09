@@ -88,7 +88,7 @@ public class ManatoneEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
             }
             //return ModSoundEvents.EXHERISTAFF_AMBIENT1.get();
-            return ModSoundEvents.SNAKE1.get();
+            return ModSoundEvents.MANATONE_AMBIENT1.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
@@ -98,7 +98,7 @@ public class ManatoneEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
             }
             //return ModSoundEvents.EXHERISTAFF_AMBIENT2.get();
-            return ModSoundEvents.SNAKE1.get();
+            return ModSoundEvents.MANATONE_AMBIENT1.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
@@ -109,7 +109,7 @@ public class ManatoneEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
             }
             //return ModSoundEvents.EXHERISTAFF_AMBIENT3.get();
-            return ModSoundEvents.SNAKE1.get();
+            return ModSoundEvents.MANATONE_AMBIENT2.get();
 
         }
         else if( 0.8 < rand && rand <= 0.8){
@@ -120,7 +120,7 @@ public class ManatoneEntity extends CreatureEntity{
                 attackEntityWithRangedAttack(this.getAttackTarget());
             }
             //return ModSoundEvents.EXHERISTAFF_AMBIENT4.get();
-            return ModSoundEvents.SNAKE1.get();
+            return ModSoundEvents.MANATONE_AMBIENT2.get();
 
         }
         else{
@@ -132,21 +132,21 @@ public class ManatoneEntity extends CreatureEntity{
                 this.destroyBlocksInAABB(this.getBoundingBox());
                 this.summonGolems();
             }
-            return SoundEvents.BLOCK_CHAIN_HIT;
+            return ModSoundEvents.MANATONE_ANIMATION.get();
 
         }
     }
     private void summonGolems(){
         if(this.getAttackTarget() != null){
-            MedusaSnakeEntity medusaSnakeEntity = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
-            medusaSnakeEntity.setPosition(this.getPosX()+1,this.getPosY()+1,this.getPosZ()+1);
-            this.world.addEntity(medusaSnakeEntity);
-            MedusaSnakeEntity medusaSnakeEntity1 = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
-            medusaSnakeEntity1.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()-1);
-            this.world.addEntity(medusaSnakeEntity1);
-            MedusaSnakeEntity medusaSnakeEntity2 = EntityTypeInit.MEDUSA_SNAKE.get().create(this.world);
-            medusaSnakeEntity2.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()+1);
-            this.world.addEntity(medusaSnakeEntity2);
+            GolemEntity golemEntity = EntityTypeInit.GOLEM.get().create(this.world);
+            golemEntity.setPosition(this.getPosX()+1,this.getPosY()+1,this.getPosZ()+1);
+            this.world.addEntity(golemEntity);
+            GolemEntity golemEntity1 = EntityTypeInit.GOLEM.get().create(this.world);
+            golemEntity1.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()-1);
+            this.world.addEntity(golemEntity1);
+            GolemEntity golemEntity2 = EntityTypeInit.GOLEM.get().create(this.world);
+            golemEntity2.setPosition(this.getPosX()-1,this.getPosY()+1,this.getPosZ()+1);
+            this.world.addEntity(golemEntity2);
         }
     }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
@@ -199,10 +199,10 @@ public class ManatoneEntity extends CreatureEntity{
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            return ModSoundEvents.SNAKE2.get();
+            return ModSoundEvents.MANATONE_HIT.get();
         }
         else {
-            return ModSoundEvents.SNAKE2.get();
+            return ModSoundEvents.MANATONE_HIT.get();
 
         }
     }
@@ -239,7 +239,7 @@ public class ManatoneEntity extends CreatureEntity{
         soepe.setItem(ItemInit.MANATONE_HEAD_PIECE.get().getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
         soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.playSound(ModSoundEvents.MEDUSA_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+        this.playSound(ModSoundEvents.MANATONE_ANIMATION.get(), 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
         this.world.addEntity(soepe);
         double rand = Math.random();
         if( rand < 0.25){
