@@ -189,7 +189,7 @@ public class ManatoneEntity extends CreatureEntity{
     protected SoundEvent getDeathSound()
     {
         //return ModSoundEvents.EXHERISTAFF_DEATH.get();
-        return ModSoundEvents.SNAKE2.get();
+        return ModSoundEvents.MANATONE_DEATH.get();
     }
 
 

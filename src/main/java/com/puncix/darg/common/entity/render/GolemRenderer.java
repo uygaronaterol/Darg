@@ -10,7 +10,7 @@ public class GolemRenderer  extends MobRenderer<GolemEntity, GolemModel<GolemEnt
             new ResourceLocation(Darg.MOD_ID, "textures/entity/golem.png");
 
     public GolemRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new GolemModel<>(), 1.2F);
+        super(renderManagerIn, new GolemModel<>(), 0.2F);
     }
 
     @Override
