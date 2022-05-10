@@ -1,6 +1,8 @@
 package com.puncix.darg.core.init;
 
 import com.puncix.darg.Darg;
+import com.puncix.darg.common.enchantments.BleedEnchantment;
+import com.puncix.darg.common.enchantments.ManatoneParalysisEnchantment;
 import com.puncix.darg.common.enchantments.MedusaPoisonEnchantment;
 import com.puncix.darg.common.enchantments.MedusaTurnStoneEnchantment;
 import net.minecraft.enchantment.Enchantment;
@@ -20,5 +22,11 @@ public class EnchantmentInit {
             new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
     public static final RegistryObject<Enchantment> MEDUSA_TURN_STONE
             = ENCHANTMENTS.register("medusa_turn_stone", ()-> new MedusaTurnStoneEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
+            new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
+    public static final RegistryObject<Enchantment> MANATONE_PARALYSIS
+            = ENCHANTMENTS.register("manatone_paralysis", ()-> new ManatoneParalysisEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
+            new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
+    public static final RegistryObject<Enchantment> BLEED
+            = ENCHANTMENTS.register("bleed", ()-> new BleedEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
             new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
 }

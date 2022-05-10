@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:wolfyre_skin"
+    },
+
+    {"item": "darg:corrupted_ball"},
+    {
+      "item": "minecraft:diamond"
+    },
+    {"item": "darg:corruption"},
+    {"item": "darg:ninja_metal"},{"item": "darg:ninja_metal"},
+    {"item": "darg:wolfyre_skin"},{"item": "darg:corrupted_ball"},{"item": "minecraft:diamond"},{"item": "darg:dwarf_blood"},
+    {
+      "item": "darg:corrupted_bone_sword"
+    },{"item": "darg:corrupted_stone_sword"},{"item": "darg:dwarf_blood"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:bleed_enchantment_kit",
+    "count": 1
+  }
+}

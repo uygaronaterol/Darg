@@ -1,6 +1,7 @@
 package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.core.init.EffectInit;
 import com.puncix.darg.core.init.EntityTypeInit;
 import com.puncix.darg.core.init.ItemInit;
 import com.puncix.darg.core.init.ParticleInit;
@@ -219,7 +220,7 @@ public class ManatoneEntity extends CreatureEntity{
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50,3));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(EffectInit.MANATONE_PARALYSIS.get(), 50,3));
                 ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.BLINDNESS, 50,3));
 
 

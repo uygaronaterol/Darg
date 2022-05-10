@@ -25,6 +25,7 @@ public class ItemInit {
 	public static final RegistryObject<CorruptedEyeOfWolfyre> CORRUPTED_EYE_OF_WOLFYRE = ITEMS.register("corrupted_eye_of_wolfyre", () -> new CorruptedEyeOfWolfyre(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> WOLFYRE_SKIN = ITEMS.register("wolfyre_skin", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> MANATONE_HEAD_PIECE = ITEMS.register("manatone_head_piece", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE_OF_MANATONE = ITEMS.register("corrupted_eye_of_manatone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
@@ -41,6 +42,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_staff_of_regeneration", () -> new CorruptedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_advanced_staff_of_regeneration", () -> new CorruptedAdvancedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> VARZAKS_CROWN = ITEMS.register("varzaks_crown", () -> new VarzaksCrown(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> MANATONE_PARALYSIS_ENCHANTMENT_KIT = ITEMS.register("manatone_paralysis_enchantment_kit", () -> new ManatoneParalysisEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> BLEED_ENCHANTMENT_KIT = ITEMS.register("bleed_enchantment_kit", () -> new BleedEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 
 	//mogling trade
@@ -93,6 +96,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_ESSENCE_PIECE = ITEMS.register("corrupted_essence_piece", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<BlockItem> CORRUPTED_ESSENCE_BLOCK = ITEMS.register("corrupted_essence_block", () -> new BlockItem(BlockInit.CORRUPTED_ESSENCE_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
+	//boss item
 	public static final RegistryObject<Item> PILLAR_OF_STAFF_OF_EXHERISTAFF = ITEMS.register("pillar_of_staff_of_exheristaff", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//mob drops
@@ -150,6 +154,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CORRUPTED_BONE_BLOCK = ITEMS.register("corrupted_bone_block", () -> new BlockItem(BlockInit.CORRUPTED_BONE_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTION_ORE = ITEMS.register("corruption_ore", () -> new BlockItem(BlockInit.CORRUPTION_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> NINJA_METAL_BLOCK = ITEMS.register("ninja_metal_block", () -> new BlockItem(BlockInit.NINJA_METAL_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> MANA_BLOCK = ITEMS.register("mana_block", () -> new BlockItem(BlockInit.MANA_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

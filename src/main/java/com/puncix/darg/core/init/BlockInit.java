@@ -178,10 +178,14 @@ public class BlockInit {
 			   }).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> CORRUPTED_FOSSIL_ORE = BLOCKS.register("corrupted_fossil_ore", () -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(5f,5f)
 			.harvestLevel(2).sound(SoundType.BONE).setLightLevel((p_235470_0_) -> {
-				return 0;
+				return 12;
 			}).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 	public static final RegistryObject<Block> CORRUPTION_ORE = BLOCKS.register("corruption_ore", () -> new Block(AbstractBlock.Properties.create(Material.DRAGON_EGG).hardnessAndResistance(500f,1500f)
 			.harvestLevel(4).sound(SoundType.ANCIENT_DEBRIS).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 
-
+	//manablock
+	public static final RegistryObject<Block> MANA_BLOCK = BLOCKS.register("mana_block", () -> new Block(AbstractBlock.Properties.create(Material.EARTH).hardnessAndResistance(10f,10f)
+			.harvestLevel(2).sound(SoundType.BASALT).setLightLevel((p_235470_0_) -> {
+				return 12;
+			}).setRequiresTool().harvestTool(ToolType.PICKAXE)));
 }

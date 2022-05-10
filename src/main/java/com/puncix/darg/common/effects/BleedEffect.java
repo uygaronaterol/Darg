@@ -16,8 +16,7 @@ public class BleedEffect extends Effect {
     @Override
     public void performEffect(LivingEntity entityLivingBaseIn, int amplifier) {
         if (entityLivingBaseIn.getHealth() > 1.0F) {
-            entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, 1.0F);
-            entityLivingBaseIn.setAIMoveSpeed(0.5F);
+            entityLivingBaseIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
         }
     }
 

@@ -1,0 +1,21 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "darg:golem_essence"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},
+    {"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "minecraft:air"},
+    {
+      "item": "darg:corrupted_essence_piece"
+    }
+  ],
+  "output": {
+    "item": "darg:mana_block",
+    "count": 3
+  }
+}

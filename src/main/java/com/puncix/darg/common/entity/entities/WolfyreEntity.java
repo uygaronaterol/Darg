@@ -41,7 +41,7 @@ public class WolfyreEntity extends CreatureEntity {
                 .createMutableAttribute(Attributes.MAX_HEALTH, 500.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 55.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 75.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D);
