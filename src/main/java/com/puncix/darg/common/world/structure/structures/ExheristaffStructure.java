@@ -104,12 +104,5 @@ public static class Start extends StructureStart<NoFeatureConfig> {
 }
 
 
-	private static final List<MobSpawnInfo.Spawners> STRUCTURE_CREATURES = ImmutableList.of(
-			new MobSpawnInfo.Spawners(EntityTypeInit.EXHERISTAFF.get(), 30, 1, 1)
-	);
-	@Override
-	public List<MobSpawnInfo.Spawners> getDefaultCreatureSpawnList() {
-		return STRUCTURE_CREATURES;
-	}
 
 }

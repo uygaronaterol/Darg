@@ -47,6 +47,10 @@ public class ModStructureGeneration {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.WOLFYRE_DEN.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
+        else if(types.contains(BiomeDictionary.Type.MESA)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.MANATONE_ALTAR.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
     }
 
 }

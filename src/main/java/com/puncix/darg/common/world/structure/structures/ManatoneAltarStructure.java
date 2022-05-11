@@ -30,10 +30,10 @@ import net.minecraft.world.biome.MobSpawnInfo;
 
 import java.util.List;
 
-public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
+public class ManatoneAltarStructure extends Structure<NoFeatureConfig>{
 
 
-    public KatsuDojoStrcuture() {
+    public ManatoneAltarStructure() {
 
         super(NoFeatureConfig.CODEC);
     }
@@ -60,7 +60,7 @@ public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
 
     @Override
     public IStartFactory<NoFeatureConfig> getStartFactory() {
-        return KatsuDojoStrcuture.Start::new;
+        return ManatoneAltarStructure.Start::new;
     }
 
     public static class Start extends StructureStart<NoFeatureConfig> {
@@ -83,7 +83,7 @@ public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
             //addpieces() add pieces of the structure so that structure can be in more than 1 chunks
             JigsawManager.func_242837_a(dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
-                            .getOrDefault(new ResourceLocation(Darg.MOD_ID, "katsu_dojo/start_pool")),
+                            .getOrDefault(new ResourceLocation(Darg.MOD_ID, "manatone_altar/start_pool")),
                             8), AbstractVillagePiece::new, chunkGenerator, templateManagerIn,
                     blockpos, this.components, this.rand,false,true);
 
@@ -92,7 +92,7 @@ public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
 
             this.recalculateStructureSize();
 
-            LogManager.getLogger().log(Level.DEBUG, "Katsu dojo structure at " +
+            LogManager.getLogger().log(Level.DEBUG, "Manatone altar structure at " +
                     this.components.get(0).getBoundingBox().minX + " " +
                     this.components.get(0).getBoundingBox().minY + " " +
                     this.components.get(0).getBoundingBox().minZ);
@@ -105,7 +105,7 @@ public class KatsuDojoStrcuture extends Structure<NoFeatureConfig>{
 
 
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_CREATURES = ImmutableList.of(
-            new MobSpawnInfo.Spawners(EntityTypeInit.NINJA.get(), 30, 1, 1)
+            new MobSpawnInfo.Spawners(EntityTypeInit.GOLEM.get(), 30, 1, 1)
     );
     @Override
     public List<MobSpawnInfo.Spawners> getDefaultCreatureSpawnList() {
