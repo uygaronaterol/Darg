@@ -3,6 +3,7 @@ package com.puncix.darg;
 
 import com.google.common.collect.ImmutableMap;
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.common.entity.entities.CinnerEntity;
 import com.puncix.darg.common.entity.entities.PaleontologistMoglingEntity;
 import com.puncix.darg.common.entity.render.*;
 import com.puncix.darg.common.screens.CraftingHandScreen;
@@ -126,6 +127,8 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.WOLFYRE.get(), WolfyreRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.MANATONE.get(), ManatoneRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOLEM.get(), GolemRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.CINNER.get(), CinnerRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOBLIN.get(), GoblinRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

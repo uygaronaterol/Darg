@@ -1,6 +1,7 @@
 package com.puncix.darg.common.entity.entities;
 
 import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.core.init.EffectInit;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -93,6 +94,7 @@ public class CinnerEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
+            lightningStrike();
             playSound(ModSoundEvents.VARZAK_AMBIENT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
@@ -102,6 +104,7 @@ public class CinnerEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             playSound(ModSoundEvents.VARZAK_AMBIENT3.get(), 1, 1);
+            lightningStrike();
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -111,18 +114,23 @@ public class CinnerEntity extends CreatureEntity {
             }
             if( rand < 6.5){
                 playSound(ModSoundEvents.VARZAK_AMBIENT5.get(), 1, 1);
+                lightningStrike();
+
                 return ModSoundEvents.SILENCE.get();
             }
             else {
                 playSound(ModSoundEvents.VARZAK_AMBIENT4.get(), 1, 1);
+                lightningStrike();
                 return ModSoundEvents.SILENCE.get();
             }
         }
         else{
             if(this.getAttackTarget() != null) {
                 teleportAttack();
-                lightningStrike();
                 this.destroyBlocksInAABB(this.getBoundingBox());
+                attackEntityWithRangedAttack(this.getAttackTarget());
+                attackEntityWithRangedAttack(this.getAttackTarget());
+                attackEntityWithRangedAttack(this.getAttackTarget());
                 playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
@@ -136,6 +144,7 @@ public class CinnerEntity extends CreatureEntity {
             EntityType.LIGHTNING_BOLT.spawn((ServerWorld)this.getEntityWorld(),null, this.attackingPlayer,pos, SpawnReason.TRIGGERED,true ,true);
         }
     }
+
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
         int i = MathHelper.floor(area.minX - 1);
         int j = MathHelper.floor(area.minY );
@@ -209,7 +218,9 @@ public class CinnerEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 50));
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(EffectInit.DJINNI.get(), 50));
+                ((LivingEntity)entityIn).setFire(2);
+
             }
             return true;
         }
@@ -248,6 +259,26 @@ public class CinnerEntity extends CreatureEntity {
             return flag2;
         } else {
             return false;
+        }
+    }
+
+    public void attackEntityWithRangedAttack(LivingEntity target) {
+
+        this.getEntity().setInvulnerable(true);
+
+        double d0 = target.getPosX() - this.getPosX();
+        double d1 = target.getPosYHeight(0.3333333333333333D) - this.getPosY() ;
+        double d2 = target.getPosZ() - this.getPosZ();
+        double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
+        ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
+        soepe.setItem(ItemInit.GOLD_COIN.get().getDefaultInstance());
+        //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
+        soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
+        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F );
+        this.world.addEntity(soepe);
+        double rand = Math.random();
+        if( rand < 0.25){
+            this.getEntity().setInvulnerable(true);
         }
     }
 }

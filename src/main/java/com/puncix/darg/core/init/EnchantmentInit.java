@@ -1,10 +1,7 @@
 package com.puncix.darg.core.init;
 
 import com.puncix.darg.Darg;
-import com.puncix.darg.common.enchantments.BleedEnchantment;
-import com.puncix.darg.common.enchantments.ManatoneParalysisEnchantment;
-import com.puncix.darg.common.enchantments.MedusaPoisonEnchantment;
-import com.puncix.darg.common.enchantments.MedusaTurnStoneEnchantment;
+import com.puncix.darg.common.enchantments.*;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.EntityType;
@@ -28,5 +25,8 @@ public class EnchantmentInit {
             new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
     public static final RegistryObject<Enchantment> BLEED
             = ENCHANTMENTS.register("bleed", ()-> new BleedEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
+            new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
+    public static final RegistryObject<Enchantment> DJINNI
+            = ENCHANTMENTS.register("djinni", ()-> new DjinniEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
             new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
 }

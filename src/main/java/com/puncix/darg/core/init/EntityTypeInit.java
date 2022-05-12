@@ -154,6 +154,16 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(GolemEntity::new,
                             EntityClassification.CREATURE).size(0.6f, 1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "golem").toString()));
+    public static final RegistryObject<EntityType<CinnerEntity>> CINNER =
+            ENTITY_TYPES.register("cinner",
+                    () -> EntityType.Builder.create(CinnerEntity::new,
+                            EntityClassification.CREATURE).size(0.8f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "cinner").toString()));
+    public static final RegistryObject<EntityType<GoblinEntity>> GOBLIN =
+            ENTITY_TYPES.register("goblin",
+                    () -> EntityType.Builder.create(GoblinEntity::new,
+                            EntityClassification.CREATURE).size(0.5f, 1.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "goblin").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

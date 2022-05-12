@@ -46,6 +46,7 @@ public class MedusaProjectileEntity extends ProjectileItemEntity {
             Entity entity = ((EntityRayTraceResult)result).getEntity();
             int damage = 20;
             entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getShooter()), (float)damage);
+
         }
         if(!world.isRemote){
             this.remove();
