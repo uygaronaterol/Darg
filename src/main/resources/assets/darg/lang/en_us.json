@@ -123,7 +123,7 @@
 	"item.darg.corrupted_eye_of_katsu": "Corrupted Eye Of Katsu",
 	"item.darg.kizutsu": "Kizutsu",
 	"item.darg.ninja_metal": "Ninja Metal",
-	"item.darg.ninja_metal_block": "Ninja Metal Block",
+	"block.darg.ninja_metal_block": "Ninja Metal Block",
 	"item.darg.katsu_spawn_egg": "Katsu Spawn Egg",
 	"item.darg.ninja_spawn_egg": "Ninja Spawn Egg",
 	"item.darg.wolfyre_spawn_egg": "Wolfyre Spawn Egg",
@@ -133,7 +133,7 @@
 	"item.darg.corrupted_eye_of_wolfyre": "Corrupted Eye Of Wolfyre",
 	"effect.darg.manatone_paralysis": "Manatone Paralysis",
 	"enchantment.darg.manatone_paralysis": "Manatone Paralysis",
-	"item.darg.mana_block": "Mana Block",
+	"block.darg.mana_block": "Mana Block",
 	"item.darg.golem_essence": "Golem Essence",
 	"item.darg.golem_spawn_egg": "Golem Spawn Egg",
 	"item.darg.manatone_spawn_egg": "Manatone Spawn Egg",
@@ -147,7 +147,13 @@
 	"item.darg.cinner_spawn_egg": "Cinner Spawn Egg",
 	"item.darg.goblin_spawn_egg": "Goblin Spawn Egg",
 	"item.darg.gold_coin": "Gold Coin",
-	"item.darg.corrupted_eye_of_cinner": "Corrupted Eye Of Cinner"
+	"item.darg.corrupted_eye_of_cinner": "Corrupted Eye Of Cinner",
+	"screen.darg.gold_producing_chalice": "",
+	"screen.darg.corrupted_crafting_table": "",
+	"screen.darg.crafting_hand": "",
+	"item.darg.troll_spawn_egg": "Troll Spawn Egg",
+	"item.darg.troll_skin": "Troll Skin",
+	"block.darg.gold_producing_chalice": "Gold Producing Chalice"
 
 
 }

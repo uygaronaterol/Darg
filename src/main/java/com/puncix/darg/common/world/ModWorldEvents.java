@@ -85,6 +85,10 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.WOLFYRE_DEN.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.MANATONE_ALTAR.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.MANATONE_ALTAR.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.CINNER_LAMB.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.CINNER_LAMB.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.GOBLIN_DUNGEON.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.GOBLIN_DUNGEON.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}

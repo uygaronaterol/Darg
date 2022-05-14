@@ -146,5 +146,11 @@
 	"item.darg.cinner_spawn_egg": "Cinner Spawn Egg",
 	"item.darg.goblin_spawn_egg": "Goblin Spawn Egg",
 	"item.darg.gold_coin": "Gold Coin",
-	"item.darg.corrupted_eye_of_cinner": "Corrupted Eye Of Cinner"
+	"item.darg.corrupted_eye_of_cinner": "Corrupted Eye Of Cinner",
+	"screen.darg.gold_producing_chalice": "",
+	"screen.darg.corrupted_crafting_table": "",
+	"screen.darg.crafting_hand": "",
+	"item.darg.troll_spawn_egg": "Troll Spawn Egg",
+	"item.darg.troll_skin": "Troll Skin",
+	"item.darg.gold_producing_chalice": "Gold Producing Chalice"
 }

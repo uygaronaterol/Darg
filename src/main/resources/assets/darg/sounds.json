@@ -506,5 +506,89 @@
   "sounds": [
     "darg:golem_hit"
   ]
+}, "cinner_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.cinner_ambient1",
+  "sounds": [
+    "darg:cinner_ambient1"
+  ]
+}, "cinner_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.cinner_ambient2",
+  "sounds": [
+    "darg:cinner_ambient2"
+  ]
+}, "cinner_ambient3": {
+  "category": "entities",
+  "subtitle": "darg.cinner_ambient3",
+  "sounds": [
+    "darg:cinner_ambient3"
+  ]
+}, "cinner_ambient4": {
+  "category": "entities",
+  "subtitle": "darg.cinner_ambient4",
+  "sounds": [
+    "darg:cinner_ambient4"
+  ]
+}, "cinner_animation": {
+  "category": "entities",
+  "subtitle": "darg.cinner_animation",
+  "sounds": [
+    "darg:cinner_animation"
+  ]
+}, "cinner_hit1": {
+  "category": "entities",
+  "subtitle": "darg.cinner_hit1",
+  "sounds": [
+    "darg:cinner_hit1"
+  ]
+}, "cinner_hit2": {
+  "category": "entities",
+  "subtitle": "darg.cinner_hit2",
+  "sounds": [
+    "darg:cinner_hit2"
+  ]
+}, "cinner_death": {
+  "category": "entities",
+  "subtitle": "darg.cinner_death",
+  "sounds": [
+    "darg:cinner_death"
+  ]
+}, "goblin_death": {
+  "category": "entities",
+  "subtitle": "darg.goblin_death",
+  "sounds": [
+    "darg:goblin_death"
+  ]
+}, "goblin_hit": {
+  "category": "entities",
+  "subtitle": "darg.goblin_hit",
+  "sounds": [
+    "darg:goblin_hit"
+  ]
+}, "goblin_ambient": {
+  "category": "entities",
+  "subtitle": "darg.goblin_ambient",
+  "sounds": [
+    "darg:goblin_ambient"
+  ]
+}, "troll_ambient": {
+  "category": "entities",
+  "subtitle": "darg.troll_ambient",
+  "sounds": [
+    "darg:troll_ambient"
+  ]
+}, "troll_death": {
+  "category": "entities",
+  "subtitle": "darg.troll_death",
+  "sounds": [
+    "darg:troll_death"
+  ]
+}, "troll_hit": {
+  "category": "entities",
+  "subtitle": "darg.troll_hit",
+  "sounds": [
+    "darg:troll_hit"
+  ]
 }
 }

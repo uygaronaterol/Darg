@@ -82,20 +82,20 @@ public class TrollEntity extends CreatureEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.EATER_AMBIENT.get();
+        return ModSoundEvents.TROLL_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.EATER_DEATH.get();
+        return ModSoundEvents.TROLL_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.EATER_HIT.get();
+        return ModSoundEvents.TROLL_HIT.get();
     }
 
 

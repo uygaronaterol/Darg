@@ -87,14 +87,14 @@ public class TrollModel <T extends TrollEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLowerArm.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
+        this.leftUpperArm.rotateAngleX =  MathHelper.sin(limbSwing * 0.3662F) * 0.7F * limbSwingAmount;
+        this.leftLowerArm.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.20F) * 0.7F * limbSwingAmount);
         this.rightUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.3F) * 1.4F * limbSwingAmount;
-        this.rightLowerArm.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.3F) * 1.4F * limbSwingAmount);
-        this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.leftLowerLeg.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
-        this.rightUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.rightLowerLeg.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.40F) * 1.4F * limbSwingAmount);
+        this.rightLowerArm.rotateAngleX = -Math.abs(MathHelper.sin(limbSwing * 0.2F) * 0.7F * limbSwingAmount);
+        this.leftUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.3662F) * 0.7F * limbSwingAmount;
+        this.leftLowerLeg.rotateAngleX = Math.abs(MathHelper.sin(limbSwing * 0.20F) * 0.7F * limbSwingAmount);
+        this.rightUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.3662F) * 0.7F * limbSwingAmount;
+        this.rightLowerLeg.rotateAngleX = Math.abs(MathHelper.cos(limbSwing * 0.20F) * 0.7F * limbSwingAmount);
     }
     @Override
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){

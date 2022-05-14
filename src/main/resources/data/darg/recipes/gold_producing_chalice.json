@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:corruption"
+    },
+
+    {"item": "darg:gold_coin"},
+    {
+      "item": "darg:manatone_head_piece"
+    },
+    {"item": "darg:gold_coin"},
+    {"item": "darg:troll_skin"},{"item": "darg:gold_coin"},
+    {"item": "darg:corruption"},{"item": "darg:gold_coin"},{"item": "darg:manatone_head_piece"},{"item": "darg:corrupted_essence_block"},
+    {
+      "item": "minecraft:gold_block"
+    },{"item": "darg:corrupted_eye_of_cinner"},{"item": "minecraft:gold_block"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:gold_producing_chalice",
+    "count": 1
+  }
+}

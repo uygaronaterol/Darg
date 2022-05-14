@@ -89,6 +89,20 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> GOLEM_DEATH = registerSoundEvent("golem_death");
     public static final RegistryObject<SoundEvent> GOLEM_HIT = registerSoundEvent("golem_hit");
     public static final RegistryObject<SoundEvent> GOLEM_AMBIENT = registerSoundEvent("golem_ambient");
+    public static final RegistryObject<SoundEvent> GOBLIN_AMBIENT = registerSoundEvent("goblin_ambient");
+    public static final RegistryObject<SoundEvent> GOBLIN_DEATH = registerSoundEvent("goblin_death");
+    public static final RegistryObject<SoundEvent> GOBLIN_HIT = registerSoundEvent("goblin_hit");
+    public static final RegistryObject<SoundEvent> TROLL_HIT = registerSoundEvent("troll_hit");
+    public static final RegistryObject<SoundEvent> TROLL_AMBIENT = registerSoundEvent("troll_ambient");
+    public static final RegistryObject<SoundEvent> TROLL_DEATH = registerSoundEvent("troll_death");
+    public static final RegistryObject<SoundEvent> CINNER_AMBIENT1 = registerSoundEvent("cinner_ambient1");
+    public static final RegistryObject<SoundEvent> CINNER_AMBIENT2 = registerSoundEvent("cinner_ambient2");
+    public static final RegistryObject<SoundEvent> CINNER_AMBIENT3 = registerSoundEvent("cinner_ambient3");
+    public static final RegistryObject<SoundEvent> CINNER_AMBIENT4 = registerSoundEvent("cinner_ambient4");
+    public static final RegistryObject<SoundEvent> CINNER_ANIMATION = registerSoundEvent("cinner_animation");
+    public static final RegistryObject<SoundEvent> CINNER_HIT1 = registerSoundEvent("cinner_hit1");
+    public static final RegistryObject<SoundEvent> CINNER_HIT2 = registerSoundEvent("cinner_hit2");
+    public static final RegistryObject<SoundEvent> CINNER_DEATH = registerSoundEvent("cinner_death");
 
 
 

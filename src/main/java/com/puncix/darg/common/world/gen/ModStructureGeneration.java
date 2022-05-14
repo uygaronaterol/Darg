@@ -30,6 +30,8 @@ public class ModStructureGeneration {
             structures.add(() -> ModStructures.EXHERISTAFF_STRUCTURE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.CORRUPTED_FOSSIL_SITE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.MOGLING_VILLAGE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.GOBLIN_DUNGEON.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+
         }
         else if(types.contains(BiomeDictionary.Type.SWAMP) ) {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
@@ -50,6 +52,10 @@ public class ModStructureGeneration {
         else if(types.contains(BiomeDictionary.Type.MESA)){
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.MANATONE_ALTAR.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
+        else if(types.contains(BiomeDictionary.Type.MUSHROOM)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.CINNER_LAMB.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
     }
 

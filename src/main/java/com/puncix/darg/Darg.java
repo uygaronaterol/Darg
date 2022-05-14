@@ -7,6 +7,7 @@ import com.puncix.darg.common.entity.entities.CinnerEntity;
 import com.puncix.darg.common.entity.entities.PaleontologistMoglingEntity;
 import com.puncix.darg.common.entity.render.*;
 import com.puncix.darg.common.screens.CraftingHandScreen;
+import com.puncix.darg.common.screens.GoldProducingChaliceScreen;
 import com.puncix.darg.common.world.biome.ModBiomes;
 import com.puncix.darg.common.world.gen.ModBiomeGeneration;
 import com.puncix.darg.common.world.gen.ModConfiguredFeatures;
@@ -103,6 +104,7 @@ public class Darg
 
             ScreenManager.registerFactory(ModContainers.CORRUPTED_CRAFTING_TABLE_CONTAINER.get(), CorruptedCraftingTableScreen::new);
             ScreenManager.registerFactory(ModContainers.CRAFTING_HAND_CONTAINER.get(), CraftingHandScreen::new);
+            ScreenManager.registerFactory(ModContainers.GOLD_PRODUCING_CHALICE_CONTAINER.get(), GoldProducingChaliceScreen::new);
 
         });
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.CORRUPTED_COW.get(), CorruptedCowRenderer::new);

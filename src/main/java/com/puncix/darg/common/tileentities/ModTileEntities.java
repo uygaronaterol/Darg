@@ -20,6 +20,9 @@ public class ModTileEntities {
 	public static RegistryObject<TileEntityType<CraftingHandTile>> CRAFTING_HAND_TILE =
 			TILE_ENTITIES.register("crafting_hand_tile", () -> TileEntityType.Builder.create(
 					CraftingHandTile::new, BlockInit.CRAFTING_HAND.get()).build(null));
+	public static RegistryObject<TileEntityType<GoldProducingChaliceTile>> GOLD_PRODUCING_CHALICE_TILE =
+			TILE_ENTITIES.register("gold_producing_chalice_tile", () -> TileEntityType.Builder.create(
+					GoldProducingChaliceTile::new, BlockInit.GOLD_PRODUCING_CHALICE.get()).build(null));
 	public static void register(IEventBus bus) {
 		TILE_ENTITIES.register(bus);
 	}

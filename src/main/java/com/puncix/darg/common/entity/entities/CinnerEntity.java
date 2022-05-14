@@ -87,7 +87,7 @@ public class CinnerEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT1.get(), 1, 1);
+            playSound(ModSoundEvents.CINNER_AMBIENT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
@@ -95,7 +95,7 @@ public class CinnerEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             lightningStrike();
-            playSound(ModSoundEvents.VARZAK_AMBIENT2.get(), 1, 1);
+            playSound(ModSoundEvents.CINNER_AMBIENT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -103,7 +103,7 @@ public class CinnerEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.VARZAK_AMBIENT3.get(), 1, 1);
+            playSound(ModSoundEvents.CINNER_AMBIENT3.get(), 1, 1);
             lightningStrike();
             return ModSoundEvents.SILENCE.get();
 
@@ -113,13 +113,13 @@ public class CinnerEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             if( rand < 6.5){
-                playSound(ModSoundEvents.VARZAK_AMBIENT5.get(), 1, 1);
+                playSound(ModSoundEvents.CINNER_AMBIENT4.get(), 1, 1);
                 lightningStrike();
 
                 return ModSoundEvents.SILENCE.get();
             }
             else {
-                playSound(ModSoundEvents.VARZAK_AMBIENT4.get(), 1, 1);
+                playSound(ModSoundEvents.CINNER_AMBIENT4.get(), 1, 1);
                 lightningStrike();
                 return ModSoundEvents.SILENCE.get();
             }
@@ -131,7 +131,7 @@ public class CinnerEntity extends CreatureEntity {
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
-                playSound(ModSoundEvents.VARZAK_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.CINNER_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
@@ -184,7 +184,7 @@ public class CinnerEntity extends CreatureEntity {
     @Override
     protected SoundEvent getDeathSound()
     {
-        playSound(ModSoundEvents.VARZAK_DEATH.get(), 1, 1);
+        playSound(ModSoundEvents.CINNER_DEATH.get(), 1, 1);
         return ModSoundEvents.SILENCE.get();
 
     }
@@ -196,11 +196,11 @@ public class CinnerEntity extends CreatureEntity {
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            playSound(ModSoundEvents.VARZAK_HIT1.get(), 1, 1);
+            playSound(ModSoundEvents.CINNER_HIT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
-            playSound(ModSoundEvents.VARZAK_HIT2.get(), 1, 1);
+            playSound(ModSoundEvents.CINNER_HIT2.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -253,7 +253,6 @@ public class CinnerEntity extends CreatureEntity {
             boolean flag2 = this.attemptTeleport(event.getTargetX(), event.getTargetY(), event.getTargetZ(), true);
             if (flag2 && !this.isSilent()) {
                 this.world.playSound((PlayerEntity)null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, this.getSoundCategory(), 1.0F, 1.0F);
-                this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
             }
 
             return flag2;
@@ -274,7 +273,6 @@ public class CinnerEntity extends CreatureEntity {
         soepe.setItem(ItemInit.GOLD_COIN.get().getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
         soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.playSound(ModSoundEvents.EXHERISTAFF_ANIMATION.get(), 1.0F, 1.0F );
         this.world.addEntity(soepe);
         double rand = Math.random();
         if( rand < 0.25){

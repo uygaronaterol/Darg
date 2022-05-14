@@ -29,6 +29,13 @@ public class ModContainers {
 				World world = inv.player.getEntityWorld();
 				return new CraftingHandContainer(windowId, world, pos, inv, inv.player);
 			})));
+	public static final RegistryObject<ContainerType<GoldProducingChaliceContainer>> GOLD_PRODUCING_CHALICE_CONTAINER
+			= CONTAINERS.register("gold_producing_chalice_container",
+			() -> IForgeContainerType.create(((windowId, inv, data) -> {
+				BlockPos pos = data.readBlockPos();
+				World world = inv.player.getEntityWorld();
+				return new GoldProducingChaliceContainer(windowId, world, pos, inv, inv.player);
+			})));
 			
 			
 	

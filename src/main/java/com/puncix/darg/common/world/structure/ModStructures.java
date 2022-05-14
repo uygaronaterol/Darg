@@ -42,6 +42,10 @@ public class ModStructures {
             STRUCTURES.register("wolfyre_den", WolfyreDenStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> MANATONE_ALTAR =
             STRUCTURES.register("manatone_altar", ManatoneAltarStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> CINNER_LAMB =
+            STRUCTURES.register("cinner_lamb", CinnerLambStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> GOBLIN_DUNGEON =
+            STRUCTURES.register("goblin_dungeon", GoblinDungeonStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -73,6 +77,12 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(MANATONE_ALTAR.get(),
                 new StructureSeparationSettings(35,30, 1234567890),
+                true);
+        setupMapSpacingAndLand(CINNER_LAMB.get(),
+                new StructureSeparationSettings(10,5, 1234567890),
+                true);
+        setupMapSpacingAndLand(GOBLIN_DUNGEON.get(),
+                new StructureSeparationSettings(300,280, 1234567890),
                 true);
     }
 

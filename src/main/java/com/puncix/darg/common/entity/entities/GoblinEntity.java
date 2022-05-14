@@ -128,20 +128,20 @@ public class GoblinEntity extends CreatureEntity {
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvents.MOGLING_AMBIENT.get();
+        return ModSoundEvents.GOBLIN_AMBIENT.get();
     }
 
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return ModSoundEvents.MOGLING_DEATH.get();
+        return ModSoundEvents.GOBLIN_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return ModSoundEvents.MOGLING_HIT.get();
+        return ModSoundEvents.GOBLIN_HIT.get();
     }
 
     @Override
