@@ -41,6 +41,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.GOLEM.get(), GolemEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.CINNER.get(), CinnerEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.GOBLIN.get(), GoblinEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.TROLL.get(), TrollEntity.setCustomAttributes().create());
 
 
 

@@ -4,6 +4,7 @@ import com.puncix.darg.Darg;
 import com.puncix.darg.common.blocks.CorruptedCraftingTable;
 import com.puncix.darg.common.blocks.CorruptedGrass;
 import com.puncix.darg.common.blocks.CraftingHand;
+import com.puncix.darg.common.blocks.GoldProducingChalice;
 import com.puncix.darg.common.blocks.trees.CorruptedOakTree;
 
 import net.minecraft.block.*;
@@ -61,7 +62,12 @@ public class BlockInit {
 				return 5;
 			}).harvestTool(ToolType.PICKAXE).notSolid()));
 
-
+	//blockbench
+	public static final RegistryObject<GoldProducingChalice> GOLD_PRODUCING_CHALICE = BLOCKS.register("gold_producing_chalice",
+			() -> new GoldProducingChalice(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(500f,500f)
+			.harvestLevel(5).sound(SoundType.NYLIUM).setLightLevel((p_235470_0_) -> {
+				return 10;
+			}).harvestTool(ToolType.PICKAXE).notSolid()));
 
 	//Corrupted stone and corrupted cobblestone
 	public static final RegistryObject<Block> CORRUPTED_STONE = BLOCKS.register("corrupted_stone", () -> new Block(AbstractBlock.Properties.create(Material.EARTH).hardnessAndResistance(3f,3f)

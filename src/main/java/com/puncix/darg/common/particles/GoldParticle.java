@@ -9,9 +9,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
-public class ManaParticle extends SpriteTexturedParticle {
+public class GoldParticle extends SpriteTexturedParticle {
 
-    protected ManaParticle(ClientWorld world, double x, double y, double z, double motionX, double motionY, double motionZ) {
+    protected GoldParticle(ClientWorld world, double x, double y, double z, double motionX, double motionY, double motionZ) {
         super(world, x, y, z, motionX, motionY, motionZ);
         this.particleRed = 0;
         this.particleBlue = 0;
@@ -53,10 +53,11 @@ public class ManaParticle extends SpriteTexturedParticle {
         @Nullable
         @Override
         public Particle makeParticle(BasicParticleType typeIn, ClientWorld worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            ManaParticle blackParticle = new ManaParticle(worldIn,x,y,z,xSpeed,ySpeed,zSpeed);
+            GoldParticle blackParticle = new GoldParticle(worldIn,x,y,z,xSpeed,ySpeed,zSpeed);
             blackParticle.setColor(1.0f,1.0f,1.0f);
             blackParticle.selectSpriteRandomly(this.spriteSet);
             return blackParticle;
         }
     }
 }
+

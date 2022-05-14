@@ -101,9 +101,9 @@ public class GoblinModel <T extends GoblinEntity> extends EntityModel<T> {
         this.leftUpperLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.rightUpperLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.leftUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount;
-        this.rightUpperArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount;
-        this.leftLowerArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount;
-        this.rightLowerArm.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount;
+        this.rightUpperArm.rotateAngleX = -MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount;
+        this.leftLowerArm.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount);
+        this.rightLowerArm.rotateAngleX = -Math.abs(MathHelper.cos(limbSwing * 0.6662F) * 2.4F * limbSwingAmount);
         this.leftLowerLeg.rotateAngleX = MathHelper.sin(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.rightLowerLeg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
     }

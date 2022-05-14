@@ -140,5 +140,14 @@
 	"item.darg.manatone_head_piece": "Manatone Head Piece",
 	"item.darg.manatone_paralysis_enchantment_kit": "Manatone Paralysis Enchantment Kit",
 	"item.darg.corrupted_eye_of_manatone": "Corrupted Eye Of Manatone",
-	"item.darg.bleed_enchantment_kit": "Bleed Enchantment Kit"
+	"item.darg.bleed_enchantment_kit": "Bleed Enchantment Kit",
+	"item.darg.djinni_enchantment_kit": "Djinni Enchantment Kit",
+	"effect.darg.djinni": "Djinni",
+	"enchantment.darg.djinni": "Djinni",
+	"item.darg.cinner_spawn_egg": "Cinner Spawn Egg",
+	"item.darg.goblin_spawn_egg": "Goblin Spawn Egg",
+	"item.darg.gold_coin": "Gold Coin",
+	"item.darg.corrupted_eye_of_cinner": "Corrupted Eye Of Cinner"
+
+
 }

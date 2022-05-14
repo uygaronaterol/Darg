@@ -2,19 +2,19 @@
   "type": "darg:corruption2",
   "ingredients": [
     {
-      "item": "darg:corruption"
+      "item": "darg:dwarf_blood"
     },
 
     {"item": "darg:corrupted_ball"},
     {
-      "item": "minecraft:vine"
+      "item": "darg:gold_coin"
     },
-    {"item": "darg:corrupted_eye_of_manatone"},
-    {"item": "darg:mana_block"},{"item": "darg:manatone_head_piece"},
-    {"item": "darg:corruption"},{"item": "darg:corrupted_ball"},{"item": "minecraft:vine"},{"item": "minecraft:snow"},
+    {"item": "darg:corrupted_eye_of_djinni"},
+    {"item": "darg:mana_block"},{"item": "darg:gold_coin"},
+    {"item": "darg:dwarf_blood"},{"item": "darg:corrupted_ball"},{"item": "darg:gold_coin"},{"item": "minecraft:snow"},
     {
-      "item": "minecraft:snowball"
-    },{"item": "minecraft:diamond"},{"item": "minecraft:conduit"},{"item": "darg:corrupted_essence_block"}
+      "item": "minecraft:vine"
+    },{"item": "minecraft:diamond"},{"item": "minecraft:vine"},{"item": "darg:corrupted_essence_block"}
   ],
   "output": {
     "item": "darg:manatone_paralysis_enchantment_kit",

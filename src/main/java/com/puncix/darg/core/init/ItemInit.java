@@ -96,6 +96,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> GOLEM_SPAWN_EGG = ITEMS.register("golem_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOLEM,0xffc4ff,0xff00ff,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> CINNER_SPAWN_EGG = ITEMS.register("cinner_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.CINNER,0x4f7942,0xfddb1d,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> GOBLIN_SPAWN_EGG = ITEMS.register("goblin_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOBLIN,0x679f1a,0x56811a,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> TROLL_SPAWN_EGG = ITEMS.register("troll_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.TROLL,0x8f8063,0x685e55,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -116,6 +117,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> DWARF_BLOOD = ITEMS.register("dwarf_blood", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> NINJA_METAL = ITEMS.register("ninja_metal", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> GOLEM_ESSENCE = ITEMS.register("golem_essence", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> TROLL_SKIN = ITEMS.register("troll_skin", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//Special items
@@ -165,6 +167,7 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CORRUPTION_ORE = ITEMS.register("corruption_ore", () -> new BlockItem(BlockInit.CORRUPTION_ORE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> NINJA_METAL_BLOCK = ITEMS.register("ninja_metal_block", () -> new BlockItem(BlockInit.NINJA_METAL_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> MANA_BLOCK = ITEMS.register("mana_block", () -> new BlockItem(BlockInit.MANA_BLOCK.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
+	public static final RegistryObject<BlockItem> GOLD_PRODUCING_CHALICE = ITEMS.register("gold_producing_chalice", () -> new BlockItem(BlockInit.GOLD_PRODUCING_CHALICE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 
 	public static final RegistryObject<BlockItem> CORRUPTED_STONE = ITEMS.register("corrupted_stone", () -> new BlockItem(BlockInit.CORRUPTED_STONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
 	public static final RegistryObject<BlockItem> CORRUPTED_COBBLESTONE = ITEMS.register("corrupted_cobblestone", () -> new BlockItem(BlockInit.CORRUPTED_COBBLESTONE.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

@@ -8,6 +8,8 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 
+import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -33,9 +35,9 @@ public class GoblinEntity extends CreatureEntity {
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 5D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 0.5D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 40D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 40.0D);
     }
 
@@ -51,8 +53,14 @@ public class GoblinEntity extends CreatureEntity {
 
     @Override
     protected void registerGoals() {
+        this.goalSelector.addGoal( 1, new NearestAttackableTargetGoal<>( this, PlayerEntity.class, true ) );
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 0.9D, false));
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
+
     }
     public ActionResultType getEntityInteractionResult(PlayerEntity player, Hand hand) {
         ItemStack itemstack = player.getHeldItem(hand);
@@ -86,7 +94,7 @@ public class GoblinEntity extends CreatureEntity {
                     this.entityDropItem(Items.NETHERITE_INGOT.asItem());
                 }
                 else if( 0.3 < rand && rand <= 0.5){
-                    this.entityDropItem(Items.ANCIENT_DEBRIS.asItem());
+                    this.entityDropItem(ItemInit.DWARF_BLOOD.get());
                 }
                 else if( 0.5 < rand && rand <= 0.7){
                     this.entityDropItem(ItemInit.CORRUPTED_BASIC_STAFF.get());

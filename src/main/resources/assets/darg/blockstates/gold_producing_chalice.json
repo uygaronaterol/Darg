@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "darg:block/gold_producing_chalice",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "darg:block/gold_producing_chalice"
+    },"facing=south": {
+      "model": "darg:block/gold_producing_chalice",
+      "y": 180
+    },"facing=west": {
+      "model": "darg:block/gold_producing_chalice",
+      "y": 270
+    }
+  }
+
+}

@@ -16,7 +16,7 @@ public class GoblinRenderer extends MobRenderer<GoblinEntity, GoblinModel<Goblin
             new ResourceLocation(Darg.MOD_ID, "textures/entity/goblin.png");
 
     public GoblinRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new GoblinModel<>(), 2F);
+        super(renderManagerIn, new GoblinModel<>(), 0.5F);
     }
     @Override
     public ResourceLocation getEntityTexture(GoblinEntity entity) {

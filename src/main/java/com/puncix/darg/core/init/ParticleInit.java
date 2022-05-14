@@ -15,5 +15,6 @@ public class ParticleInit {
     public static final RegistryObject<BasicParticleType> BLACK_PARTICLE = PARTICLES.register("black_particle", () -> new BasicParticleType(true));
     public static final RegistryObject<BasicParticleType> CORRUPTED_PARTICLE = PARTICLES.register("corrupted_particle", () -> new BasicParticleType(true));
     public static final RegistryObject<BasicParticleType> MANA_PARTICLE = PARTICLES.register("mana_particle", () -> new BasicParticleType(true));
+    public static final RegistryObject<BasicParticleType> GOLD_PARTICLE = PARTICLES.register("gold_particle", () -> new BasicParticleType(true));
 
 }

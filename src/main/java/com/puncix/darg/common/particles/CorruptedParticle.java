@@ -53,7 +53,7 @@ public class CorruptedParticle extends SpriteTexturedParticle {
         @Nullable
         @Override
         public Particle makeParticle(BasicParticleType typeIn, ClientWorld worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            BlackParticle blackParticle = new BlackParticle(worldIn,x,y,z,xSpeed,ySpeed,zSpeed);
+            CorruptedParticle blackParticle = new CorruptedParticle(worldIn,x,y,z,xSpeed,ySpeed,zSpeed);
             blackParticle.setColor(1.0f,1.0f,1.0f);
             blackParticle.selectSpriteRandomly(this.spriteSet);
             return blackParticle;

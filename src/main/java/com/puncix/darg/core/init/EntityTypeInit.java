@@ -2,6 +2,7 @@ package com.puncix.darg.core.init;
 
 import com.puncix.darg.Darg;
 import com.puncix.darg.common.entity.entities.*;
+import com.puncix.darg.common.entity.model.TrollModel;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.ZombieEntity;
@@ -162,8 +163,13 @@ public class EntityTypeInit {
     public static final RegistryObject<EntityType<GoblinEntity>> GOBLIN =
             ENTITY_TYPES.register("goblin",
                     () -> EntityType.Builder.create(GoblinEntity::new,
-                            EntityClassification.CREATURE).size(0.5f, 1.1f)
+                            EntityClassification.CREATURE).size(0.5f, 2.1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "goblin").toString()));
+    public static final RegistryObject<EntityType<TrollEntity>> TROLL =
+            ENTITY_TYPES.register("troll",
+                    () -> EntityType.Builder.create(TrollEntity::new,
+                            EntityClassification.CREATURE).size(0.7f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "troll").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

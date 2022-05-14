@@ -92,7 +92,7 @@ public class DarbigEntity extends CreatureEntity {
                     this.entityDropItem(Items.DIAMOND_ORE.asItem());
                 }
                 else if( 0.7 < rand && rand <= 0.9){
-                    this.entityDropItem(Items.HEART_OF_THE_SEA.asItem());
+                    this.entityDropItem(ItemInit.DWARF_BLOOD.get());
                 }
                 else if( 0.9 < rand && rand <= 0.97){
                     this.entityDropItem(ItemInit.CORRUPTION.get());
