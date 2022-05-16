@@ -89,6 +89,8 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.CINNER_LAMB.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.GOBLIN_DUNGEON.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.GOBLIN_DUNGEON.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.BLACK_BEARD_SHIP.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.BLACK_BEARD_SHIP.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}

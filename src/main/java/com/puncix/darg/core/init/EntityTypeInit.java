@@ -170,6 +170,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(TrollEntity::new,
                             EntityClassification.CREATURE).size(0.7f, 3.1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "troll").toString()));
+    public static final RegistryObject<EntityType<BlackBeardEntity>> BLACK_BEARD =
+            ENTITY_TYPES.register("black_beard",
+                    () -> EntityType.Builder.create(BlackBeardEntity::new,
+                            EntityClassification.CREATURE).size(0.7f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "black_beard").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

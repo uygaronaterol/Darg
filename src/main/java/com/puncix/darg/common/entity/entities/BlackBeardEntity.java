@@ -11,6 +11,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
+import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
@@ -27,24 +28,26 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class CinnerEntity extends CreatureEntity {
-    public CinnerEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class BlackBeardEntity extends CreatureEntity {
+    public BlackBeardEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 600.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 800.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 75.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
-                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D);
+                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D)
+                ;
     }
 
     @Override
@@ -74,7 +77,7 @@ public class CinnerEntity extends CreatureEntity {
     @Override
     protected int getExperiencePoints(PlayerEntity player)
     {
-        return 80 ;
+        return 90 ;
     }
 
 
@@ -87,15 +90,15 @@ public class CinnerEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.CINNER_AMBIENT1.get(), 1, 1);
+            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else if( 0.2 < rand && rand <= 0.4){
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            lightningStrike();
-            playSound(ModSoundEvents.CINNER_AMBIENT2.get(), 1, 1);
+            explode();
+            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -103,8 +106,8 @@ public class CinnerEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            playSound(ModSoundEvents.CINNER_AMBIENT3.get(), 1, 1);
-            lightningStrike();
+            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+            explode();
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -113,14 +116,14 @@ public class CinnerEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             if( rand < 6.5){
-                playSound(ModSoundEvents.CINNER_AMBIENT4.get(), 1, 1);
-                lightningStrike();
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+                explode();
 
                 return ModSoundEvents.SILENCE.get();
             }
             else {
-                playSound(ModSoundEvents.CINNER_AMBIENT4.get(), 1, 1);
-                lightningStrike();
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+                explode();
                 return ModSoundEvents.SILENCE.get();
             }
         }
@@ -131,20 +134,21 @@ public class CinnerEntity extends CreatureEntity {
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
-                playSound(ModSoundEvents.CINNER_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.BLACK_BEARD_ANIMATION.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
 
         }
     }
-    private void lightningStrike(){
-        if( this.getAttackTarget() != null){
-            BlockPos pos = this.getAttackTarget().getPosition();
-            EntityType.LIGHTNING_BOLT.spawn((ServerWorld)this.getEntityWorld(),null, this.attackingPlayer,pos, SpawnReason.TRIGGERED,true ,true);
+
+    private void explode() {
+        if (!this.world.isRemote && this.getAttackTarget()!= null) {
+            Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
+            this.setAbsorptionAmount(10);
+            this.world.createExplosion(this, this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(), this.getAttackTarget().getPosZ(), (float)5, explosion$mode);
         }
     }
-
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
         int i = MathHelper.floor(area.minX - 1);
         int j = MathHelper.floor(area.minY );
@@ -184,7 +188,7 @@ public class CinnerEntity extends CreatureEntity {
     @Override
     protected SoundEvent getDeathSound()
     {
-        playSound(ModSoundEvents.CINNER_DEATH.get(), 1, 1);
+        playSound(ModSoundEvents.SILENCE.get(), 1, 1);
         return ModSoundEvents.SILENCE.get();
 
     }
@@ -196,11 +200,11 @@ public class CinnerEntity extends CreatureEntity {
     {
         double rand = Math.random();
         if(rand <= 0.5) {
-            playSound(ModSoundEvents.CINNER_HIT1.get(), 1, 1);
+            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
-            playSound(ModSoundEvents.CINNER_HIT2.get(), 1, 1);
+            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }

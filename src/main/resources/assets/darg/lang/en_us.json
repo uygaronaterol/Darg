@@ -153,7 +153,9 @@
 	"screen.darg.crafting_hand": "",
 	"item.darg.troll_spawn_egg": "Troll Spawn Egg",
 	"item.darg.troll_skin": "Troll Skin",
-	"block.darg.gold_producing_chalice": "Gold Producing Chalice"
-
-
+	"block.darg.gold_producing_chalice": "Gold Producing Chalice",
+	"item.darg.black_beard_spawn_egg": "Black Beard Spawn Egg",
+	"item.darg.tnt_placer": "TNT Placer",
+	"item.darg.corrupted_eye_of_black_beard": "Corrupted Eye Of Black Beard",
+	"enchantment.darg.bleed": "Bleed"
 }

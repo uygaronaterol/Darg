@@ -1,6 +1,9 @@
 package com.puncix.darg.data.recipes;
 
 import com.puncix.darg.Darg;
+import com.puncix.darg.client.util.DargTags;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.util.registry.Registry;
@@ -18,7 +21,6 @@ public class ModRecipeTypes {
 
     public static IRecipeType<CorruptedCraftingTableRecipe> CORRUPTED_RECIPE =
             new CorruptedCraftingTableRecipe.CorruptedCraftingTableRecipeType();
-
 
     public static final RegistryObject<CraftingHandRecipe.Serializer> HAND_SERIALIZER =
             RECIPE_SERIALIZER.register("corruption2", CraftingHandRecipe.Serializer::new);

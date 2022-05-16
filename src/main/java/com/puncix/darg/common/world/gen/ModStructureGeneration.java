@@ -57,6 +57,10 @@ public class ModStructureGeneration {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.CINNER_LAMB.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
+        else if(types.contains(BiomeDictionary.Type.OCEAN)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.BLACK_BEARD_SHIP.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
     }
 
 }

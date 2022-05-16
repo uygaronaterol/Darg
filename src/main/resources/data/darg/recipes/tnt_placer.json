@@ -1,0 +1,22 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {"item": "minecraft:tnt"},
+    {"item": "minecraft:tnt"},
+    {"item": "darg:corrupted_eye_of_black_beard"},{"item": "minecraft:tnt"},
+    {"item": "minecraft:tnt"},{"item": "minecraft:tnt"},{"item": "minecraft:tnt"},{"item": "darg:corrupted_ball"},
+    {
+      "item": "darg:corruption"
+    },{"item": "darg:corruption"},{"item": "darg:corrupted_ball"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:tnt_placer",
+    "count": 1
+  }
+}

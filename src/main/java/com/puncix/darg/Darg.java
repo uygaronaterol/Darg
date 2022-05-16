@@ -132,6 +132,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.CINNER.get(), CinnerRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOBLIN.get(), GoblinRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.TROLL.get(), TrollRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.BLACK_BEARD.get(), BlackBeardRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

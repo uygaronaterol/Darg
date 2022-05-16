@@ -590,5 +590,11 @@
   "sounds": [
     "darg:troll_hit"
   ]
+}, "black_beard_animation": {
+  "category": "entities",
+  "subtitle": "darg.black_beard_animation",
+  "sounds": [
+    "darg:black_beard_animation"
+  ]
 }
 }

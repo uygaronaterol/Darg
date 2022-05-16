@@ -27,6 +27,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> MANATONE_HEAD_PIECE = ITEMS.register("manatone_head_piece", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE_OF_MANATONE = ITEMS.register("corrupted_eye_of_manatone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE_OF_CINNER = ITEMS.register("corrupted_eye_of_cinner", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE_OF_BLACK_BEARD = ITEMS.register("corrupted_eye_of_black_beard", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
@@ -43,6 +44,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_staff_of_regeneration", () -> new CorruptedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 	public static final RegistryObject<Item> CORRUPTED_ADVANCED_STAFF_OF_REGENERATION = ITEMS.register("corrupted_advanced_staff_of_regeneration", () -> new CorruptedAdvancedStaffOfRegeneration(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> VARZAKS_CROWN = ITEMS.register("varzaks_crown", () -> new VarzaksCrown(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> TNT_PLACER = ITEMS.register("tnt_placer", () -> new TNTPlacer(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).maxDamage(300)));
 
 
 	//enchantment kits
@@ -97,6 +99,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> CINNER_SPAWN_EGG = ITEMS.register("cinner_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.CINNER,0x4f7942,0xfddb1d,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> GOBLIN_SPAWN_EGG = ITEMS.register("goblin_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOBLIN,0x679f1a,0x56811a,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> TROLL_SPAWN_EGG = ITEMS.register("troll_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.TROLL,0x8f8063,0x685e55,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> BLACK_BEARD_SPAWN_EGG = ITEMS.register("black_beard_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.BLACK_BEARD,0xd00b0b,0xf1c27d,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

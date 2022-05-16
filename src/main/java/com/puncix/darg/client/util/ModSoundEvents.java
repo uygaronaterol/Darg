@@ -103,6 +103,7 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> CINNER_HIT1 = registerSoundEvent("cinner_hit1");
     public static final RegistryObject<SoundEvent> CINNER_HIT2 = registerSoundEvent("cinner_hit2");
     public static final RegistryObject<SoundEvent> CINNER_DEATH = registerSoundEvent("cinner_death");
+    public static final RegistryObject<SoundEvent> BLACK_BEARD_ANIMATION = registerSoundEvent("black_beard_animation");
 
 
 

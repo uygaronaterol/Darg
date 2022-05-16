@@ -46,6 +46,8 @@ public class ModStructures {
             STRUCTURES.register("cinner_lamb", CinnerLambStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> GOBLIN_DUNGEON =
             STRUCTURES.register("goblin_dungeon", GoblinDungeonStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> BLACK_BEARD_SHIP =
+            STRUCTURES.register("black_beard_ship", BlackBeardShipStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -84,6 +86,9 @@ public class ModStructures {
         setupMapSpacingAndLand(GOBLIN_DUNGEON.get(),
                 new StructureSeparationSettings(300,280, 1234567890),
                 true);
+        setupMapSpacingAndLand(BLACK_BEARD_SHIP.get(),
+                new StructureSeparationSettings(300,280, 1234567890),
+                false);
     }
 
     /**
