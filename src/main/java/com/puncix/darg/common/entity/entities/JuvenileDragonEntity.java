@@ -47,7 +47,7 @@ import java.util.EnumSet;
 import java.util.Random;
 import java.util.function.Predicate;
 
-public class BabyDragonEntity extends TameableEntity implements IAnimatable {
+public class JuvenileDragonEntity extends TameableEntity implements IAnimatable {
     private AnimationFactory Factory = new AnimationFactory(this);
     protected static final DataParameter<Boolean> SITTING = EntityDataManager.createKey(BabyDragonEntity.class, DataSerializers.BOOLEAN);
     private static final Predicate<LivingEntity> TARGET_ENTITIES = (p_213440_0_) -> {
@@ -57,7 +57,7 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
     };
     private static boolean shouldFly = false;
     private static int counter = 0;
-    public BabyDragonEntity(EntityType<? extends TameableEntity> type, World worldIn) {
+    public JuvenileDragonEntity(EntityType<? extends TameableEntity> type, World worldIn) {
         super(type, worldIn);
         shouldFly = false;
     }

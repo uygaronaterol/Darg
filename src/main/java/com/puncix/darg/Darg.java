@@ -140,6 +140,7 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.VOLCANUS.get(), VolcanusRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DORANZER.get(), DoranzerRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.BABY_DRAGON.get(), BabyDragonRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.JUVENILE_DRAGON.get(), JuvenileDragonRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

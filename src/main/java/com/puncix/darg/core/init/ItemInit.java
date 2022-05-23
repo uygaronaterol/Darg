@@ -109,6 +109,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> DORANZER_SPAWN_EGG = ITEMS.register("doranzer_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.DORANZER,0xb41139,0x4a2ab0,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> VOLCANUS_SPAWN_EGG = ITEMS.register("volcanus_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.VOLCANUS,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> BABY_DRAGON_SPAWN_EGG = ITEMS.register("baby_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.BABY_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> JUVENILE_DRAGON_SPAWN_EGG = ITEMS.register("juvenile_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.JUVENILE_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -167,6 +168,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_BONE_CHESTPLATE = ITEMS.register("corrupted_bone_chestplate", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
 	public static final RegistryObject<Item> CORRUPTED_BONE_HELMET = ITEMS.register("corrupted_bone_helmet", () -> new ArmorItem(ModArmorMaterial.CORRUPTED_BONE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
 
+	//DRAGON STUFF
+	//Projectile
+	public static final RegistryObject<Item> BABY_DRAGON_PROJECTILE = ITEMS.register("baby_dragon_projectile", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
+	//Commander
+	public static final RegistryObject<Item> DRAGON_COMMANDER = ITEMS.register("dragon_commander", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//Block items
