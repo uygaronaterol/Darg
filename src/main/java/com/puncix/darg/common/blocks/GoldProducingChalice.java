@@ -57,12 +57,6 @@ public class GoldProducingChalice extends HorizontalBlock {
             worldIn.addParticle(ParticleInit.GOLD_PARTICLE.get(),pos.getX()+rand.nextDouble(),pos.getY() + 0.6d,pos.getZ()+rand.nextDouble(),0d,-0.05d,0d);
         }
 
-        if( rand.nextFloat() < chance){
-            GoldLayingChickenEntity entity = EntityTypeInit.GOLD_LAYING_CHICKEN.get().create(worldIn);
-            entity.setPosition(pos.getX(),pos.getY()+1,pos.getZ());
-            worldIn.addEntity(entity);
-
-        }
         super.animateTick(stateIn, worldIn, pos, rand);
     }
     @Override

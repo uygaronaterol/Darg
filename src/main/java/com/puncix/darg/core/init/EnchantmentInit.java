@@ -29,4 +29,10 @@ public class EnchantmentInit {
     public static final RegistryObject<Enchantment> DJINNI
             = ENCHANTMENTS.register("djinni", ()-> new DjinniEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
             new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
+    public static final RegistryObject<Enchantment> TIME_FREEZE
+            = ENCHANTMENTS.register("time_freeze", ()-> new DjinniEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.WEAPON,
+            new EquipmentSlotType[]{EquipmentSlotType.MAINHAND}));
+    public static final RegistryObject<Enchantment> VOLCANUS_BODY
+            = ENCHANTMENTS.register("volcanus_body", ()-> new VolcanusBodyEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST,
+            new EquipmentSlotType[]{EquipmentSlotType.CHEST}));
 }

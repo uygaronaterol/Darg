@@ -28,6 +28,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTED_EYE_OF_MANATONE = ITEMS.register("corrupted_eye_of_manatone", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE_OF_CINNER = ITEMS.register("corrupted_eye_of_cinner", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> CORRUPTED_EYE_OF_BLACK_BEARD = ITEMS.register("corrupted_eye_of_black_beard", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE_OF_ZELOTH = ITEMS.register("corrupted_eye_of_zeloth", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE_OF_DORANZER = ITEMS.register("corrupted_eye_of_doranzer", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> CORRUPTED_EYE_OF_VOLCANUS = ITEMS.register("corrupted_eye_of_volcanus", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//complex items
 	public static final RegistryObject<Item> STAFF_OF_EXHERISTAFF = ITEMS.register("staff_of_exheristaff", () -> new StaffOfExheristaff(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
@@ -51,6 +54,8 @@ public class ItemInit {
 	public static final RegistryObject<Item> MANATONE_PARALYSIS_ENCHANTMENT_KIT = ITEMS.register("manatone_paralysis_enchantment_kit", () -> new ManatoneParalysisEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> BLEED_ENCHANTMENT_KIT = ITEMS.register("bleed_enchantment_kit", () -> new BleedEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 	public static final RegistryObject<Item> DJINNI_ENCHANTMENT_KIT = ITEMS.register("djinni_enchantment_kit", () -> new DjinniEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> TIME_FREEZE_ENCHANTMENT_KIT = ITEMS.register("time_freeze_enchantment_kit", () -> new TimeFreezeEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
+	public static final RegistryObject<Item> VOLCANUS_BODY_ENCHANTMENT_KIT = ITEMS.register("volcanus_body_enchantment_kit", () -> new VolcanusBodyEnchantmentKit(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)));
 
 
 	//mogling trade
@@ -100,6 +105,10 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> GOBLIN_SPAWN_EGG = ITEMS.register("goblin_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.GOBLIN,0x679f1a,0x56811a,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> TROLL_SPAWN_EGG = ITEMS.register("troll_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.TROLL,0x8f8063,0x685e55,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> BLACK_BEARD_SPAWN_EGG = ITEMS.register("black_beard_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.BLACK_BEARD,0xd00b0b,0xf1c27d,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> ZELOTH_SPAWN_EGG = ITEMS.register("zeloth_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.ZELOTH,0x7de5f1,0xfdfcce,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> DORANZER_SPAWN_EGG = ITEMS.register("doranzer_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.DORANZER,0xb41139,0x4a2ab0,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> VOLCANUS_SPAWN_EGG = ITEMS.register("volcanus_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.VOLCANUS,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> BABY_DRAGON_SPAWN_EGG = ITEMS.register("baby_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.BABY_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -145,6 +154,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> CORRUPTION_SHOVEL = ITEMS.register("corruption_shovel", () -> new ShovelItem(ModItemTier.CORRUPTION, -3,-2.4F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<Kizutsu> KIZUTSU = ITEMS.register("kizutsu", () -> new Kizutsu(ModItemTier.CORRUPTION, 7,-2.0F, new Item.Properties().group(ItemGroup.TOOLS)));
 	public static final RegistryObject<WolfyreHand> WOLFYRE_HAND = ITEMS.register("wolfyre_hand", () -> new WolfyreHand(ModItemTier.CORRUPTION, 7,-2.0F, new Item.Properties().group(ItemGroup.TOOLS)));
+	public static final RegistryObject<DoranzerShield> DORANZER_SHIELD = ITEMS.register("doranzer_shield", () -> new DoranzerShield( new Item.Properties().group(ItemGroup.COMBAT)));
 
 
 	//Armors

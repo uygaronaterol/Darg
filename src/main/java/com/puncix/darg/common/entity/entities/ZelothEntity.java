@@ -11,7 +11,6 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
-import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
@@ -28,26 +27,24 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class BlackBeardEntity extends CreatureEntity {
-    public BlackBeardEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class ZelothEntity extends CreatureEntity {
+    public ZelothEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 800.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 75.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 80.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
-                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D)
-                ;
+                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D);
     }
 
     @Override
@@ -77,7 +74,7 @@ public class BlackBeardEntity extends CreatureEntity {
     @Override
     protected int getExperiencePoints(PlayerEntity player)
     {
-        return 90 ;
+        return 50 ;
     }
 
 
@@ -97,17 +94,16 @@ public class BlackBeardEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            explode();
             playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
         }
         else if( 0.4 < rand && rand <= 0.6){
             if(this.getAttackTarget() != null) {
+                teleportAttack();
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-            explode();
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -116,37 +112,36 @@ public class BlackBeardEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             if( rand < 6.5){
-                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-                explode();
+                teleportAttack();
 
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             else {
+                teleportAttack();
+
                 playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-                explode();
                 return ModSoundEvents.SILENCE.get();
             }
         }
         else{
             if(this.getAttackTarget() != null) {
                 teleportAttack();
+                goCrazy();
                 this.destroyBlocksInAABB(this.getBoundingBox());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                playSound(ModSoundEvents.BLACK_BEARD_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
 
         }
     }
+    private void goCrazy(){
+        if( this.getAttackTarget() != null) {
+            this.addPotionEffect(new EffectInstance(Effects.SPEED.getEffect(), 400));
+            this.addPotionEffect(new EffectInstance(Effects.STRENGTH.getEffect(), 300));
 
-    private void explode() {
-        if (!this.world.isRemote && this.getAttackTarget()!= null) {
-            Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
-            this.setAbsorptionAmount(10);
-            this.world.createExplosion(this, this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(), this.getAttackTarget().getPosZ(), (float)5, explosion$mode);
+            this.addPotionEffect(new EffectInstance(Effects.REGENERATION.getEffect(), 200));
         }
     }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
@@ -222,7 +217,7 @@ public class BlackBeardEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).setFire(2);
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(EffectInit.TIME_FREEZE.get(), 100));
 
             }
             return true;
@@ -231,9 +226,9 @@ public class BlackBeardEntity extends CreatureEntity {
 
     protected boolean teleportAttack() {
         if (!this.world.isRemote() && this.isAlive() && this.getAttackTarget() != null) {
-            double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 4.0D;
+            double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 1.0D;
             double d1 = this.getAttackTarget().getPosY() ;
-            double d2 = this.getAttackTarget().getPosZ() + (this.rand.nextDouble() - 0.5D) * 4.0D;
+            double d2 = this.getAttackTarget().getPosZ() + (this.rand.nextDouble() - 0.5D) * 1.0D;
 
             return this.teleportTo(d0, d1, d2);
         } else {
@@ -256,30 +251,12 @@ public class BlackBeardEntity extends CreatureEntity {
             boolean flag2 = this.attemptTeleport(event.getTargetX(), event.getTargetY(), event.getTargetZ(), true);
             if (flag2 && !this.isSilent()) {
                 this.world.playSound((PlayerEntity)null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, this.getSoundCategory(), 1.0F, 1.0F);
+                this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
             }
 
             return flag2;
         } else {
             return false;
-        }
-    }
-
-    public void attackEntityWithRangedAttack(LivingEntity target) {
-
-        this.getEntity().setInvulnerable(true);
-
-        double d0 = target.getPosX() - this.getPosX();
-        double d1 = target.getPosYHeight(0.3333333333333333D) - this.getPosY() ;
-        double d2 = target.getPosZ() - this.getPosZ();
-        double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
-        ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
-        soepe.setItem(ItemInit.GOLD_COIN.get().getDefaultInstance());
-        //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
-        soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.world.addEntity(soepe);
-        double rand = Math.random();
-        if( rand < 0.25){
-            this.getEntity().setInvulnerable(true);
         }
     }
 }

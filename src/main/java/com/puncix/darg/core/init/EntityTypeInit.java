@@ -2,11 +2,8 @@ package com.puncix.darg.core.init;
 
 import com.puncix.darg.Darg;
 import com.puncix.darg.common.entity.entities.*;
-import com.puncix.darg.common.entity.model.TrollModel;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.monster.ZombieEntity;
-import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -175,6 +172,26 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(BlackBeardEntity::new,
                             EntityClassification.CREATURE).size(0.7f, 3.1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "black_beard").toString()));
+    public static final RegistryObject<EntityType<ZelothEntity>> ZELOTH =
+            ENTITY_TYPES.register("zeloth",
+                    () -> EntityType.Builder.create(ZelothEntity::new,
+                            EntityClassification.CREATURE).size(0.7f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "zeloth").toString()));
+    public static final RegistryObject<EntityType<DoranzerEntity>> DORANZER =
+            ENTITY_TYPES.register("doranzer",
+                    () -> EntityType.Builder.create(DoranzerEntity::new,
+                            EntityClassification.CREATURE).size(1f, 4.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "doranzer").toString()));
+    public static final RegistryObject<EntityType<VolcanusEntity>> VOLCANUS =
+            ENTITY_TYPES.register("volcanus",
+                    () -> EntityType.Builder.create(VolcanusEntity::new,
+                            EntityClassification.CREATURE).size(0.7f, 3.1f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "volcanus").toString()));
+    public static final RegistryObject<EntityType<BabyDragonEntity>> BABY_DRAGON =
+            ENTITY_TYPES.register("baby_dragon",
+                    () -> EntityType.Builder.create(BabyDragonEntity::new,
+                            EntityClassification.CREATURE).size(0.5f, 0.5f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "baby_dragon").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

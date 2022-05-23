@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:shield"
+    },
+
+    {"item": "darg:condensed_corrupted_stone"},
+    {
+      "item": "minecraft:shield"
+    },
+    {"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:corrupted_eye_of_doranzer"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "minecraft:shield"},{"item": "darg:condensed_corrupted_stone"},{"item": "minecraft:shield"},{"item": "darg:corrupted_essence_block"},
+    {
+      "item": "minecraft:diamond_block"
+    },{"item": "minecraft:netherite_block"},{"item": "minecraft:diamond_block"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:doranzer_shield",
+    "count": 1
+  }
+}

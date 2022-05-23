@@ -91,6 +91,12 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.GOBLIN_DUNGEON.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.BLACK_BEARD_SHIP.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.BLACK_BEARD_SHIP.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.ZELOTH_POST.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.ZELOTH_POST.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.DORANZER_ARENA.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.DORANZER_ARENA.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.VOLCANUS_LAKE.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.VOLCANUS_LAKE.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}

@@ -17,6 +17,7 @@ import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.tags.BlockTags;
@@ -32,18 +33,18 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class BlackBeardEntity extends CreatureEntity {
-    public BlackBeardEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class VolcanusEntity extends CreatureEntity {
+    public VolcanusEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 800.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 75.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 80.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D)
@@ -53,6 +54,16 @@ public class BlackBeardEntity extends CreatureEntity {
     @Override
     protected float getStandingEyeHeight(Pose poseIn, EntitySize sizeIn) {
         return super.getStandingEyeHeight(poseIn, sizeIn);
+    }
+
+    @Override
+    public boolean isImmuneToFire() {
+        return true;
+    }
+
+    @Override
+    public boolean isImmuneToExplosions() {
+        return true;
     }
 
     @Override
@@ -134,7 +145,7 @@ public class BlackBeardEntity extends CreatureEntity {
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
-                playSound(ModSoundEvents.BLACK_BEARD_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
@@ -145,8 +156,7 @@ public class BlackBeardEntity extends CreatureEntity {
     private void explode() {
         if (!this.world.isRemote && this.getAttackTarget()!= null) {
             Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
-            this.setAbsorptionAmount(10);
-            this.world.createExplosion(this, this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(), this.getAttackTarget().getPosZ(), (float)5, explosion$mode);
+            this.world.createExplosion(this, this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(), this.getAttackTarget().getPosZ(), (float)7, explosion$mode);
         }
     }
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
@@ -222,7 +232,7 @@ public class BlackBeardEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).setFire(2);
+                ((LivingEntity)entityIn).setFire(10);
 
             }
             return true;
@@ -273,7 +283,7 @@ public class BlackBeardEntity extends CreatureEntity {
         double d2 = target.getPosZ() - this.getPosZ();
         double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
         ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
-        soepe.setItem(ItemInit.GOLD_COIN.get().getDefaultInstance());
+        soepe.setItem(Items.BLAZE_POWDER.getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
         soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
         this.world.addEntity(soepe);

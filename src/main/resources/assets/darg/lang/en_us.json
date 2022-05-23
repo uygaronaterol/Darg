@@ -157,5 +157,15 @@
 	"item.darg.black_beard_spawn_egg": "Black Beard Spawn Egg",
 	"item.darg.tnt_placer": "TNT Placer",
 	"item.darg.corrupted_eye_of_black_beard": "Corrupted Eye Of Black Beard",
-	"enchantment.darg.bleed": "Bleed"
+	"enchantment.darg.bleed": "Bleed",
+	"enchantment.darg.time_freeze": "Time Freeze",
+	"item.darg.corrupted_eye_of_zeloth": "Corrupted Eye Of Zeloth",
+	"item.darg.time_freeze_enchantment_kit": "Time Freeze Enchantment Kit",
+	"item.darg.volcanus_body_enchantment_kit": "Volcanus Body Enchantment Kit",
+	"item.darg.doranzer_spawn_egg": "Doranzer Spawn Egg",
+	"item.darg.volcanus_spawn_egg": "Volcanus Spawn Egg",
+	"item.darg.doranzer_shield": "Doranzer Shield",
+	"item.darg.corrupted_eye_of_volcanus": "Corrupted Eye Of Volcanus",
+	"item.darg.corrupted_eye_of_doranzer": "Corrupted Eye Of Doranzer",
+	"enchantment.darg.volcanus_body": "Volcanus Body"
 }

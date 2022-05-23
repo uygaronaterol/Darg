@@ -48,6 +48,8 @@ public class ModStructureGeneration {
         else if(types.contains(BiomeDictionary.Type.FOREST)){
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.WOLFYRE_DEN.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.ZELOTH_POST.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+
         }
         else if(types.contains(BiomeDictionary.Type.MESA)){
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
@@ -60,6 +62,14 @@ public class ModStructureGeneration {
         else if(types.contains(BiomeDictionary.Type.OCEAN)){
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
             structures.add(() -> ModStructures.BLACK_BEARD_SHIP.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
+        else if(types.contains(BiomeDictionary.Type.SANDY)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.DORANZER_ARENA.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        }
+        else if(types.contains(BiomeDictionary.Type.NETHER) && types.contains(BiomeDictionary.Type.DRY)){
+            List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
+            structures.add(() -> ModStructures.VOLCANUS_LAKE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
     }
 

@@ -32,18 +32,18 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class BlackBeardEntity extends CreatureEntity {
-    public BlackBeardEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class DoranzerEntity extends CreatureEntity {
+    public DoranzerEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 800.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 1000.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.8D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 20.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 75.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 30.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 80.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 25D )
                 .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 9999D)
@@ -63,7 +63,7 @@ public class BlackBeardEntity extends CreatureEntity {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new SwimGoal(this));
-        this.goalSelector.addGoal( 1, new MeleeAttackGoal(this, 0.6, true));
+        this.goalSelector.addGoal( 1, new MeleeAttackGoal(this, 0.7, true));
 
         this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 50F));
         //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
@@ -97,7 +97,7 @@ public class BlackBeardEntity extends CreatureEntity {
             if(this.getAttackTarget() != null) {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
-            explode();
+            teleportAttack();
             playSound(ModSoundEvents.SILENCE.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
 
@@ -107,7 +107,7 @@ public class BlackBeardEntity extends CreatureEntity {
                 this.destroyBlocksInAABB(this.getBoundingBox());
             }
             playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-            explode();
+            teleportAttack();
             return ModSoundEvents.SILENCE.get();
 
         }
@@ -117,24 +117,22 @@ public class BlackBeardEntity extends CreatureEntity {
             }
             if( rand < 6.5){
                 playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-                explode();
+                teleportAttack();
 
                 return ModSoundEvents.SILENCE.get();
             }
             else {
                 playSound(ModSoundEvents.SILENCE.get(), 1, 1);
-                explode();
+                teleportAttack();
                 return ModSoundEvents.SILENCE.get();
             }
         }
         else{
             if(this.getAttackTarget() != null) {
                 teleportAttack();
+                goCrazy();
                 this.destroyBlocksInAABB(this.getBoundingBox());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                attackEntityWithRangedAttack(this.getAttackTarget());
-                playSound(ModSoundEvents.BLACK_BEARD_ANIMATION.get(), 1, 1);
+                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
                 return ModSoundEvents.SILENCE.get();
             }
             return ModSoundEvents.SILENCE.get();
@@ -142,13 +140,7 @@ public class BlackBeardEntity extends CreatureEntity {
         }
     }
 
-    private void explode() {
-        if (!this.world.isRemote && this.getAttackTarget()!= null) {
-            Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
-            this.setAbsorptionAmount(10);
-            this.world.createExplosion(this, this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(), this.getAttackTarget().getPosZ(), (float)5, explosion$mode);
-        }
-    }
+
     private boolean destroyBlocksInAABB(AxisAlignedBB area) {
         int i = MathHelper.floor(area.minX - 1);
         int j = MathHelper.floor(area.minY );
@@ -222,7 +214,7 @@ public class BlackBeardEntity extends CreatureEntity {
             return false;
         } else {
             if (entityIn instanceof LivingEntity) {
-                ((LivingEntity)entityIn).setFire(2);
+                ((LivingEntity)entityIn).addPotionEffect(new EffectInstance(Effects.WEAKNESS.getEffect(), 50));
 
             }
             return true;
@@ -231,9 +223,9 @@ public class BlackBeardEntity extends CreatureEntity {
 
     protected boolean teleportAttack() {
         if (!this.world.isRemote() && this.isAlive() && this.getAttackTarget() != null) {
-            double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 4.0D;
+            double d0 = this.getAttackTarget().getPosX() + (this.rand.nextDouble() - 0.5D) * 1.0D;
             double d1 = this.getAttackTarget().getPosY() ;
-            double d2 = this.getAttackTarget().getPosZ() + (this.rand.nextDouble() - 0.5D) * 4.0D;
+            double d2 = this.getAttackTarget().getPosZ() + (this.rand.nextDouble() - 0.5D) * 1.0D;
 
             return this.teleportTo(d0, d1, d2);
         } else {
@@ -263,23 +255,13 @@ public class BlackBeardEntity extends CreatureEntity {
             return false;
         }
     }
+    private void goCrazy(){
+        if( this.getAttackTarget() != null) {
+            this.addPotionEffect(new EffectInstance(Effects.SPEED.getEffect(), 400));
+            this.addPotionEffect(new EffectInstance(Effects.STRENGTH.getEffect(), 300));
 
-    public void attackEntityWithRangedAttack(LivingEntity target) {
-
-        this.getEntity().setInvulnerable(true);
-
-        double d0 = target.getPosX() - this.getPosX();
-        double d1 = target.getPosYHeight(0.3333333333333333D) - this.getPosY() ;
-        double d2 = target.getPosZ() - this.getPosZ();
-        double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
-        ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
-        soepe.setItem(ItemInit.GOLD_COIN.get().getDefaultInstance());
-        //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
-        soepe.shoot( d0, d1 + d3 * (double)0.2F - 2, d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
-        this.world.addEntity(soepe);
-        double rand = Math.random();
-        if( rand < 0.25){
-            this.getEntity().setInvulnerable(true);
+            this.addPotionEffect(new EffectInstance(Effects.REGENERATION.getEffect(), 200));
         }
     }
+
 }

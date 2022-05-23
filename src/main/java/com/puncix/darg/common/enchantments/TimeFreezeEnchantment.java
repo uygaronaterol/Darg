@@ -1,28 +1,31 @@
 package com.puncix.darg.common.enchantments;
 
-import com.puncix.darg.core.init.EnchantmentInit;
+import com.puncix.darg.Darg;
+import com.puncix.darg.client.util.ModSoundEvents;
+import com.puncix.darg.common.entity.entities.MedusaProjectileEntity;
+import com.puncix.darg.common.entity.entities.StaffOfExheristaffProjectileEntity;
+import com.puncix.darg.core.init.EffectInit;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
-public class MedusaTurnStoneEnchantment extends Enchantment {
-    public MedusaTurnStoneEnchantment(Rarity rarityIn, EnchantmentType typeIn, EquipmentSlotType[] slots) {
+public class TimeFreezeEnchantment extends Enchantment {
+    public TimeFreezeEnchantment(Rarity rarityIn, EnchantmentType typeIn, EquipmentSlotType[] slots) {
         super(rarityIn, typeIn, slots);
     }
+
     @Override
     public boolean canVillagerTrade() {
-        return false;
-    }
-    @Override
-    public boolean canApplyAtEnchantingTable(ItemStack stack) {
         return false;
     }
 
@@ -37,6 +40,16 @@ public class MedusaTurnStoneEnchantment extends Enchantment {
     }
 
     @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
+    @Override
+    protected boolean canApplyTogether(Enchantment ench) {
+        return super.canApplyTogether(ench);
+    }
+
+    @Override
     public boolean isAllowedOnBooks() {
         return true;
     }
@@ -46,14 +59,16 @@ public class MedusaTurnStoneEnchantment extends Enchantment {
         if( target.isAlive()){
             LivingEntity entity = (LivingEntity) target;
 
-            entity.addPotionEffect( new EffectInstance(Effects.SLOWNESS.getEffect(), 100 , 3, true, false));
+            entity.addPotionEffect( new EffectInstance(EffectInit.TIME_FREEZE.get(), 100 , 3, true, true));
+
         }
         super.onEntityDamaged(user, target, level);
     }
 
+
     @Override
     public boolean canApply(ItemStack stack) {
-        return stack == ItemInit.CORRUPTED_EYE_OF_MEDUSA.get().getDefaultInstance();
+        return stack == ItemInit.CORRUPTED_EYE_OF_ZELOTH.get().getDefaultInstance();
     }
 
 

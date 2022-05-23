@@ -20,6 +20,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -35,6 +36,7 @@ import com.puncix.darg.common.containers.ModContainers;
 import com.puncix.darg.common.screens.CorruptedCraftingTableScreen;
 import com.puncix.darg.common.tileentities.ModTileEntities;
 import com.puncix.darg.common.world.structure.ModStructures;
+import software.bernie.geckolib3.GeckoLib;
 
 import java.util.function.Supplier;
 
@@ -64,6 +66,7 @@ public class Darg
         PotionInit.register(bus);
         EntityTypeInit.register(bus);
         ModBiomes.register(bus);
+        GeckoLib.initialize();
         // Register the enqueueIMC method for modloading
         //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
@@ -133,6 +136,10 @@ public class Darg
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.GOBLIN.get(), GoblinRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.TROLL.get(), TrollRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.BLACK_BEARD.get(), BlackBeardRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.ZELOTH.get(), ZelothRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.VOLCANUS.get(), VolcanusRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.DORANZER.get(), DoranzerRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.BABY_DRAGON.get(), BabyDragonRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityTypeInit.EXHERISTAFF.get(), ExheristaffRenderer::new);
         registerProjectileEntityModels(event.getMinecraftSupplier());

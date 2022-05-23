@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:magma_cream"
+    },
+
+    {"item": "darg:corrupted_fire"},
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {"item": "darg:corrupted_fire"},
+    {"item": "darg:corrupted_eye_of_volcanus"},{"item": "darg:corrupted_fire"},
+    {"item": "minecraft:magma_cream"},{"item": "darg:corrupted_fire"},{"item": "minecraft:blaze_rod"},{"item": "darg:corrupted_essence_block"},
+    {
+      "item": "darg:condensed_corrupted_stone"
+    },{"item": "darg:corruption"},{"item": "darg:condensed_corrupted_stone"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:volcanus_body_enchantment_kit",
+    "count": 1
+  }
+}

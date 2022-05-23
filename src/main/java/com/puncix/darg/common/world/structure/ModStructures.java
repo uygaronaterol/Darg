@@ -6,6 +6,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.puncix.darg.Darg;
+import com.puncix.darg.common.items.VolcanusBodyEnchantmentKit;
 import com.puncix.darg.common.world.structure.structures.*;
 
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -48,6 +49,12 @@ public class ModStructures {
             STRUCTURES.register("goblin_dungeon", GoblinDungeonStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> BLACK_BEARD_SHIP =
             STRUCTURES.register("black_beard_ship", BlackBeardShipStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> ZELOTH_POST =
+            STRUCTURES.register("zeloth_post", ZelothPostStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> DORANZER_ARENA =
+            STRUCTURES.register("doranzer_arena", DoranzerArenaStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> VOLCANUS_LAKE =
+            STRUCTURES.register("volcanus_lake", VolcanusLakeStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -75,7 +82,7 @@ public class ModStructures {
                 new StructureSeparationSettings(130,100, 1234567890),
                 true);
         setupMapSpacingAndLand(WOLFYRE_DEN.get(),
-                new StructureSeparationSettings(300,200, 1234567890),
+                new StructureSeparationSettings(180,150, 1234567890),
                 true);
         setupMapSpacingAndLand(MANATONE_ALTAR.get(),
                 new StructureSeparationSettings(35,30, 1234567890),
@@ -89,6 +96,15 @@ public class ModStructures {
         setupMapSpacingAndLand(BLACK_BEARD_SHIP.get(),
                 new StructureSeparationSettings(300,280, 1234567890),
                 false);
+        setupMapSpacingAndLand(ZELOTH_POST.get(),
+                new StructureSeparationSettings(200,160, 1234567890),
+                true);
+        setupMapSpacingAndLand(DORANZER_ARENA.get(),
+                new StructureSeparationSettings(300,260, 1234567890),
+                true);
+        setupMapSpacingAndLand(VOLCANUS_LAKE.get(),
+                new StructureSeparationSettings(80,60, 1234567890),
+                true);
     }
 
     /**
