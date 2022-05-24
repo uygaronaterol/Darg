@@ -47,6 +47,7 @@ public class ModEventBusEvents {
         event.put(EntityTypeInit.DORANZER.get(), DoranzerEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.VOLCANUS.get(), VolcanusEntity.setCustomAttributes().create());
         event.put(EntityTypeInit.JUVENILE_DRAGON.get(), JuvenileDragonEntity.setCustomAttributes().create());
+        event.put(EntityTypeInit.TEENAGE_DRAGON.get(), TeenageDragonEntity.setCustomAttributes().create());
 
         event.put(EntityTypeInit.BABY_DRAGON.get(), BabyDragonEntity.setCustomAttributes().create());
 

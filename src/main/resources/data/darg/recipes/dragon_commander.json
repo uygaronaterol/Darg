@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "darg:gold_coin"
+    },
+
+    {"item": "minecraft:air"},
+    {
+      "item": "minecraft:air"
+    },
+    {"item": "darg:gold_coin"},
+    {"item": "darg:condensed_corrupted_stone"},{"item": "darg:condensed_corrupted_stone"},
+    {"item": "darg:gold_coin"},{"item": "minecraft:air"},{"item": "minecraft:air"},{"item": "darg:corrupted_essence_block"},
+    {
+      "item": "minecraft:gold_block"
+    },{"item": "darg:corruption"},{"item": "minecraft:gold_block"},{"item": "darg:corrupted_essence_block"}
+  ],
+  "output": {
+    "item": "darg:dragon_commander",
+    "count": 1
+  }
+}

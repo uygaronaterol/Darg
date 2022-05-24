@@ -110,6 +110,7 @@ public class ItemInit {
 	public static final RegistryObject<ModSpawnEggItem> VOLCANUS_SPAWN_EGG = ITEMS.register("volcanus_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.VOLCANUS,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> BABY_DRAGON_SPAWN_EGG = ITEMS.register("baby_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.BABY_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<ModSpawnEggItem> JUVENILE_DRAGON_SPAWN_EGG = ITEMS.register("juvenile_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.JUVENILE_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<ModSpawnEggItem> TEENAGE_DRAGON_SPAWN_EGG = ITEMS.register("teenage_dragon_spawn_egg", () -> new ModSpawnEggItem(EntityTypeInit.TEENAGE_DRAGON,0x874b4c,0xff821a,new Item.Properties().group(ItemGroup.MISC)));
 
 	//Wool
 	public static final RegistryObject<BlockItem> CORRUPTED_WOOL = ITEMS.register("corrupted_wool", () -> new BlockItem(BlockInit.CORRUPTED_WOOL.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));
@@ -171,9 +172,16 @@ public class ItemInit {
 	//DRAGON STUFF
 	//Projectile
 	public static final RegistryObject<Item> BABY_DRAGON_PROJECTILE = ITEMS.register("baby_dragon_projectile", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> JUVENILE_DRAGON_PROJECTILE = ITEMS.register("juvenile_dragon_projectile", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> TEENAGE_DRAGON_PROJECTILE = ITEMS.register("teenage_dragon_projectile", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 	//Commander
 	public static final RegistryObject<Item> DRAGON_COMMANDER = ITEMS.register("dragon_commander", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
+	//Food
+	public static final RegistryObject<Item> PRESSED_MEAT = ITEMS.register("pressed_meat", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> BABY_DRAGON_FOOD = ITEMS.register("baby_dragon_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> JUVENILE_DRAGON_FOOD = ITEMS.register("juvenile_dragon_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
 
 	//Block items

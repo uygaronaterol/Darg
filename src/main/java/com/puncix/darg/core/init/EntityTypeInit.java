@@ -197,6 +197,11 @@ public class EntityTypeInit {
                     () -> EntityType.Builder.create(JuvenileDragonEntity::new,
                             EntityClassification.CREATURE).size(1.5f, 1f)
                             .build(new ResourceLocation(Darg.MOD_ID, "juvenile_dragon").toString()));
+    public static final RegistryObject<EntityType<TeenageDragonEntity>> TEENAGE_DRAGON =
+            ENTITY_TYPES.register("teenage_dragon",
+                    () -> EntityType.Builder.create(TeenageDragonEntity::new,
+                            EntityClassification.CREATURE).size(3f, 4f)
+                            .build(new ResourceLocation(Darg.MOD_ID, "teenage_dragon").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

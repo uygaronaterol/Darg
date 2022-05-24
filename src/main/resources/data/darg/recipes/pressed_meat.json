@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption",
+  "ingredients": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:porkchop"
+    },
+    {"item": "minecraft:air"},
+    {"item": "minecraft:beef"},
+    {"item": "darg:essence"},
+    {"item": "minecraft:mutton"},{"item": "minecraft:air"},{"item": "minecraft:salmon"},
+    {"item": "minecraft:air"},
+    {
+      "item": "darg:essence"
+    }
+  ],
+  "output": {
+    "item": "darg:pressed_meat",
+    "count": 1
+  }
+}

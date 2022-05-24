@@ -1,0 +1,23 @@
+{
+  "type": "darg:corruption2",
+  "ingredients": [
+    {
+      "item": "minecraft:chicken"
+    },
+
+    {"item": "darg:pressed_meat"},
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {"item": "darg:pressed_meat"},
+    {"item": "minecraft:gold_block"},{"item": "darg:pressed_meat"},
+    {"item": "minecraft:pufferfish"},{"item": "darg:pressed_meat"},{"item": "minecraft:rabbit"},{"item": "darg:pressed_meat"},
+    {
+      "item": "darg:pressed_meat"
+    },{"item": "darg:corrupted_essence_block"},{"item": "darg:pressed_meat"},{"item": "darg:pressed_meat"}
+  ],
+  "output": {
+    "item": "darg:juvenile_dragon_food",
+    "count": 1
+  }
+}

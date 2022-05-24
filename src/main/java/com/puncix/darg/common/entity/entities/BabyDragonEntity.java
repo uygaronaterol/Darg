@@ -4,7 +4,9 @@ import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.EntityTypeInit;
 import com.puncix.darg.core.init.ItemInit;
 import net.minecraft.command.impl.data.EntityDataAccessor;
+import net.minecraft.entity.item.EnderPearlEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -109,7 +111,7 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 40.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.6D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 5.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 80.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
                 .createMutableAttribute(Attributes.ARMOR, 5D )
@@ -210,9 +212,7 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
 //        else {
 //            this.setNoGravity(false);
 //        }
-        if(this.getAttackTarget() != null ){
-            shouldFly = false;
-        }
+
         if (shouldFly && moveController.isUpdating() && counter == 0){
 
             Random random = this.getRNG();
@@ -321,7 +321,13 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
                 return ActionResultType.SUCCESS;
             }
         }
-
+        else if( item == ItemInit.BABY_DRAGON_FOOD.get()&& this.isTamed()){
+            JuvenileDragonEntity juvenileDragonEntity = EntityTypeInit.JUVENILE_DRAGON.get().create(this.world);
+            juvenileDragonEntity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, this.rotationPitch);
+            this.world.addEntity(juvenileDragonEntity);
+            juvenileDragonEntity.tame(player,hand);
+            this.remove();
+        }
         if (itemstack.getItem() == itemForTaming) {
             return ActionResultType.PASS;
         }

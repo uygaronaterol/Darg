@@ -55,7 +55,7 @@ import java.util.EnumSet;
 import java.util.Random;
 import java.util.function.Predicate;
 
-public class JuvenileDragonEntity extends TameableEntity implements IAnimatable {
+public class TeenageDragonEntity extends TameableEntity implements IAnimatable {
     private AnimationFactory Factory = new AnimationFactory(this);
     protected static final DataParameter<Boolean> SITTING = EntityDataManager.createKey(BabyDragonEntity.class, DataSerializers.BOOLEAN);
     private static final Predicate<LivingEntity> TARGET_ENTITIES = (p_213440_0_) -> {
@@ -65,7 +65,7 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
     };
     private static boolean shouldFly = false;
     private static int counter = 0;
-    public JuvenileDragonEntity(EntityType<? extends TameableEntity> type, World worldIn) {
+    public TeenageDragonEntity(EntityType<? extends TameableEntity> type, World worldIn) {
         super(type, worldIn);
         shouldFly = false;
     }
@@ -97,32 +97,32 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
 
         //this.goalSelector.addGoal(4, new FollowMobGoal(this,0.6D,0F,1F));
         if(!this.isTamed()) {
-            this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-            this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
-            this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
-            this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
+            this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, false));
+            this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+            this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, false));
+            this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, false));
 
         }
         else{
             this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
             this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
-            this.targetSelector.addGoal(3,new NearestAttackableTargetGoal<>(this, MonsterEntity.class,true));
-            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
-            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, true));
-            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
-            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
+            this.targetSelector.addGoal(3,new NearestAttackableTargetGoal<>(this, MonsterEntity.class,false));
+            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, PlayerEntity.class, false));
+            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, AbstractVillagerEntity.class, false));
+            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, false));
+            this.targetSelector.removeGoal( new NearestAttackableTargetGoal<>(this, AnimalEntity.class, false));
         }
     }
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 150.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.9D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
-                .createMutableAttribute(Attributes.FOLLOW_RANGE, 100.0D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 300.0D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 1.1D)
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 30.0D)
+                .createMutableAttribute(Attributes.FOLLOW_RANGE, 10000.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
-                .createMutableAttribute(Attributes.ARMOR, 10D )
-                .createMutableAttribute(Attributes.FLYING_SPEED, 1.1F)
-                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 30D)
+                .createMutableAttribute(Attributes.ARMOR, 15D )
+                .createMutableAttribute(Attributes.FLYING_SPEED, 1.3F)
+                .createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 60D)
                 ;
     }
     @Override
@@ -402,13 +402,6 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
                 return ActionResultType.SUCCESS;
             }
         }
-        else if( item == ItemInit.JUVENILE_DRAGON_FOOD.get() && this.isTamed()){
-            TeenageDragonEntity teenageDragonEntity = EntityTypeInit.TEENAGE_DRAGON.get().create(this.world);
-            teenageDragonEntity.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, this.rotationPitch);
-            this.world.addEntity(teenageDragonEntity);
-            teenageDragonEntity.tame(player,hand);
-            this.remove();
-        }
         else if(isTamed() && !this.world.isRemote && hand == Hand.MAIN_HAND && this.isOwner(player)){
             this.mountTo(player);
 
@@ -431,9 +424,11 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
             player.rotationYaw = this.rotationYaw;
             player.rotationPitch = this.rotationPitch;
             player.startRiding(this);
+
         }
 
     }
+
     public void attackEntityWithRangedAttack(LivingEntity target) {
 
         this.getEntity().setInvulnerable(true);
@@ -442,10 +437,10 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
         double d1 = target.getPosYHeight(0.3333333333333333D) - this.getPosY() ;
         double d2 = target.getPosZ() - this.getPosZ();
         double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
-        ExheristaffProjectileEntity soepe = new ExheristaffProjectileEntity(this, this.world);
-        soepe.setItem(ItemInit.JUVENILE_DRAGON_PROJECTILE.get().getDefaultInstance());
+        MedusaProjectileEntity soepe = new MedusaProjectileEntity(this, this.world);
+        soepe.setItem(ItemInit.TEENAGE_DRAGON_PROJECTILE.get().getDefaultInstance());
         //soepe.shoot( playerIn.rotationPitch, playerIn.rotationYaw, playerIn.rotationYawHead, 1.5F, 1.0F);
-        soepe.shoot( d0, d1 + d3 * (double)0.2F - 1 , d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
+        soepe.shoot( d0, d1 + d3 * (double)0.2F , d2, 1.6F, (float)(14 - this.world.getDifficulty().getId() * 4));
         this.world.addEntity(soepe);
         double rand = Math.random();
         if( rand < 0.25){
@@ -462,6 +457,7 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
         else {
             if(this.getAttackTarget() != null) {
                 playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+                attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
