@@ -250,23 +250,34 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
         if(this.getAttackTarget() != null && !this.isTamed()) {
             if (this.getAttackTarget().getPosY() > this.getPosY() + 1 ) {
                 this.setNoGravity(true);
-                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY() + 20,
+                this.navigator.clearPath();
+                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+ 20,
                     this.getAttackTarget().getPosZ(), 1);
-                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+1,
-                        this.getAttackTarget().getPosZ(), 1);
+                this.setMoveVertical(0.2f);
+//                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+1,
+//                        this.getAttackTarget().getPosZ(), 1);
             } else if (!this.isOnGround()  && (this.getAttackTarget().getPosY()== this.getPosY() + 1|| this.getAttackTarget().getPosY() == this.getPosY() + 0 || this.getAttackTarget().getPosY() < this.getPosY()) && this.getControllingPassenger() == null) {
                 this.setNoGravity(false);
-
+                this.navigator.clearPath();
+                this.setMoveVertical(0);
                 shouldFly = false;
             }
         }
 
         if(this.getAttackTarget() != null && !this.isTamed()){
-            shouldFly = true;
             this.destroyBlocksInAABB(this.getBoundingBox());
+            this.navigator.clearPath();
+
+        }
+        else if(this.getAttackTarget() == null && !this.isTamed()){
+            shouldFly = true;
+            this.setMoveVertical(0);
+            this.navigator.clearPath();
+            this.setNoGravity(true);
         }
 
         if (shouldFly && moveController.isUpdating() && counter == 0 && this.getAttackTarget() == null){
+            this.navigator.clearPath();
             Random random = this.getRNG();
             double d0 = this.getPosX() + (double)((random.nextFloat() * 2.0F - 1.0F) * 5.0F);
             double d1;

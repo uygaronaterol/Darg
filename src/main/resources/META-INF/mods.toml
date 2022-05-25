@@ -4,17 +4,19 @@ license="All rights reserved"
 issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
 [[mods]]
 modId="darg"
-version="1.0.1.2"
+version="1.3.0.0"
 displayName="Darg"
 updateJSONURL="https://change.me.example.invalid/updates.json"
 displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
 logoFile="examplemod.png" #optional
 credits="Kaan Yilmaz, Metin Ilkbahar, Umut Emre Fidan, Arman Durmuş as voice actors,
  https://www.youtube.com/c/XiaoTongPiano as the corrupted plains soundtrack,
+ https://www.youtube.com/channel/UCRHrSNdSQ0i-x1OYTlJlY0A channel for dragon sounds,
  many youtube minecraft modding tutorial channels"
 authors="puncix"
 description='''
-I am sorry for writing this mod
+Mod that offers magical world with many deadly creatures and some helpful ones with many items, structures and unique biome
+with sounds
 '''
 [[dependencies.examplemod]]
     modId="forge"

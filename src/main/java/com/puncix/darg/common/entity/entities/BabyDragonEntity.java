@@ -267,7 +267,7 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
         ItemStack itemstack = player.getHeldItem(hand);
         Item item = itemstack.getItem();
 
-        Item itemForTaming = Items.APPLE;
+        Item itemForTaming = Items.ENCHANTED_GOLDEN_APPLE;
 
         if (item == itemForTaming && !isTamed()) {
             if (this.world.isRemote) {

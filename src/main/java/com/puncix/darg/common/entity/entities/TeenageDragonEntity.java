@@ -251,20 +251,27 @@ public class TeenageDragonEntity extends TameableEntity implements IAnimatable {
         if(this.getAttackTarget() != null && !this.isTamed()) {
             if (this.getAttackTarget().getPosY() > this.getPosY() + 1 ) {
                 this.setNoGravity(true);
-                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY() + 20,
+                this.navigator.clearPath();
+                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+ 20,
                         this.getAttackTarget().getPosZ(), 1);
-                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+1,
-                        this.getAttackTarget().getPosZ(), 1);
-            } else if (!this.isOnGround()  && (this.getAttackTarget().getPosY()== this.getPosY() + 1|| this.getAttackTarget().getPosY() == this.getPosY() + 0 || this.getAttackTarget().getPosY() < this.getPosY()) && this.getControllingPassenger() == null) {
+                this.setMoveVertical(0.2f);
+//                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+1,
+//                        this.getAttackTarget().getPosZ(), 1);
+            } else if (!this.isOnGround()  &&  this.getAttackTarget().getPosY()+ 4 < this.getPosY() && this.getControllingPassenger() == null) {
                 this.setNoGravity(false);
-
+                this.navigator.clearPath();
+                this.setMoveVertical(0);
                 shouldFly = false;
             }
         }
 
         if(this.getAttackTarget() != null && !this.isTamed()){
-            shouldFly = true;
             this.destroyBlocksInAABB(this.getBoundingBox());
+
+        }
+        else if(this.getAttackTarget() == null && !this.isTamed()){
+            shouldFly = true;
+            this.setNoGravity(true);
         }
 
         if (shouldFly && moveController.isUpdating() && counter == 0 && this.getAttackTarget() == null){
