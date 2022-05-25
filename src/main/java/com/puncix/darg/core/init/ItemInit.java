@@ -183,6 +183,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> BABY_DRAGON_FOOD = ITEMS.register("baby_dragon_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> JUVENILE_DRAGON_FOOD = ITEMS.register("juvenile_dragon_food", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
+	//Drop
+	public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
 
 	//Block items
 	public static final RegistryObject<BlockItem> CORRUPTED_GRASS = ITEMS.register("corrupted_grass", () -> new BlockItem(BlockInit.CORRUPTED_GRASS.get(),new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)));

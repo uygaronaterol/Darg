@@ -104,6 +104,15 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> CINNER_HIT2 = registerSoundEvent("cinner_hit2");
     public static final RegistryObject<SoundEvent> CINNER_DEATH = registerSoundEvent("cinner_death");
     public static final RegistryObject<SoundEvent> BLACK_BEARD_ANIMATION = registerSoundEvent("black_beard_animation");
+    public static final RegistryObject<SoundEvent> BABY_DRAGON_AMBIENT1 = registerSoundEvent("baby_dragon_ambient1");
+    public static final RegistryObject<SoundEvent> BABY_DRAGON_AMBIENT2 = registerSoundEvent("baby_dragon_ambient2");
+    public static final RegistryObject<SoundEvent> BABY_DRAGON_HIT = registerSoundEvent("baby_dragon_hit");
+    public static final RegistryObject<SoundEvent> JUVENILE_DRAGON_HIT = registerSoundEvent("juvenile_dragon_hit");
+    public static final RegistryObject<SoundEvent> JUVENILE_DRAGON_AMBIENT1 = registerSoundEvent("juvenile_dragon_ambient1");
+    public static final RegistryObject<SoundEvent> JUVENILE_DRAGON_AMBIENT2 = registerSoundEvent("juvenile_dragon_ambient2");
+    public static final RegistryObject<SoundEvent> TEENAGE_DRAGON_AMBIENT2 = registerSoundEvent("teenage_dragon_ambient2");
+    public static final RegistryObject<SoundEvent> TEENAGE_DRAGON_AMBIENT1 = registerSoundEvent("teenage_dragon_ambient1");
+    public static final RegistryObject<SoundEvent> TEENAGE_DRAGON_HIT = registerSoundEvent("teenage_dragon_hit");
 
 
 

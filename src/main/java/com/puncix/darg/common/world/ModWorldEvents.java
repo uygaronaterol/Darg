@@ -97,6 +97,10 @@ public class ModWorldEvents {
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.DORANZER_ARENA.get()));
 			((HashMap) tempMap).putIfAbsent(ModStructures.VOLCANUS_LAKE.get(),
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.VOLCANUS_LAKE.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.TEENAGE_DRAGON_DEN.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.TEENAGE_DRAGON_DEN.get()));
+			((HashMap) tempMap).putIfAbsent(ModStructures.JUVENILE_DRAGON_DEN.get(),
+					DimensionStructuresSettings.field_236191_b_.get(ModStructures.JUVENILE_DRAGON_DEN.get()));
 			serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
 
 		}

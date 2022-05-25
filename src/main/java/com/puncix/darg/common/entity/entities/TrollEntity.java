@@ -21,6 +21,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -42,6 +43,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class TrollEntity extends CreatureEntity {
+    private int counter = 0;
     public TrollEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
@@ -115,6 +117,47 @@ public class TrollEntity extends CreatureEntity {
             return true;
         }
     }
+    public ActionResultType getEntityInteractionResult(PlayerEntity player, Hand hand) {
+        ItemStack itemstack = player.getHeldItem(hand);
+        if (itemstack.getItem() == Items.LEAD && this.canBeLeashedTo(player)) {
+            this.setLeashHolder(player, true);
+            itemstack.shrink(1);
+            return ActionResultType.func_233537_a_(this.world.isRemote);
+        } else {
+            if (itemstack.getItem() == Items.NAME_TAG) {
+                ActionResultType actionresulttype = itemstack.interactWithEntity(player, this, hand);
+                if (actionresulttype.isSuccessOrConsume()) {
+                    return actionresulttype;
+                }
+            }
 
+            if (itemstack.getItem() instanceof SpawnEggItem) {
+                if (this.world instanceof ServerWorld) {
+                    SpawnEggItem spawneggitem = (SpawnEggItem)itemstack.getItem();
+                    Optional<MobEntity> optional = spawneggitem.getChildToSpawn(player, this, (EntityType)this.getType(), (ServerWorld)this.world, this.getPositionVec(), itemstack);
+                    optional.ifPresent((p_233658_2_) -> {
+                        this.onChildSpawnFromEgg(player, p_233658_2_);
+                    });
+                    return optional.isPresent() ? ActionResultType.SUCCESS : ActionResultType.PASS;
+                } else {
+                    return ActionResultType.CONSUME;
+                }
+            } else if(itemstack.getItem() == ItemInit.DRAGON_SCALE.get()) {
+                double rand = Math.random();
+                if(counter < 51) {
+                    itemstack.shrink(1);
+                }
+                counter++;
+                if(counter == 50) {
+
+                    this.entityDropItem(ItemInit.BABY_DRAGON_SPAWN_EGG.get());
+
+                }
+                return ActionResultType.CONSUME;
+            }
+            return ActionResultType.CONSUME;
+
+        }
+    }
 
 }

@@ -3,8 +3,6 @@ package com.puncix.darg.common.entity.entities;
 import com.puncix.darg.client.util.ModSoundEvents;
 import com.puncix.darg.core.init.EntityTypeInit;
 import com.puncix.darg.core.init.ItemInit;
-import net.minecraft.command.impl.data.EntityDataAccessor;
-import net.minecraft.entity.item.EnderPearlEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.passive.*;
@@ -28,6 +26,7 @@ import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -328,6 +327,14 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
             juvenileDragonEntity.tame(player,hand);
             this.remove();
         }
+        else if(item == Items.GOLDEN_APPLE && this.isTamed()){
+            if (!player.abilities.isCreativeMode) {
+                itemstack.shrink(1);
+            }
+
+            this.heal(10);
+            return ActionResultType.SUCCESS;
+        }
         if (itemstack.getItem() == itemForTaming) {
             return ActionResultType.PASS;
         }
@@ -357,12 +364,12 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
     protected SoundEvent getAmbientSound() {
         double rand = Math.random();
         if (rand <= 0.3) {
-            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+            playSound(ModSoundEvents.BABY_DRAGON_AMBIENT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
             if(this.getAttackTarget() != null) {
-                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+                playSound(ModSoundEvents.BABY_DRAGON_AMBIENT2.get(), 1, 1);
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
@@ -419,4 +426,18 @@ public class BabyDragonEntity extends TameableEntity implements IAnimatable {
         }
     }
 
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        playSound(ModSoundEvents.BABY_DRAGON_HIT.get(), 1, 1);
+
+        return super.getHurtSound(damageSourceIn);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        playSound(ModSoundEvents.BABY_DRAGON_HIT.get(), 2, 1);
+        return super.getDeathSound();
+    }
 }

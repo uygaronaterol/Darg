@@ -31,7 +31,8 @@ public class ModStructureGeneration {
             structures.add(() -> ModStructures.CORRUPTED_FOSSIL_SITE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.MOGLING_VILLAGE.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
             structures.add(() -> ModStructures.GOBLIN_DUNGEON.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-
+            structures.add(() -> ModStructures.TEENAGE_DRAGON_DEN.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            structures.add(() -> ModStructures.JUVENILE_DRAGON_DEN.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
         else if(types.contains(BiomeDictionary.Type.SWAMP) ) {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();

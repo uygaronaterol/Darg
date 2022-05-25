@@ -33,6 +33,7 @@ import net.minecraft.potion.Effects;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -51,7 +52,6 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import javax.annotation.Nullable;
-import java.util.EnumSet;
 import java.util.Random;
 import java.util.function.Predicate;
 
@@ -64,7 +64,7 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
                 entitytype == EntityType.HORSE ||entitytype == EntityType.DONKEY ||entitytype == EntityType.CHICKEN ||entitytype == EntityTypeInit.MOGLING.get() ||entitytype == EntityTypeInit.ZORBIG.get() ||entitytype == EntityTypeInit.DARBIG.get() ||entitytype == EntityType.CAT ;
     };
     private static boolean shouldFly = false;
-    private static int counter = 0;
+    private int counter = 0;
     public JuvenileDragonEntity(EntityType<? extends TameableEntity> type, World worldIn) {
         super(type, worldIn);
         shouldFly = false;
@@ -116,7 +116,7 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
                 .createMutableAttribute(Attributes.MAX_HEALTH, 150.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.9D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.7D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 15.0D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 100.0D)
                 .createMutableAttribute(Attributes.ZOMBIE_SPAWN_REINFORCEMENTS)
@@ -250,12 +250,14 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
         if(this.getAttackTarget() != null && !this.isTamed()) {
             if (this.getAttackTarget().getPosY() > this.getPosY() + 1 ) {
                 this.setNoGravity(true);
-                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY(),
+                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getAttackTarget().getPosY() + 20,
+                    this.getAttackTarget().getPosZ(), 1);
+                this.getMoveHelper().setMoveTo(this.getAttackTarget().getPosX(), this.getPosY()+1,
                         this.getAttackTarget().getPosZ(), 1);
-
-
-            } else if (!this.isOnGround()  && (this.getAttackTarget().getPosY()== this.getPosY() + 1 || this.getAttackTarget().getPosY() == this.getPosY() || this.getAttackTarget().getPosY() < this.getPosY()) && this.getControllingPassenger() == null) {
+            } else if (!this.isOnGround()  && (this.getAttackTarget().getPosY()== this.getPosY() + 1|| this.getAttackTarget().getPosY() == this.getPosY() + 0 || this.getAttackTarget().getPosY() < this.getPosY()) && this.getControllingPassenger() == null) {
                 this.setNoGravity(false);
+
+                shouldFly = false;
             }
         }
 
@@ -264,8 +266,7 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
             this.destroyBlocksInAABB(this.getBoundingBox());
         }
 
-        if (shouldFly && moveController.isUpdating() && counter == 0){
-
+        if (shouldFly && moveController.isUpdating() && counter == 0 && this.getAttackTarget() == null){
             Random random = this.getRNG();
             double d0 = this.getPosX() + (double)((random.nextFloat() * 2.0F - 1.0F) * 5.0F);
             double d1;
@@ -279,7 +280,8 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
             this.getMoveHelper().setMoveTo(d0, d1, d2, 1.0D);
             counter++;
         }
-        else if(shouldFly && !moveController.isUpdating()){
+        else if(shouldFly && !moveController.isUpdating() && this.getAttackTarget() == null){
+
             Random random = this.getRNG();
             double d0 = this.getPosX() + (double)((random.nextFloat() * 2.0F - 1.0F) * 5.0F);
             double d1;
@@ -409,6 +411,14 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
             teenageDragonEntity.tame(player,hand);
             this.remove();
         }
+        else if(item == Items.GOLDEN_APPLE && this.isTamed()){
+            if (!player.abilities.isCreativeMode) {
+                itemstack.shrink(1);
+            }
+
+            this.heal(15);
+            return ActionResultType.SUCCESS;
+        }
         else if(isTamed() && !this.world.isRemote && hand == Hand.MAIN_HAND && this.isOwner(player)){
             this.mountTo(player);
 
@@ -456,12 +466,12 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
     protected SoundEvent getAmbientSound() {
         double rand = Math.random();
         if (rand <= 0.3) {
-            playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+            playSound(ModSoundEvents.JUVENILE_DRAGON_AMBIENT1.get(), 1, 1);
             return ModSoundEvents.SILENCE.get();
         }
         else {
             if(this.getAttackTarget() != null) {
-                playSound(ModSoundEvents.SILENCE.get(), 1, 1);
+                playSound(ModSoundEvents.JUVENILE_DRAGON_AMBIENT2.get(), 1, 1);
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
                 attackEntityWithRangedAttack(this.getAttackTarget());
@@ -477,6 +487,20 @@ public class JuvenileDragonEntity extends TameableEntity implements IAnimatable 
         return ModSoundEvents.SILENCE.get();
     }
 
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        playSound(ModSoundEvents.JUVENILE_DRAGON_HIT.get(), 1, 1);
+
+        return super.getHurtSound(damageSourceIn);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        playSound(ModSoundEvents.JUVENILE_DRAGON_HIT.get(), 2, 1);
+        return super.getDeathSound();
+    }
 
 
 }

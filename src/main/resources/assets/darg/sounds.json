@@ -596,5 +596,59 @@
   "sounds": [
     "darg:black_beard_animation"
   ]
+}, "baby_dragon_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.baby_dragon_ambient1",
+  "sounds": [
+    "darg:baby_dragon_ambient1"
+  ]
+}, "baby_dragon_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.baby_dragon_ambient2",
+  "sounds": [
+    "darg:baby_dragon_ambient2"
+  ]
+}, "baby_dragon_hit": {
+  "category": "entities",
+  "subtitle": "darg.baby_dragon_hit",
+  "sounds": [
+    "darg:baby_dragon_hit"
+  ]
+}, "juvenile_dragon_hit": {
+  "category": "entities",
+  "subtitle": "darg.juvenile_dragon_hit",
+  "sounds": [
+    "darg:juvenile_dragon_hit"
+  ]
+}, "juvenile_dragon_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.juvenile_dragon_ambient1",
+  "sounds": [
+    "darg:juvenile_dragon_ambient1"
+  ]
+}, "juvenile_dragon_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.juvenile_dragon_ambient2",
+  "sounds": [
+    "darg:juvenile_dragon_ambient2"
+  ]
+}, "teenage_dragon_ambient2": {
+  "category": "entities",
+  "subtitle": "darg.teenage_dragon_ambient2",
+  "sounds": [
+    "darg:teenage_dragon_ambient2"
+  ]
+}, "teenage_dragon_ambient1": {
+  "category": "entities",
+  "subtitle": "darg.teenage_dragon_ambient1",
+  "sounds": [
+    "darg:teenage_dragon_ambient1"
+  ]
+}, "teenage_dragon_hit": {
+  "category": "entities",
+  "subtitle": "darg.teenage_dragon_hit",
+  "sounds": [
+    "darg:teenage_dragon_hit"
+  ]
 }
 }

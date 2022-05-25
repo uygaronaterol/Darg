@@ -55,6 +55,10 @@ public class ModStructures {
             STRUCTURES.register("doranzer_arena", DoranzerArenaStructure::new);
     public static final RegistryObject<Structure<NoFeatureConfig>> VOLCANUS_LAKE =
             STRUCTURES.register("volcanus_lake", VolcanusLakeStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> TEENAGE_DRAGON_DEN =
+            STRUCTURES.register("teenage_dragon_den", TeenageDragonDenStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> JUVENILE_DRAGON_DEN =
+            STRUCTURES.register("juvenile_dragon_den", JuvenileDragonDenStructure::new);
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
@@ -104,6 +108,12 @@ public class ModStructures {
                 true);
         setupMapSpacingAndLand(VOLCANUS_LAKE.get(),
                 new StructureSeparationSettings(80,60, 1234567890),
+                true);
+        setupMapSpacingAndLand(TEENAGE_DRAGON_DEN.get(),
+                new StructureSeparationSettings(200,170, 1234567890),
+                true);
+        setupMapSpacingAndLand(JUVENILE_DRAGON_DEN.get(),
+                new StructureSeparationSettings(101,91, 1234567890),
                 true);
     }
 

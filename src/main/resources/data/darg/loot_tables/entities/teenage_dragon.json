@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": {
+        "min": 20,
+        "max": 32
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "darg:dragon_scale"
+        }
+      ]
+    }
+  ]
+}

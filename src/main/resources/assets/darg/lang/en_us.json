@@ -167,5 +167,18 @@
 	"item.darg.doranzer_shield": "Doranzer Shield",
 	"item.darg.corrupted_eye_of_volcanus": "Corrupted Eye Of Volcanus",
 	"item.darg.corrupted_eye_of_doranzer": "Corrupted Eye Of Doranzer",
-	"enchantment.darg.volcanus_body": "Volcanus Body"
+	"enchantment.darg.volcanus_body": "Volcanus Body",
+	"item.darg.baby_dragon_spawn_egg": "Baby Dragon Spawn Egg",
+	"item.darg.juvenile_dragon_spawn_egg": "Juvenile Dragon Spawn Egg",
+	"item.darg.teenage_dragon_spawn_egg": "Teenage Dragon Spawn Egg",
+	"item.darg.juvenile_dragon_food": "Juvenile Dragon Food",
+	"item.darg.baby_dragon_food": "Baby Dragon Food",
+	"item.darg.dragon_commander": "Dragon Commander",
+	"item.darg.dragon_scale": "Dragon Scale",
+	"item.darg.pressed_meat": "Pressed Meat"
+
+
+
+
+
 }
