@@ -68,13 +68,13 @@ public class ModStructures {
                 new StructureSeparationSettings(100,50, 1234567890),
                 true);
         setupMapSpacingAndLand(EXHERISTAFF_STRUCTURE.get(),
-                new StructureSeparationSettings(300,200, 1234567890),
+                new StructureSeparationSettings(270,265, 1234567890),
                 true);
         setupMapSpacingAndLand(CORRUPTED_FOSSIL_SITE.get(),
                 new StructureSeparationSettings(200,80, 1234567890),
                 true);
         setupMapSpacingAndLand(MOGLING_VILLAGE.get(),
-                new StructureSeparationSettings(300,200, 1234567890),
+                new StructureSeparationSettings(350,250, 1234567890),
                 true);
         setupMapSpacingAndLand(MEDUSA_TEMPLE.get(),
                 new StructureSeparationSettings(100,80, 1234567890),
